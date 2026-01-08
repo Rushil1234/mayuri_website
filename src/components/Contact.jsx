@@ -77,8 +77,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="font-sans text-sm text-charcoal/60">Email</p>
-                                    <a href="mailto:mkstudiobridal@gmail.com" className="font-sans text-charcoal link-underline">
-                                        mkstudiobridal@gmail.com
+                                    <a href="mailto:rushilkakkad1234@gmail.com" className="font-sans text-charcoal link-underline">
+                                        rushilkakkad1234@gmail.com
                                     </a>
                                 </div>
                             </div>

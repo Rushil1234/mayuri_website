@@ -15,7 +15,7 @@ export default function ContactPage() {
             "@type": "LocalBusiness",
             "name": "MK Studio Bridal",
             "telephone": "+12019126702",
-            "email": "mkstudiobridal@gmail.com",
+            "email": "rushilkakkad1234@gmail.com",
             "areaServed": "Northeast United States"
         }
     };

@@ -131,8 +131,8 @@ export default function ContactTemplate() {
                             <div className="space-y-8 pl-4 border-l border-antique-gold/30">
                                 <div>
                                     <h3 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-antique-gold mb-2">Email</h3>
-                                    <a href="mailto:mkstudiobridal@gmail.com" className="font-serif text-2xl text-charcoal hover:text-antique-gold transition-colors block">
-                                        mkstudiobridal@gmail.com
+                                    <a href="mailto:rushilkakkad1234@gmail.com" className="font-serif text-2xl text-charcoal hover:text-antique-gold transition-colors block">
+                                        rushilkakkad1234@gmail.com
                                     </a>
                                 </div>
                                 <div>
