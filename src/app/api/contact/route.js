@@ -37,7 +37,7 @@ export async function POST(request) {
 
                 const mailOptions = {
                     from: `"MK Studio Bot" <${process.env.GMAIL_USER}>`,
-                    to: 'mayurikakkad@gmail.com',
+                    to: 'rushilkakkad1234@gmail.com',
                     subject: `New Client Inquiry: ${name}`,
                     html: `
                         <div style="font-family: Arial, sans-serif; color: #333;">
