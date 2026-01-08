@@ -36,7 +36,7 @@ export default function AboutPage() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="font-hero-brand text-[22vw] leading-[0.6] text-charcoal/5 whitespace-nowrap"
                         >
-                            The Artist
+                            the artist
                         </motion.h1>
                     </div>
 
@@ -81,39 +81,210 @@ export default function AboutPage() {
                             </p>
 
                             {/* Henna Pattern Flow */}
-                            <div className="mt-10 flex justify-center md:justify-start">
+                            <div className="mt-8 flex justify-center md:justify-start overflow-visible">
                                 <svg
-                                    width="200"
-                                    height="40"
-                                    viewBox="0 0 200 40"
+                                    width="300"
+                                    height="100"
+                                    viewBox="0 0 2400 800"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="text-antique-gold/80"
+                                    className="text-antique-gold opacity-90 w-[80%] md:w-auto h-auto"
                                 >
-                                    <motion.path
-                                        d="M10 20C40 10 40 30 70 20S100 10 130 20S160 30 190 20"
-                                        stroke="currentColor"
-                                        strokeWidth="1.5"
-                                        strokeLinecap="round"
+                                    <defs>
+                                        <style>
+                                            {`
+                                            .stem{fill:none;stroke:currentColor;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+                                            .main{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+                                            .thin{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+                                            .dot{fill:currentColor;stroke:none}
+                                            `}
+                                        </style>
+
+                                        {/* Leaf (outline) */}
+                                        <path id="leaf" className="thin" d="M0,0 C30,-26 70,-26 100,0 C70,26 30,26 0,0 Z"></path>
+                                        {/* Leaf vein */}
+                                        <path id="leafVein" className="thin" d="M10,0 C40,-6 60,-6 90,0"></path>
+
+                                        {/* Simple 5-petal flower */}
+                                        <g id="flower5">
+                                            <circle className="thin" cx="0" cy="0" r="10"></circle>
+                                            <path className="main" d="M0,-90 C40,-70 40,-30 0,-10 C-40,-30 -40,-70 0,-90Z"></path>
+                                            <path className="main" d="M0,90 C40,70 40,30 0,10 C-40,30 -40,70 0,90Z"></path>
+                                            <path className="main" d="M-90,0 C-70,-40 -30,-40 -10,0 C-30,40 -70,40 -90,0Z"></path>
+                                            <path className="main" d="M90,0 C70,-40 30,-40 10,0 C30,40 70,40 90,0Z"></path>
+                                            <path className="main" d="M-64,-64 C-34,-76 -12,-54 -22,-24 C-52,-14 -74,-34 -64,-64Z"></path>
+                                            <path className="main" d="M64,64 C34,76 12,54 22,24 C52,14 74,34 64,64Z"></path>
+                                            {/* petal texture lines */}
+                                            <path className="thin" d="M0,-80 C10,-55 10,-35 0,-18"></path>
+                                            <path className="thin" d="M0,-80 C-10,-55 -10,-35 0,-18"></path>
+                                            <path className="thin" d="M0,80 C10,55 10,35 0,18"></path>
+                                            <path className="thin" d="M0,80 C-10,55 -10,35 0,18"></path>
+                                            <path className="thin" d="M-80,0 C-55,10 -35,10 -18,0"></path>
+                                            <path className="thin" d="M80,0 C55,10 35,10 18,0"></path>
+                                        </g>
+
+                                        {/* Bud */}
+                                        <g id="bud">
+                                            <path className="main" d="M0,0 C25,-10 45,10 30,34 C18,50 -5,48 -12,32 C-22,10 -8,2 0,0 Z"></path>
+                                            <circle className="dot" cx="12" cy="16" r="3.5"></circle>
+                                        </g>
+
+                                        {/* Tiny filler sprig */}
+                                        <g id="sprig">
+                                            <path className="thin" d="M0,0 C30,-30 70,-40 110,-20"></path>
+                                            <circle className="dot" cx="30" cy="-18" r="3"></circle>
+                                            <circle className="dot" cx="55" cy="-32" r="2.8"></circle>
+                                            <circle className="dot" cx="85" cy="-30" r="2.6"></circle>
+                                            <circle className="dot" cx="108" cy="-20" r="2.4"></circle>
+                                        </g>
+                                    </defs>
+
+                                    <motion.g
                                         initial={{ pathLength: 0, opacity: 0 }}
                                         whileInView={{ pathLength: 1, opacity: 1 }}
                                         viewport={{ once: true }}
-                                        transition={{ duration: 1.5, ease: "easeInOut" }}
-                                    />
-                                    {/* Decorative leaves/dots */}
-                                    <motion.circle cx="70" cy="20" r="2" fill="currentColor"
-                                        initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 0.5 }} viewport={{ once: true }} />
-                                    <motion.circle cx="130" cy="20" r="2" fill="currentColor"
-                                        initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1 }} viewport={{ once: true }} />
-                                    <motion.path
-                                        d="M70 20 Q 80 10 85 15 M130 20 Q 140 30 145 25"
-                                        stroke="currentColor"
-                                        strokeWidth="1"
-                                        initial={{ pathLength: 0 }}
-                                        whileInView={{ pathLength: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.8, duration: 0.5 }}
-                                    />
+                                        transition={{ duration: 2, ease: "easeOut" }}
+                                    >
+                                        {/* MAIN VINE (continuous) */}
+                                        <path className="stem" d="M60,520
+               C220,430 320,380 480,420
+               C640,460 720,560 860,560
+               C980,560 1080,460 1220,430
+               C1380,400 1500,480 1620,520
+               C1780,575 1900,560 2040,480
+               C2160,410 2240,380 2340,410"></path>
+
+                                        {/* SECONDARY CURLS */}
+                                        <path className="thin" d="M360,430 C330,360 360,310 420,295"></path>
+                                        <path className="thin" d="M980,555 C1015,610 1000,675 930,700"></path>
+                                        <path className="thin" d="M1500,500 C1525,430 1595,405 1655,420"></path>
+                                        <path className="thin" d="M2080,470 C2060,410 2085,360 2145,345"></path>
+
+                                        {/* FLOWER CLUSTERS */}
+                                        {/* Cluster 1 (left) */}
+                                        <g transform="translate(330 430) rotate(-12)">
+                                            <use href="#flower5" transform="scale(1.05)"></use>
+                                            <use href="#flower5" transform="translate(140 55) rotate(18) scale(.78)"></use>
+                                            <use href="#flower5" transform="translate(-130 -30) rotate(-22) scale(.72)"></use>
+                                            <path className="thin" d="M-30,110 C10,135 55,140 95,120"></path>
+                                            <g transform="translate(120 120) rotate(20) scale(.7)">
+                                                <use href="#leaf"></use>
+                                                <use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(-150 60) rotate(-35) scale(.62)">
+                                                <use href="#leaf"></use>
+                                                <use href="#leafVein"></use>
+                                            </g>
+                                            <use href="#bud" transform="translate(210 -40) rotate(25) scale(.9)"></use>
+                                            <use href="#sprig" transform="translate(60 -150) rotate(10) scale(.9)"></use>
+                                        </g>
+
+                                        {/* Leaves along vine (left segment) */}
+                                        <g>
+                                            <g transform="translate(210 485) rotate(-30) scale(.55)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(520 420) rotate(22) scale(.5)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(610 485) rotate(55) scale(.58)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                        </g>
+
+                                        {/* Cluster 2 (mid-left) */}
+                                        <g transform="translate(860 560) rotate(8)">
+                                            <use href="#flower5" transform="scale(.95)"></use>
+                                            <use href="#flower5" transform="translate(125 -70) rotate(-18) scale(.72)"></use>
+                                            <use href="#flower5" transform="translate(-130 70) rotate(22) scale(.68)"></use>
+                                            <g transform="translate(150 50) rotate(35) scale(.6)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(-160 -30) rotate(-20) scale(.62)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <use href="#bud" transform="translate(-210 30) rotate(-10) scale(.85)"></use>
+                                            <use href="#sprig" transform="translate(40 150) rotate(190) scale(.9)"></use>
+                                            {/* dot accents */}
+                                            <circle className="dot" cx="40" cy="-140" r="3.6"></circle>
+                                            <circle className="dot" cx="62" cy="-155" r="3.0"></circle>
+                                            <circle className="dot" cx="85" cy="-160" r="2.6"></circle>
+                                        </g>
+
+                                        {/* Leaves along vine (middle) */}
+                                        <g>
+                                            <g transform="translate(1040 500) rotate(-12) scale(.55)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(1150 450) rotate(35) scale(.45)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(1320 430) rotate(10) scale(.55)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                        </g>
+
+                                        {/* Cluster 3 (mid-right) */}
+                                        <g transform="translate(1520 500) rotate(-10)">
+                                            <use href="#flower5" transform="scale(1.08)"></use>
+                                            <use href="#flower5" transform="translate(150 35) rotate(18) scale(.75)"></use>
+                                            <use href="#flower5" transform="translate(-145 -55) rotate(-15) scale(.7)"></use>
+                                            <g transform="translate(-170 60) rotate(-30) scale(.6)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(165 -70) rotate(30) scale(.62)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <use href="#bud" transform="translate(235 5) rotate(25) scale(.95)"></use>
+                                            <use href="#sprig" transform="translate(-30 -160) rotate(-10) scale(.95)"></use>
+                                            <circle className="dot" cx="-40" cy="150" r="3.4"></circle>
+                                            <circle className="dot" cx="-65" cy="162" r="2.8"></circle>
+                                            <circle className="dot" cx="-90" cy="168" r="2.5"></circle>
+                                        </g>
+
+                                        {/* Leaves along vine (right) */}
+                                        <g>
+                                            <g transform="translate(1750 545) rotate(35) scale(.55)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(1865 520) rotate(-18) scale(.5)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(1980 500) rotate(12) scale(.58)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                        </g>
+
+                                        {/* Cluster 4 (far right end) */}
+                                        <g transform="translate(2140 410) rotate(14)">
+                                            <use href="#flower5" transform="scale(.92)"></use>
+                                            <use href="#flower5" transform="translate(120 70) rotate(22) scale(.68)"></use>
+                                            <use href="#flower5" transform="translate(-120 -70) rotate(-18) scale(.62)"></use>
+                                            <g transform="translate(140 -30) rotate(25) scale(.55)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <g transform="translate(-155 35) rotate(-25) scale(.6)">
+                                                <use href="#leaf"></use><use href="#leafVein"></use>
+                                            </g>
+                                            <use href="#bud" transform="translate(200 -40) rotate(20) scale(.85)"></use>
+                                            <use href="#sprig" transform="translate(0 150) rotate(200) scale(.85)"></use>
+                                        </g>
+
+                                        {/* scattered micro dots like henna filler */}
+                                        <g>
+                                            <circle className="dot" cx="720" cy="610" r="2.2"></circle>
+                                            <circle className="dot" cx="760" cy="640" r="2.0"></circle>
+                                            <circle className="dot" cx="800" cy="660" r="1.8"></circle>
+
+                                            <circle className="dot" cx="1240" cy="380" r="2.2"></circle>
+                                            <circle className="dot" cx="1270" cy="350" r="2.0"></circle>
+                                            <circle className="dot" cx="1300" cy="330" r="1.8"></circle>
+
+                                            <circle className="dot" cx="1930" cy="615" r="2.2"></circle>
+                                            <circle className="dot" cx="1960" cy="645" r="2.0"></circle>
+                                            <circle className="dot" cx="1990" cy="670" r="1.8"></circle>
+                                        </g>
+                                    </motion.g>
                                 </svg>
                             </div>
                         </motion.div>
