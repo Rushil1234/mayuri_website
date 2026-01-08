@@ -48,7 +48,7 @@ const StepContent = ({ step }) => {
 
             {/* The Text Box - Pushed to the front (z-30) for maximum readability */}
             <div className="relative z-30 bg-white/90 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white shadow-xl shadow-charcoal/5 max-w-xs">
-                <p className="font-sans text-sm md:text-base leading-relaxed text-charcoal/90">
+                <p className="font-serif text-base md:text-lg leading-relaxed text-charcoal/80">
                     {step.description}
                 </p>
             </div>
