@@ -62,7 +62,7 @@ export default function TimelessGlamour() {
                         </div>
                         <h2 className="text-right">
                             <span className="block font-serif text-4xl text-charcoal/80 mb-2 mr-4 md:text-5xl">Effortless</span>
-                            <span className="block font-hero-brand text-4xl text-antique-gold md:text-4xl -mt-4 md:-mt-1">Beauty</span>
+                            <span className="block font-hero-brand text-4xl text-antique-gold md:text-4xl -mt-4 md:-mt-1 mr-4">Beauty</span>
                         </h2>
                     </motion.div>
                 </div>
