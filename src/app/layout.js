@@ -35,7 +35,9 @@ export const metadata = {
   title: "MK Studio Bridal | Mayuri Kakkad",
   description: "Expert makeup, hair styling & mehendi artistry with 27 years of experience. Serving Western Pennsylvania and the Northeast. Bridal services by Mayuri Kakkad.",
   keywords: ["makeup artist", "hair stylist", "mehendi", "mehndi", "bridal makeup", "bridal henna", "Pittsburgh makeup artist", "Western Pennsylvania", "Mayuri Kakkad", "MK Studio Bridal"],
+  siteName: "MK Studio Bridal",
   authors: [{ name: "Mayuri Kakkad" }],
+  metadataBase: new URL('https://www.mayurikakkad.com'), // Replace with actual domain when live
   openGraph: {
     title: "MK Studio Bridal | Mayuri Kakkad",
     description: "Expert makeup, hair styling & mehendi artistry with 27 years of experience.",

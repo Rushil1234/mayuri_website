@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source "../components";
+@source "../app";
 
 /* =========================================
    The Digital Ateliér - Design System
