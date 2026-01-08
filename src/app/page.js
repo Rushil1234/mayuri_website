@@ -12,6 +12,7 @@ const Hero = dynamic(() => import("@/components/Hero"));
 const TimelessGlamour = dynamic(() => import("@/components/TimelessGlamour"));
 const CraftingBeauty = dynamic(() => import("@/components/CraftingBeauty"));
 const Services = dynamic(() => import("@/components/Services"));
+const HowItWorks = dynamic(() => import("@/components/HowItWorks"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const Footer = dynamic(() => import("@/components/Footer"));
 
@@ -56,6 +57,9 @@ export default function Home() {
 
           {/* Services */}
           <Services />
+
+          {/* How It Works - Booking Process */}
+          <HowItWorks />
 
           {/* Testimonials */}
           <Testimonials />
