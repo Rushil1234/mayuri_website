@@ -143,7 +143,7 @@ export default function ContactTemplate() {
                                 </div>
                                 <div>
                                     <h3 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-antique-gold mb-2">Studio</h3>
-                                    <p className="font-serif text-xl text-charcoal/80 leading-relaxed">
+                                    <p className="font-serif text-xl text-charcoal leading-relaxed">
                                         Pittsburgh, Pennsylvania<br />
                                         <span className="text-base italic text-charcoal/60">Available for travel in Northeastern US</span>
                                     </p>
