@@ -80,13 +80,41 @@ export default function AboutPage() {
                                 of artistry to life. Based in Western PA, crafting timeless beauty for brides across the Northeast.
                             </p>
 
-                            {/* Signature Stamp */}
-                            <div className="mt-12 flex justify-center md:justify-start">
-                                <div className="h-24 w-24 rounded-full border border-charcoal/20 flex items-center justify-center animate-spin-slow">
-                                    <span className="font-sans text-[10px] uppercase tracking-widest text-charcoal rotate-[-15deg]">
-                                        Est. 1997
-                                    </span>
-                                </div>
+                            {/* Henna Pattern Flow */}
+                            <div className="mt-10 flex justify-center md:justify-start">
+                                <svg
+                                    width="200"
+                                    height="40"
+                                    viewBox="0 0 200 40"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="text-antique-gold/80"
+                                >
+                                    <motion.path
+                                        d="M10 20C40 10 40 30 70 20S100 10 130 20S160 30 190 20"
+                                        stroke="currentColor"
+                                        strokeWidth="1.5"
+                                        strokeLinecap="round"
+                                        initial={{ pathLength: 0, opacity: 0 }}
+                                        whileInView={{ pathLength: 1, opacity: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.5, ease: "easeInOut" }}
+                                    />
+                                    {/* Decorative leaves/dots */}
+                                    <motion.circle cx="70" cy="20" r="2" fill="currentColor"
+                                        initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 0.5 }} viewport={{ once: true }} />
+                                    <motion.circle cx="130" cy="20" r="2" fill="currentColor"
+                                        initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1 }} viewport={{ once: true }} />
+                                    <motion.path
+                                        d="M70 20 Q 80 10 85 15 M130 20 Q 140 30 145 25"
+                                        stroke="currentColor"
+                                        strokeWidth="1"
+                                        initial={{ pathLength: 0 }}
+                                        whileInView={{ pathLength: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: 0.8, duration: 0.5 }}
+                                    />
+                                </svg>
                             </div>
                         </motion.div>
                     </div>
