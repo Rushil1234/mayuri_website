@@ -23,7 +23,7 @@ export async function POST(request) {
         await sql`INSERT INTO contacts (name, email, phone, inquiry_type, event_date, message)
                   VALUES (${name}, ${email}, ${phone}, ${inquiryType}, ${eventDate}, ${message});`;
 
-        // 2. SMS Notification via Email (Nodemailer)
+        // 2. Email Notification to Admin (Reliable fallback for Google Voice/Carriers)
         // Only run if environment variables are present
         if (process.env.GMAIL_USER && process.env.GMAIL_PASS) {
             try {
@@ -36,17 +36,26 @@ export async function POST(request) {
                 });
 
                 const mailOptions = {
-                    from: process.env.GMAIL_USER,
-                    to: '4127373376@tmomail.net',
-                    subject: `New Inquiry: ${name}`,
-                    text: `New ${inquiryType} Inquiry!\n\nName: ${name}\nDate: ${eventDate}\nPhone: ${phone}\nMsg: ${message.substring(0, 50)}...`,
+                    from: `"Website Bot" <${process.env.GMAIL_USER}>`,
+                    to: process.env.GMAIL_USER, // Send to yourself
+                    subject: `✨ New Inquiry: ${name}`,
+                    html: `
+                        <h2>New Website Inquiry</h2>
+                        <p><strong>Name:</strong> ${name}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>Phone:</strong> ${phone}</p>
+                        <p><strong>Type:</strong> ${inquiryType}</p>
+                        <p><strong>Date:</strong> ${eventDate}</p>
+                        <br/>
+                        <p><strong>Message:</strong></p>
+                        <p>${message}</p>
+                    `,
                 };
 
                 await transporter.sendMail(mailOptions);
-                console.log('SMS Notification sent successfully');
+                console.log('Admin notification sent successfully');
             } catch (emailError) {
-                console.error('Failed to send SMS notification:', emailError);
-                // Do not throw here; we still want to return success for the DB save
+                console.error('Failed to send Admin notification:', emailError);
             }
         }
 
