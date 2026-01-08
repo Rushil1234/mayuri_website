@@ -10,7 +10,9 @@ const HennaCursor = dynamic(() => import("@/components/HennaCursor"), { ssr: fal
 const Navbar = dynamic(() => import("@/components/Navbar"));
 const Hero = dynamic(() => import("@/components/Hero"));
 const TimelessGlamour = dynamic(() => import("@/components/TimelessGlamour"));
+const CraftingBeauty = dynamic(() => import("@/components/CraftingBeauty"));
 const Services = dynamic(() => import("@/components/Services"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
@@ -49,8 +51,14 @@ export default function Home() {
           {/* Timeless Glamour - Intro Section */}
           <TimelessGlamour />
 
+          {/* Crafting Beauty - Experience Section */}
+          <CraftingBeauty />
+
           {/* Services */}
           <Services />
+
+          {/* Testimonials */}
+          <Testimonials />
         </main>
 
         {/* Footer */}

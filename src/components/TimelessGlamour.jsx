@@ -20,7 +20,7 @@ export default function TimelessGlamour() {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-[120vh] overflow-hidden bg-cream py-32"
+            className="relative min-h-[90vh] overflow-hidden bg-cream pt-24 pb-24"
         >
             {/* Background Typography - Massive, decorative */}
             <div className="pointer-events-none absolute left-0 top-20 z-0 w-full overflow-hidden opacity-[0.03]">

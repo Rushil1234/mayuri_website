@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import MagneticButton from "./MagneticButton";
 
 const services = [
@@ -27,82 +27,90 @@ const services = [
 
 export default function Services() {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start end", "end start"]
+    });
+
+    const yBackground = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
     return (
         <section
             id="services"
             ref={sectionRef}
-            className="section-padding bg-cream text-charcoal"
+            className="relative overflow-hidden bg-white py-32"
         >
-            <div className="container-main">
-                {/* Section header */}
-                <motion.div
-                    className="mb-20 text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.8 }}
-                >
-                    <p className="mb-4 font-sans text-sm font-medium uppercase tracking-[0.3em] text-[var(--vibe-accent)]">
-                        Services & Packages
-                    </p>
-                    <h2 className="mb-6 font-serif">
-                        Tailored to Your <span className="italic">Vision</span>
-                    </h2>
-                    <p className="mx-auto max-w-2xl font-sans text-charcoal/70">
-                        Every client deserves a bespoke experience. Choose a service that speaks
-                        to your style, or let's create something entirely unique together.
-                    </p>
-                </motion.div>
+            {/* =========================================
+                GEOMETRIC CONTAINER (The "Big Box" fitting everything)
+               ========================================= */}
+            <div className="absolute left-[5%] right-[5%] top-[10%] bottom-[10%] z-0 hidden md:block">
+                {/* Main colored background box - Framing the content */}
+                <div className="absolute inset-0 border border-antique-gold/30 bg-[#F4F1EA]"></div>
 
-                {/* Services grid */}
-                <div className="grid gap-8 md:grid-cols-3">
+                {/* Offset styling outline */}
+                <div className="absolute -left-4 -top-4 h-full w-full border border-charcoal/10"></div>
+
+                {/* Decorative solid block corner */}
+                <div className="absolute -right-12 top-20 h-64 w-24 bg-antique-gold/10"></div>
+            </div>
+
+            {/* Mobile background fallback */}
+            <div className="absolute inset-0 z-0 bg-[#F4F1EA] md:hidden"></div>
+
+
+            <div className="container-main relative z-10 py-12 md:px-12">
+                {/* Section header */}
+                <div className="mb-20 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        <span className="mb-4 block font-sans text-xs font-bold uppercase tracking-[0.3em] text-antique-gold">
+                            Services & Packages
+                        </span>
+                        <h2 className="flex flex-col items-center justify-center leading-none">
+                            <span className="font-serif text-5xl text-charcoal md:text-6xl">Tailored to Your</span>
+                            <span className="mt-2 font-hero-brand text-[5rem] text-antique-gold md:text-[6rem]">Vision</span>
+                        </h2>
+                    </motion.div>
+                </div>
+
+                {/* Services grid - Staggered layout */}
+                <div className="grid gap-8 lg:grid-cols-3 lg:gap-12">
                     {services.map((service, index) => (
                         <motion.div
                             key={service.id}
-                            className={`relative flex flex-col border p-8 transition-all duration-300 ${service.popular
-                                ? "border-[var(--vibe-accent)] bg-cream"
-                                : "border-charcoal/10 hover:border-charcoal/30"
-                                }`}
-                            initial={{ opacity: 0, y: 40 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.1 * index }}
+                            className={`relative flex flex-col justify-between border bg-white/50 p-10 backdrop-blur-sm transition-all duration-500 hover:shadow-xl ${index === 1 ? "lg:-mt-12 lg:mb-12 border-antique-gold/50 shadow-md" : "border-charcoal/10"
+                                }`} // Stagger the middle card upwards
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: index * 0.2 }}
+                            viewport={{ once: true }}
                         >
-                            {/* Popular badge */}
-                            {service.popular && (
-                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--vibe-accent)] px-4 py-1 text-xs font-sans uppercase tracking-widest text-cream">
-                                    Most Popular
-                                </div>
-                            )}
+                            {/* Decorative corner box for each card */}
+                            <div className="absolute right-4 top-4 h-8 w-8 border-r border-t border-charcoal/10"></div>
 
-                            <div className="mb-8 flex-grow">
-                                <h3 className="mb-4 font-serif text-2xl text-charcoal">{service.name}</h3>
-                                <p className="text-sm text-charcoal/80 leading-relaxed">{service.description}</p>
+                            <div>
+                                <h3 className="mb-6 font-serif text-3xl text-charcoal">{service.name}</h3>
+                                <p className="mb-8 font-sans text-sm leading-relaxed text-charcoal/70">
+                                    {service.description}
+                                </p>
                             </div>
-
-                            <MagneticButton
-                                href="/contact"
-                                variant={service.popular ? "primary" : "secondary"}
-                                className={service.popular ? "" : "border-charcoal text-charcoal hover:bg-charcoal hover:text-cream"}
-                            >
-                                Inquire Now
-                            </MagneticButton>
                         </motion.div>
                     ))}
                 </div>
 
-                {/* Custom note */}
-                <motion.p
-                    className="mt-16 text-center font-sans text-sm text-charcoal/60"
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                >
-                    Looking for something different? All services can be customized.
-                    <a href="/contact" className="ml-1 text-[var(--vibe-accent)] underline">
-                        Let's chat about your vision
-                    </a>
-                </motion.p>
+                {/* Centered CTA Button */}
+                <div className="mt-20 flex justify-center">
+                    <MagneticButton
+                        href="/contact"
+                        variant="secondary"
+                    >
+                        INQUIRE NOW
+                    </MagneticButton>
+                </div>
             </div>
         </section>
     );
