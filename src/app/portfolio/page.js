@@ -51,7 +51,6 @@ const portfolioImages = [
     "/images/portfolio/Gemini_Generated_Image_62b81d62b81d62b8.png",
     "/images/portfolio/Jan 7, 2026, 07_43_33 PM.png",
     "/images/portfolio/creative-detail.png",
-    "/images/portfolio/daniel-lloyd-blunk-fernandez-zwvpvmryzt4-unsplash_orig (1).webp",
     "/images/portfolio/daniel-lloyd-blunk-fernandez-zwvpvmryzt4-unsplash_orig.webp",
     "/images/portfolio/img-2445_orig.webp",
     "/images/portfolio/img-5010.webp",
