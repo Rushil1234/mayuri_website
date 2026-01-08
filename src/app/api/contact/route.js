@@ -23,7 +23,7 @@ export async function POST(request) {
         await sql`INSERT INTO contacts (name, email, phone, inquiry_type, event_date, message)
                   VALUES (${name}, ${email}, ${phone}, ${inquiryType}, ${eventDate}, ${message});`;
 
-        // 2. Email Notification to Admin (Reliable fallback for Google Voice/Carriers)
+        // 2. Email Notification to Admin
         // Only run if environment variables are present
         if (process.env.GMAIL_USER && process.env.GMAIL_PASS) {
             try {
@@ -31,31 +31,33 @@ export async function POST(request) {
                     service: 'gmail',
                     auth: {
                         user: process.env.GMAIL_USER,
-                        pass: process.env.GMAIL_PASS,
+                        pass: process.env.GMAIL_PASS, // App Password
                     },
                 });
 
                 const mailOptions = {
-                    from: `"Website Bot" <${process.env.GMAIL_USER}>`,
-                    to: process.env.GMAIL_USER, // Send to yourself
-                    subject: `✨ New Inquiry: ${name}`,
+                    from: `"MK Studio Bot" <${process.env.GMAIL_USER}>`,
+                    to: 'rushilkakkad1234@gmail.com',
+                    subject: `New Client Inquiry: ${name}`,
                     html: `
-                        <h2>New Website Inquiry</h2>
-                        <p><strong>Name:</strong> ${name}</p>
-                        <p><strong>Email:</strong> ${email}</p>
-                        <p><strong>Phone:</strong> ${phone}</p>
-                        <p><strong>Type:</strong> ${inquiryType}</p>
-                        <p><strong>Date:</strong> ${eventDate}</p>
-                        <br/>
-                        <p><strong>Message:</strong></p>
-                        <p>${message}</p>
+                        <div style="font-family: Arial, sans-serif; color: #333;">
+                            <h2 style="color: #D4AF37;">New Client Inquiry</h2>
+                            <p><strong>Name:</strong> ${name}</p>
+                            <p><strong>Phone:</strong> ${phone}</p>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p><strong>Service:</strong> ${inquiryType}</p>
+                            <p><strong>Date:</strong> ${eventDate}</p>
+                            <hr style="border: 1px solid #eee; margin: 20px 0;" />
+                            <p><strong>Message:</strong></p>
+                            <p style="background-color: #f9f9f9; padding: 15px; border-radius: 5px;">${message}</p>
+                        </div>
                     `,
                 };
 
                 await transporter.sendMail(mailOptions);
-                console.log('Admin notification sent successfully');
+                console.log('Admin notification email sent successfully');
             } catch (emailError) {
-                console.error('Failed to send Admin notification:', emailError);
+                console.error('Failed to send notification email:', emailError);
             }
         }
 
