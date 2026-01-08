@@ -1,7 +1,8 @@
 import { WindSong, Playfair_Display, Lato } from "next/font/google";
 import ClientCursor from "@/components/ClientCursor";
-import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 // Modern, breezy, effortless signature script
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

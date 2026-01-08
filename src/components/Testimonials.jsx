@@ -90,7 +90,7 @@ export default function Testimonials() {
       `}</style>
 
             <div className="container-main mb-16 text-center">
-                <span className="mb-8 block font-sans text-xs font-bold uppercase tracking-[0.5em] text-antique-gold">
+                <span className="mb-6 block font-sans text-xs font-bold uppercase tracking-[0.5em] text-antique-gold">
                     Testimonials
                 </span>
                 <h2 className="flex flex-col items-center justify-center leading-none text-charcoal">
