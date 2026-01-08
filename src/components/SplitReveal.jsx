@@ -8,18 +8,28 @@ const customEase = [0.77, 0, 0.175, 1];
 
 export default function SplitReveal({ children, onAnimationComplete }) {
     // Check if intro was already shown this session
-    const [hasSeenIntro, setHasSeenIntro] = useState(false);
-    const [isRevealed, setIsRevealed] = useState(false);
-    const [isRemoved, setIsRemoved] = useState(false);
+    // Initialize state based on session storage (client-side only due to ssr: false)
+    const [hasSeenIntro, setHasSeenIntro] = useState(() => {
+        if (typeof window !== 'undefined') return !!sessionStorage.getItem("hasSeenIntro");
+        return false;
+    });
+    const [isRevealed, setIsRevealed] = useState(() => {
+        if (typeof window !== 'undefined') return !!sessionStorage.getItem("hasSeenIntro");
+        return false;
+    });
+    const [isRemoved, setIsRemoved] = useState(() => {
+        if (typeof window !== 'undefined') return !!sessionStorage.getItem("hasSeenIntro");
+        return false;
+    });
+    const [shouldAnimate, setShouldAnimate] = useState(() => {
+        if (typeof window !== 'undefined') return !sessionStorage.getItem("hasSeenIntro");
+        return true;
+    });
 
     useEffect(() => {
-        // Check sessionStorage on mount
-        const seenIntro = sessionStorage.getItem("hasSeenIntro");
-        if (seenIntro) {
-            // Skip intro animation
-            setHasSeenIntro(true);
-            setIsRevealed(true);
-            setIsRemoved(true);
+        // Use state instead of re-reading sessionStorage to handle Strict Mode correctly
+        if (hasSeenIntro) {
+            // Already initialized to skip, just trigger callback
             onAnimationComplete?.();
         } else {
             // Show intro and mark as seen
@@ -28,9 +38,21 @@ export default function SplitReveal({ children, onAnimationComplete }) {
             const timer = setTimeout(() => {
                 setIsRevealed(true);
             }, 1000);
-            return () => clearTimeout(timer);
+
+            // Safety timeout: Ensure page unlocks even if animation stalls
+            const safetyTimer = setTimeout(() => {
+                if (!isRemoved) {
+                    setIsRevealed(true);
+                    setTimeout(() => onAnimationComplete?.(), 1500);
+                }
+            }, 2500); // reduced as requested
+
+            return () => {
+                clearTimeout(timer);
+                clearTimeout(safetyTimer);
+            };
         }
-    }, []);
+    }, [hasSeenIntro, isRemoved, onAnimationComplete]);
 
     const handleAnimationComplete = () => {
         // Remove panels from DOM after animation
@@ -50,9 +72,9 @@ export default function SplitReveal({ children, onAnimationComplete }) {
                     opacity: isRevealed ? 1 : 0,
                 }}
                 transition={{
-                    duration: 1.2,
+                    duration: shouldAnimate ? 1.2 : 0,
                     ease: customEase,
-                    delay: 0.1,
+                    delay: shouldAnimate ? 0.1 : 0,
                 }}
             >
                 {children}
@@ -61,15 +83,18 @@ export default function SplitReveal({ children, onAnimationComplete }) {
             {/* Split panels overlay */}
             <AnimatePresence>
                 {!isRemoved && (
-                    <>
+                    <motion.div
+                        className="fixed inset-0 z-[100] cursor-pointer"
+                        onClick={() => setIsRevealed(true)}
+                    >
                         {/* Left Panel */}
                         <motion.div
-                            className="fixed inset-y-0 left-0 z-[100] w-1/2 bg-cream"
+                            className="fixed inset-y-0 left-0 w-1/2 bg-cream"
                             initial={{ x: 0 }}
                             animate={{ x: isRevealed ? "-100%" : 0 }}
                             exit={{ x: "-100%" }}
                             transition={{
-                                duration: 1.2,
+                                duration: shouldAnimate ? 1.2 : 0,
                                 ease: customEase,
                             }}
                             onAnimationComplete={() => {
@@ -77,15 +102,18 @@ export default function SplitReveal({ children, onAnimationComplete }) {
                             }}
                         >
                             {/* Left half of text */}
-                            <div className="absolute right-0 top-1/2 -translate-y-1/2 overflow-hidden">
+                            <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col items-end pr-0.6 md:pr-0">
                                 <span
-                                    className="block whitespace-nowrap pr-0 text-right font-serif text-[clamp(2rem,6vw,5rem)] font-light tracking-[0.3em] text-charcoal"
-                                    style={{
-                                        fontFamily: "'Playfair Display', Georgia, serif",
-                                        fontStyle: "italic",
-                                    }}
+                                    className="block leading-[0.85] text-right font-serif text-[clamp(4rem,10vw,8rem)] font-light text-charcoal"
+                                    style={{ fontFamily: "'Playfair Display', serif" }}
                                 >
-                                    MK Stu
+                                    M
+                                </span>
+                                <span
+                                    className="block leading-[0.85] text-right font-serif text-[clamp(2rem,5vw,4rem)] font-light tracking-[0.2em] text-charcoal/80"
+                                    style={{ fontFamily: "'Playfair Display', serif" }}
+                                >
+                                    Stu
                                 </span>
                             </div>
                         </motion.div>
@@ -97,18 +125,21 @@ export default function SplitReveal({ children, onAnimationComplete }) {
                             animate={{ x: isRevealed ? "100%" : 0 }}
                             exit={{ x: "100%" }}
                             transition={{
-                                duration: 1.2,
+                                duration: shouldAnimate ? 1.2 : 0,
                                 ease: customEase,
                             }}
                         >
                             {/* Right half of text */}
-                            <div className="absolute left-0 top-1/2 -translate-y-1/2 overflow-hidden">
+                            <div className="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col items-start pl-0.5 md:pl-1">
                                 <span
-                                    className="block whitespace-nowrap pl-0 text-left font-serif text-[clamp(2rem,6vw,5rem)] font-light tracking-[0.3em] text-charcoal"
-                                    style={{
-                                        fontFamily: "'Playfair Display', Georgia, serif",
-                                        fontStyle: "italic",
-                                    }}
+                                    className="block leading-[0.85] text-left font-serif text-[clamp(4rem,10vw,8rem)] font-light text-charcoal"
+                                    style={{ fontFamily: "'Playfair Display', serif" }}
+                                >
+                                    K
+                                </span>
+                                <span
+                                    className="block leading-[0.85] text-left font-serif text-[clamp(2rem,5vw,4rem)] font-light tracking-[0.2em] text-charcoal/80"
+                                    style={{ fontFamily: "'Playfair Display', serif" }}
                                 >
                                     dio
                                 </span>
@@ -124,12 +155,12 @@ export default function SplitReveal({ children, onAnimationComplete }) {
                                 opacity: isRevealed ? 0 : 0.3,
                             }}
                             transition={{
-                                duration: 0.8,
+                                duration: shouldAnimate ? 0.8 : 0,
                                 ease: customEase,
                             }}
                             style={{ transformOrigin: "center" }}
                         />
-                    </>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </>
