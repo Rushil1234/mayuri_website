@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,9 @@ const inquiryTypes = [
 ];
 
 export default function ContactTemplate() {
+    // Initialize smooth scrolling
+    useSmoothScroll();
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",

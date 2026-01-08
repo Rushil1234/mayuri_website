@@ -4,12 +4,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 
 import Footer from "@/components/Footer";
 
 const HennaCursor = dynamic(() => import("@/components/HennaCursor"), { ssr: false });
 
 export default function AboutTemplate() {
+    // Initialize smooth scrolling
+    useSmoothScroll();
+
     const { scrollYProgress } = useScroll();
     const y1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
     const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);

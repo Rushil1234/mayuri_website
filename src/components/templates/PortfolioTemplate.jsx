@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -62,6 +63,9 @@ const portfolioImages = [
 ];
 
 export default function PortfolioTemplate() {
+    // Initialize smooth scrolling
+    useSmoothScroll();
+
     const [selectedImage, setSelectedImage] = useState(null);
 
     return (
