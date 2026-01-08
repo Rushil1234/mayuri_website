@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const navLinks = [
     { label: "Portfolio", href: "#portfolio" },
@@ -40,10 +41,12 @@ export default function Footer() {
                     viewport={{ once: true }}
                     className="relative mb-16 inline-block"
                 >
-                    {/* The "font uptop" - Amsterdam */}
-                    <h1 className="font-hero-brand text-[8rem] leading-[0.8] text-antique-gold md:text-[12rem] lg:text-[15rem]">
-                        MK Bride
-                    </h1>
+                    <Link href="/contact" className="block cursor-pointer transition-transform hover:scale-105 active:scale-95">
+                        {/* The "font uptop" - Amsterdam */}
+                        <h1 className="font-hero-brand text-[8rem] leading-[0.8] text-antique-gold md:text-[12rem] lg:text-[15rem]">
+                            MK Bride
+                        </h1>
+                    </Link>
                 </motion.div>
 
                 {/* Logo Placement */}

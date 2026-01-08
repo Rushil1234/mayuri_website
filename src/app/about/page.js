@@ -71,8 +71,8 @@ export default function AboutPage() {
                             <span className="block font-sans text-xs uppercase tracking-[0.4em] text-antique-gold mb-4">
                                 Established 1997
                             </span>
-                            <h2 className="font-signature text-6xl md:text-8xl text-charcoal mb-6 leading-tight">
-                                Mayuri Kakkad
+                            <h2 className="font-serif text-5xl md:text-7xl text-charcoal mb-6 leading-tight">
+                                Mayuri <br /> <span className="italic text-antique-gold">Kakkad</span>
                             </h2>
                             <p className="font-sans text-charcoal/70 text-lg leading-relaxed max-w-md mx-auto md:mx-0">
                                 A celebrated cosmetologist and mehendi artist bringing
@@ -80,16 +80,15 @@ export default function AboutPage() {
                                 of artistry to life. Based in Western PA, crafting timeless beauty for brides across the Northeast.
                             </p>
 
-                            {/* Henna Pattern Flow - Spanning from Image to Edge */}
-                            <div className="absolute top-[100%] md:top-[80%] left-[-20%] md:left-[-40%] right-[-50%] h-32 md:h-48 z-0 pointer-events-none overflow-visible">
+                            {/* Henna Pattern Flow */}
+                            <div className="mt-8 flex justify-center md:justify-start overflow-visible">
                                 <svg
-                                    width="100%"
-                                    height="100%"
+                                    width="300"
+                                    height="100"
                                     viewBox="0 0 2400 800"
-                                    preserveAspectRatio="none"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="text-antique-gold opacity-90 w-full h-full"
+                                    className="text-antique-gold opacity-90 w-[80%] md:w-auto h-auto"
                                 >
                                     <defs>
                                         <style>

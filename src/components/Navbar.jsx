@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/about", label: "About Me" },
     { href: "/portfolio", label: "Portfolio" },
-    { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
 ];
 
@@ -59,24 +59,29 @@ export default function Navbar() {
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className={`relative font-sans text-sm uppercase tracking-widest transition-colors ${pathname === link.href
-                                ? "text-[var(--vibe-accent)]"
-                                : "text-charcoal hover:text-[var(--vibe-accent)]"
-                                }`}
-                        >
-                            {link.label}
-                            {pathname === link.href && (
-                                <motion.div
-                                    className="absolute -bottom-1 left-0 right-0 h-px bg-[var(--vibe-accent)]"
-                                    layoutId="activeTab"
-                                />
-                            )}
-                        </Link>
-                    ))}
+                    {navLinks.map((link) => {
+                        const isHome = pathname === "/";
+                        const isLightText = isHome && !isScrolled;
+
+                        return (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={`relative font-sans text-sm font-medium uppercase tracking-widest transition-colors drop-shadow-sm ${isLightText
+                                        ? "text-cream hover:text-antique-gold"
+                                        : "text-charcoal hover:text-antique-gold"
+                                    } ${pathname === link.href ? "text-antique-gold" : ""}`}
+                            >
+                                {link.label}
+                                {pathname === link.href && (
+                                    <motion.div
+                                        className="absolute -bottom-1 left-0 right-0 h-px bg-antique-gold"
+                                        layoutId="activeTab"
+                                    />
+                                )}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* Mobile Menu Button */}
