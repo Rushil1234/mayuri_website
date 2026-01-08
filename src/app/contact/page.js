@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 
 const HennaCursor = dynamic(() => import("@/components/HennaCursor"), { ssr: false });
@@ -47,7 +47,7 @@ export default function ContactPage() {
     return (
         <>
             <HennaCursor />
-            <Navbar />
+
 
             <main className="min-h-screen bg-[#F2F0E9] relative overflow-hidden">
                 {/* Global Grain Texture */}

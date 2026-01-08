@@ -7,7 +7,7 @@ import useSmoothScroll from "@/hooks/useSmoothScroll";
 // Dynamic imports for better code splitting
 const SplitReveal = dynamic(() => import("@/components/SplitReveal"), { ssr: false });
 const HennaCursor = dynamic(() => import("@/components/HennaCursor"), { ssr: false });
-const Navbar = dynamic(() => import("@/components/Navbar"));
+
 const Hero = dynamic(() => import("@/components/Hero"));
 const TimelessGlamour = dynamic(() => import("@/components/TimelessGlamour"));
 const CraftingBeauty = dynamic(() => import("@/components/CraftingBeauty"));
@@ -41,8 +41,7 @@ export default function Home() {
 
       {/* Split reveal intro wraps everything */}
       <SplitReveal onAnimationComplete={() => setIntroComplete(true)}>
-        {/* Navbar */}
-        <Navbar />
+
 
         {/* Main content */}
         <main>

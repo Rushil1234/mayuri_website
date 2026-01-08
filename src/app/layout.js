@@ -1,5 +1,7 @@
 import { WindSong, Playfair_Display, Lato } from "next/font/google";
 import ClientCursor from "@/components/ClientCursor";
+import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 // Modern, breezy, effortless signature script
@@ -63,7 +65,9 @@ export default function RootLayout({ children }) {
         className={`${signature.variable} ${playfair.variable} ${lato.variable} antialiased`}
       >
         <ClientCursor />
+        <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
     return (
         <>
             <HennaCursor />
-            <Navbar />
+
 
             <main className="min-h-screen bg-[#F2F0E9]">
                 {/* Hero Header */}
