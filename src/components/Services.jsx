@@ -94,7 +94,7 @@ export default function Services() {
 
                             <div>
                                 <h3 className="mb-6 font-serif text-3xl text-charcoal">{service.name}</h3>
-                                <p className="mb-8 font-sans text-sm leading-relaxed text-charcoal/70">
+                                <p className="mb-8 font-serif text-base leading-relaxed text-charcoal/80">
                                     {service.description}
                                 </p>
                             </div>
