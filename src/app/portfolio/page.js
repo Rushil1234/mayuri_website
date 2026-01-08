@@ -77,6 +77,21 @@ export default function PortfolioPage() {
                         style={{ backgroundImage: 'url("/images/noise.png")', backgroundRepeat: "repeat" }}>
                     </div>
 
+                    {/* Decorative Top-Right Header: Rotating Henna Mandala */}
+                    <motion.div
+                        className="absolute -top-[100px] -right-[100px] md:-top-[250px] md:-right-[250px] w-[400px] h-[400px] md:w-[900px] md:h-[900px] pointer-events-none opacity-100 z-0"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                    >
+                        <Image
+                            src="/images/luxury_mandala_ultra_detailed_transparent.svg"
+                            alt="Decorative Henna Pattern"
+                            width={600}
+                            height={600}
+                            className="w-full h-full object-contain"
+                        />
+                    </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}

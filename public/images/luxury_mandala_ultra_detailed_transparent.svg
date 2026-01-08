@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-800 -800 1600 1600">
+  <defs>
+    <style>
+      .gold { stroke:#D4AF37; }
+      .thin { stroke-width:1.1; }
+      .hair { stroke-width:0.7; }
+      .micro { stroke-width:0.45; }
+      .none { fill:none; }
+      .round { stroke-linecap:round; stroke-linejoin:round; }
+      .soft { opacity:0.8; }
+      .softer { opacity:0.6; }
+      .faint { opacity:0.4; }
+    </style>
+
+    <path id="petalA" d="
+      M0,-420
+      C 48,-380 88,-320 92,-260
+      C 96,-190 54,-140 0,-110
+      C -54,-140 -96,-190 -92,-260
+      C -88,-320 -48,-380 0,-420 Z"/>
+
+    <path id="petalB" d="
+      M0,-300
+      C 34,-270 60,-230 62,-190
+      C 64,-150 36,-118 0,-96
+      C -36,-118 -64,-150 -62,-190
+      C -60,-230 -34,-270 0,-300 Z"/>
+
+    <path id="curl" d="
+      M0,0
+      C 26,-18 44,-40 40,-60
+      C 34,-84 6,-98 -18,-88"/>
+
+    <path id="drop" d="
+      M0,-46
+      C 14,-36 18,-22 14,-10
+      C 10,2 0,8 0,8
+      C 0,8 -10,2 -14,-10
+      C -18,-22 -14,-36 0,-46 Z"/>
+  </defs>
+
+  <!-- Primary lotus layer -->
+  <g class="none round gold soft">
+    <use href="#petalA"/>
+    <use href="#petalA" transform="rotate(15)"/>
+    <use href="#petalA" transform="rotate(30)"/>
+    <use href="#petalA" transform="rotate(45)"/>
+    <use href="#petalA" transform="rotate(60)"/>
+    <use href="#petalA" transform="rotate(75)"/>
+    <use href="#petalA" transform="rotate(90)"/>
+    <use href="#petalA" transform="rotate(105)"/>
+    <use href="#petalA" transform="rotate(120)"/>
+    <use href="#petalA" transform="rotate(135)"/>
+    <use href="#petalA" transform="rotate(150)"/>
+    <use href="#petalA" transform="rotate(165)"/>
+    <use href="#petalA" transform="rotate(180)"/>
+    <use href="#petalA" transform="rotate(195)"/>
+    <use href="#petalA" transform="rotate(210)"/>
+    <use href="#petalA" transform="rotate(225)"/>
+    <use href="#petalA" transform="rotate(240)"/>
+    <use href="#petalA" transform="rotate(255)"/>
+    <use href="#petalA" transform="rotate(270)"/>
+    <use href="#petalA" transform="rotate(285)"/>
+    <use href="#petalA" transform="rotate(300)"/>
+    <use href="#petalA" transform="rotate(315)"/>
+    <use href="#petalA" transform="rotate(330)"/>
+    <use href="#petalA" transform="rotate(345)"/>
+  </g>
+
+  <!-- Secondary lace petals -->
+  <g class="none round gold softer">
+    <use href="#petalB"/>
+    <use href="#petalB" transform="rotate(10)"/>
+    <use href="#petalB" transform="rotate(20)"/>
+    <use href="#petalB" transform="rotate(30)"/>
+    <use href="#petalB" transform="rotate(40)"/>
+    <use href="#petalB" transform="rotate(50)"/>
+    <use href="#petalB" transform="rotate(60)"/>
+    <use href="#petalB" transform="rotate(70)"/>
+    <use href="#petalB" transform="rotate(80)"/>
+    <use href="#petalB" transform="rotate(90)"/>
+    <use href="#petalB" transform="rotate(100)"/>
+    <use href="#petalB" transform="rotate(110)"/>
+    <use href="#petalB" transform="rotate(120)"/>
+    <use href="#petalB" transform="rotate(130)"/>
+    <use href="#petalB" transform="rotate(140)"/>
+    <use href="#petalB" transform="rotate(150)"/>
+    <use href="#petalB" transform="rotate(160)"/>
+    <use href="#petalB" transform="rotate(170)"/>
+    <use href="#petalB" transform="rotate(180)"/>
+    <use href="#petalB" transform="rotate(190)"/>
+    <use href="#petalB" transform="rotate(200)"/>
+    <use href="#petalB" transform="rotate(210)"/>
+    <use href="#petalB" transform="rotate(220)"/>
+    <use href="#petalB" transform="rotate(230)"/>
+    <use href="#petalB" transform="rotate(240)"/>
+    <use href="#petalB" transform="rotate(250)"/>
+    <use href="#petalB" transform="rotate(260)"/>
+    <use href="#petalB" transform="rotate(270)"/>
+    <use href="#petalB" transform="rotate(280)"/>
+    <use href="#petalB" transform="rotate(290)"/>
+    <use href="#petalB" transform="rotate(300)"/>
+    <use href="#petalB" transform="rotate(310)"/>
+    <use href="#petalB" transform="rotate(320)"/>
+    <use href="#petalB" transform="rotate(330)"/>
+    <use href="#petalB" transform="rotate(340)"/>
+    <use href="#petalB" transform="rotate(350)"/>
+  </g>
+
+  <!-- Teardrop bead ring -->
+  <g class="none round gold softer">
+    <use href="#drop" transform="rotate(0) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(12) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(24) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(36) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(48) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(60) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(72) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(84) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(96) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(108) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(120) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(132) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(144) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(156) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(168) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(180) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(192) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(204) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(216) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(228) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(240) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(252) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(264) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(276) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(288) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(300) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(312) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(324) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(336) translate(0,-240)"/>
+    <use href="#drop" transform="rotate(348) translate(0,-240)"/>
+  </g>
+
+  <!-- Inner rosette -->
+  <g class="none round gold soft">
+    <circle r="140" class="thin"/>
+    <circle r="110" class="hair"/>
+    <circle r="80" class="micro"/>
+    
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(0)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(30)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(60)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(90)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(120)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(150)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(180)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(210)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(240)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(270)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(300)" class="hair"/>
+
+    <path d="M0,-120 C 18,-96 26,-72 24,-54 C 22,-34 10,-20 0,-14
+             C -10,-20 -22,-34 -24,-54 C -26,-72 -18,-96 0,-120 Z"
+          transform="rotate(330)" class="hair"/>
+    <circle r="14" class="micro"/>
+  </g>
+</svg>
