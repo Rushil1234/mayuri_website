@@ -156,7 +156,17 @@ export default function AboutPage() {
                             viewport={{ once: true, margin: "-100px" }}
                             className="flex flex-col md:flex-row gap-12 items-center relative"
                         >
-                            <div className="md:w-1/2 hidden md:block"></div>
+                            <div className="md:w-1/2 hidden md:block">
+                                <div className="relative aspect-[4/3] w-[80%] ml-auto rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
+                                    <Image
+                                        src="/images/family.jpg"
+                                        alt="Mayuri with her family"
+                                        fill
+                                        className="object-cover rounded-2xl shadow-xl grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                                    />
+                                    <div className="absolute inset-0 rounded-2xl border border-antique-gold/30 -z-10 translate-x-4 translate-y-4"></div>
+                                </div>
+                            </div>
                             {/* Connector Dot */}
                             <div className="absolute left-[20px] md:left-1/2 -translate-x-1/2 top-0 md:top-8 w-3 h-3 bg-antique-gold rounded-full border-4 border-[#F2F0E9] z-20 shadow-md"></div>
 
