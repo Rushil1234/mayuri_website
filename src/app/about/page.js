@@ -135,7 +135,7 @@ export default function AboutPage() {
                             className="flex flex-col md:flex-row gap-12 items-center relative"
                         >
                             <div className="md:w-1/2 text-left md:text-right md:pr-16 order-2 md:order-1">
-                                <span className="text-[6rem] font-serif leading-none text-antique-gold/10 absolute -top-12 md:-right-4 right-0 -z-10">01</span>
+                                <span className="text-[6rem] font-serif leading-none text-antique-gold/20 absolute -top-12 md:-right-4 right-0 -z-10">01</span>
                                 <h3 className="font-serif text-3xl text-charcoal mb-4">Roots & Rhythm</h3>
                                 <p className="font-sans text-charcoal/70 leading-relaxed">
                                     Born and raised in the vibrant city of Hyderabad, India, art runs through my veins.
@@ -171,7 +171,7 @@ export default function AboutPage() {
                             <div className="absolute left-[20px] md:left-1/2 -translate-x-1/2 top-0 md:top-8 w-3 h-3 bg-antique-gold rounded-full border-4 border-[#F2F0E9] z-20 shadow-md"></div>
 
                             <div className="md:w-1/2 pl-12 md:pl-16 text-left">
-                                <span className="text-[6rem] font-serif leading-none text-antique-gold/10 absolute -top-12 -left-4 -z-10">02</span>
+                                <span className="text-[6rem] font-serif leading-none text-antique-gold/20 absolute -top-12 -left-4 -z-10">02</span>
                                 <h3 className="font-serif text-3xl text-charcoal mb-4">Life & Love</h3>
                                 <p className="font-sans text-charcoal/70 leading-relaxed">
                                     I am a proud homemaker, finding joy in raising my two boys alongside my wonderful husband.
@@ -188,7 +188,7 @@ export default function AboutPage() {
                             className="flex flex-col md:flex-row gap-12 items-center relative"
                         >
                             <div className="md:w-1/2 text-left md:text-right md:pr-16 order-2 md:order-1">
-                                <span className="text-[6rem] font-serif leading-none text-antique-gold/10 absolute -top-12 md:-right-4 right-0 -z-10">03</span>
+                                <span className="text-[6rem] font-serif leading-none text-antique-gold/20 absolute -top-12 md:-right-4 right-0 -z-10">03</span>
                                 <h3 className="font-serif text-3xl text-charcoal mb-4">The Craft</h3>
                                 <p className="font-sans text-charcoal/70 leading-relaxed">
                                     Adorning a bride is a sacred trust. I strive to create designs that aren't just beautiful,
