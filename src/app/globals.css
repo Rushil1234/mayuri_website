@@ -112,6 +112,23 @@ body::before {
   /* Massive size for MK Studio */
 }
 
+@font-face {
+  font-family: 'Amsterdam Handwriting';
+  src: url('/fonts/AmsterdamHandwriting.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Special class for Hero "Amsterdam" style only */
+.font-hero-brand {
+  font-family: 'Amsterdam Handwriting', cursive;
+  font-weight: 400;
+  line-height: 1;
+  font-style: normal;
+  font-size: clamp(3.5rem, 12vw, 8rem);
+}
+
 /* =========================================
    Typography
    ========================================= */

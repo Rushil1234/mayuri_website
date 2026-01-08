@@ -42,17 +42,17 @@ export default function Hero({ heroImage }) {
             >
                 {/* Main Signature Heading - Massive */}
                 <motion.h1
-                    className="font-signature text-cream drop-shadow-lg"
+                    className="font-hero-brand text-cream drop-shadow-lg"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    MK Studio
+                    MK studio
                 </motion.h1>
 
                 {/* Minimal Tagline - Sans Serif Uppercase */}
                 <motion.p
-                    className="mt-4 font-sans text-sm font-bold uppercase tracking-[0.4em] text-cream drop-shadow-md sm:text-base md:mt-0"
+                    className="mt-2 font-Playfair Display text-sm font-medium uppercase tracking-[0.6em] text-cream drop-shadow-md sm:text-base md:mt-12"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}

@@ -18,6 +18,8 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+
+
 // Humanist sans-serif for body text - warmer and friendlier
 const lato = Lato({
   variable: "--font-lato",
