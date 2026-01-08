@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Services", href: "/#services" },
+    { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -65,13 +65,13 @@ export default function Footer() {
                 {/* Minimalist Navigation */}
                 <nav className="mb-12 flex flex-wrap justify-center gap-8 md:gap-16">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.label}
                             href={link.href}
                             className="font-sans text-xs uppercase tracking-[0.2em] text-white/40 transition-all hover:text-antique-gold hover:tracking-[0.3em]"
                         >
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
