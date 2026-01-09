@@ -52,7 +52,7 @@ export default function CraftingBeauty() {
                             <div className="absolute left-0 top-2 h-full w-px bg-antique-gold/30"></div>
 
                             <p>
-                                I have been a makeup and Mehndi artist for <span className="font-bold text-charcoal">27 years</span>.
+                                I have been a makeup and Mehendi artist for <span className="font-bold text-charcoal">27 years</span>.
                             </p>
                             <p>
                                 I take pride in adorning brides and clients with stunning designs that bring out their inner beauty and express their unique personalities.

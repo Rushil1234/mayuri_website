@@ -20,7 +20,7 @@ const services = [
     {
         id: 3,
         name: "Mehendi / Henna",
-        description: "I am also a skilled Mehndi artist with a passion for creating intricate and beautiful designs. From traditional bridal Mehndi to contemporary patterns and designs, I can create a wide range of styles to suit any taste. Using only the finest quality henna, I ensure that each design is rich in color and long-lasting. My Packages depend on the style and length of the mehndi on arms and legs. I take great pride in my work and strive to make each Mehndi experience a special and memorable one for my clients.",
+        description: "I am also a skilled Mehendi artist with a passion for creating intricate and beautiful designs. From traditional bridal Mehendi to contemporary patterns and designs, I can create a wide range of styles to suit any taste. Using only the finest quality henna, I ensure that each design is rich in color and long-lasting. My Packages depend on the style and length of the Mehendi on arms and legs. I take great pride in my work and strive to make each Mehendi experience a special and memorable one for my clients.",
         popular: false,
     },
 ];

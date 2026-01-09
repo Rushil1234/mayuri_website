@@ -32,7 +32,7 @@ export default function Hero({ heroImage }) {
                     }}
                 />
                 {/* Subtle Overlay for Text Readability - Minimal */}
-                <div className="absolute inset-0 bg-black/10" />
+                <div className="absolute inset-0 bg-black/30" />
             </motion.div>
 
             {/* Content - Centered, Clean, Simple */}
@@ -42,7 +42,7 @@ export default function Hero({ heroImage }) {
             >
                 {/* Main Signature Heading - Massive */}
                 <motion.h1
-                    className="font-hero-brand text-cream drop-shadow-lg"
+                    className="font-hero-brand text-cream drop-shadow-2xl"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
@@ -52,7 +52,7 @@ export default function Hero({ heroImage }) {
 
                 {/* Minimal Tagline - Sans Serif Uppercase */}
                 <motion.p
-                    className="mt-2 font-Playfair Display text-sm font-medium uppercase tracking-[0.6em] text-cream drop-shadow-md sm:text-base md:mt-12"
+                    className="mt-2 font-serif text-sm font-semibold uppercase tracking-[0.2em] text-cream drop-shadow-lg sm:text-base md:mt-12"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
