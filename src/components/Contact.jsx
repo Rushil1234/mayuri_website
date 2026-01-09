@@ -175,7 +175,7 @@ export default function Contact() {
                                             <path d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <h3 className="mb-4 font-serif text-2xl text-charcoal">Thank You!</h3>
+                                    <h3 className="mb-4 font-serif text-lg leading-tight text-charcoal">Thank You!</h3>
                                     <p className="text-charcoal/70">
                                         Your inquiry has been received. I'll be in touch within 24 hours to discuss your vision.
                                     </p>
