@@ -178,8 +178,8 @@ export default function ContactTemplate() {
                                     >
                                         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                     </motion.div>
-                                    <h3 className="font-hero-brand text-6xl text-charcoal">Thank You</h3>
-                                    <p className="font-serif text-xl text-charcoal/70 max-w-md">Your inquiry has been received. I'll be in touch shortly to start planning your vision.</p>
+                                    <h3 className="font-hero-brand text-4xl md:text-5xl text-charcoal mb-4">Thank You</h3>
+                                    <p className="font-serif text-lg text-charcoal/70 max-w-md">Your inquiry has been received. I'll be in touch shortly to start planning your vision.</p>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-10">

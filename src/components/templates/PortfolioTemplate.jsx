@@ -57,8 +57,7 @@ const portfolioImages = [
     "/images/portfolio/testimonial-aisha.png",
     "/images/portfolio/testimonial-anjali.jpg",
     "/images/portfolio/testimonial-priya.jpg",
-    "/images/portfolio/testimonial-riya.png",
-    "/images/portfolio/testimonial-sneha.png"
+    "/images/portfolio/testimonial-riya.png"
 ];
 
 export default function PortfolioTemplate() {
