@@ -8,7 +8,7 @@ const steps = [
         number: "01",
         title: "Get in touch",
         align: "left",
-        description: "Send over all your wedding details. If I'm free, I'll send my exclusive bridal package your way.",
+        description: "Send over all your wedding details. I'll check my availability and send my exclusive bridal package your way.",
     },
     {
         number: "02",
