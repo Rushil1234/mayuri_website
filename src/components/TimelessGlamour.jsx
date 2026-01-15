@@ -22,11 +22,11 @@ export default function TimelessGlamour() {
             ref={containerRef}
             className="relative min-h-[90vh] overflow-hidden bg-cream pt-24 pb-24"
         >
-            {/* Background Typography - Massive, decorative */}
-            <div className="pointer-events-none absolute left-0 top-20 z-0 w-full overflow-hidden opacity-[0.03]">
-                <h1 className="whitespace-nowrap font-serif text-[15rem] leading-none text-charcoal">
+            {/* Background Typography - Massive, decorative (using div instead of h1 to avoid SEO issues) */}
+            <div className="pointer-events-none absolute left-0 top-20 z-0 w-full overflow-hidden opacity-[0.03]" aria-hidden="true">
+                <div className="whitespace-nowrap font-serif text-[15rem] leading-none text-charcoal">
                     TIMELESS GLAMOUR
-                </h1>
+                </div>
             </div>
 
             <div className="container-main relative z-10 grid h-full grid-cols-1 gap-12 lg:grid-cols-12">

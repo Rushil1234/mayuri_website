@@ -41,14 +41,17 @@ export default function Hero({ heroImage }) {
                 style={{ y: textY, opacity }}
             >
                 {/* Main Signature Heading - Massive */}
-                <motion.h1
+                <motion.div
                     className="font-hero-brand text-cream drop-shadow-2xl"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
+                    aria-hidden="true"
                 >
                     MK studio
-                </motion.h1>
+                </motion.div>
+                {/* SEO-optimized H1 - visually subtle but semantically primary */}
+                <h1 className="sr-only">Luxury Indian Bridal Makeup & Henna in Pittsburgh</h1>
 
                 {/* Minimal Tagline - Sans Serif Uppercase */}
                 <motion.p

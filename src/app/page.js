@@ -11,13 +11,15 @@ export default function Home() {
     "@type": "LocalBusiness",
     "name": "MK Studio Bridal",
     "image": "https://www.mayurikakkad.com/images/hero-bridal.jpg",
-    "description": "Award-winning luxury bridal makeup artist specializing in South Asian weddings, serving New Jersey and New York.",
+    "description": "Award-winning luxury bridal makeup artist specializing in South Asian weddings, serving Pittsburgh and Western Pennsylvania.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "New Jersey",
-      "addressRegion": "NJ",
-      "addressCountry": "US"
+      "addressLocality": "Pittsburgh",
+      "addressRegion": "PA",
+      "addressCountry": "US",
+      "postalCode": "15228"
     },
+    "areaServed": ["Pittsburgh", "Western Pennsylvania", "Northeast US"],
     "priceRange": "$$$",
     "url": "https://www.mayurikakkad.com",
     "telephone": "+1-555-555-5555" // Replace with actual business phone if available

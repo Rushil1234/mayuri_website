@@ -43,6 +43,18 @@ export const metadata = {
     description: "Expert makeup, hair styling & mehendi artistry with 27 years of experience.",
     type: "website",
     locale: "en_US",
+    url: "https://www.mayurikakkad.com",
+    images: [
+      {
+        url: "https://www.mayurikakkad.com/images/hero-bridal.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MK Studio Bridal - Luxury Indian Bridal Makeup",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.mayurikakkad.com",
   },
   twitter: {
     card: "summary_large_image",
