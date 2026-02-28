@@ -1,8 +1,8 @@
 import PortfolioTemplate from "@/components/templates/PortfolioTemplate";
 
 export const metadata = {
-    title: "Bridal Makeup & Henna Portfolio | Real Brides | MK Studio",
-    description: "Explore our curated gallery of real Indian brides, traditional Gujarati looks, intricate bridal henna designs, and luxury hair styling by Mayuri Kakkad.",
+    title: "South Asian Bridal Makeup & Mehndi Portfolio",
+    description: "Real Indian, Gujarati & South Indian brides by Mayuri Kakkad. Explore bridal makeup looks, intricate mehndi designs & luxury hair styling in Pittsburgh, PA.",
 };
 
 export default function PortfolioPage() {

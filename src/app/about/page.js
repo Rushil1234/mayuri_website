@@ -1,8 +1,8 @@
 import AboutTemplate from "@/components/templates/AboutTemplate";
 
 export const metadata = {
-    title: "About Mayuri Kakkad | 27 Years of Bridal Artistry",
-    description: "Meet Mayuri Kakkad, a celebrated cosmetologist and henna artist with over two decades of experience transforming brides in Pennsylvania and beyond.",
+    title: "Meet Mayuri Kakkad | 27 Years of Bridal Artistry",
+    description: "Mayuri Kakkad — Pittsburgh's trusted South Asian bridal makeup & mehndi artist. 27+ years specializing in Indian, Gujarati & South Indian wedding transformations.",
 };
 
 export default function AboutPage() {

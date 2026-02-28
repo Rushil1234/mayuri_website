@@ -51,7 +51,7 @@ export default function Hero({ heroImage }) {
                     MK studio
                 </motion.div>
                 {/* SEO-optimized H1 - visually subtle but semantically primary */}
-                <h1 className="sr-only">Luxury Indian Bridal Makeup & Henna in Pittsburgh</h1>
+                <h1 className="sr-only">South Asian Bridal Makeup & Mehndi Artist | Pittsburgh, PA</h1>
 
                 {/* Minimal Tagline - Sans Serif Uppercase */}
                 <motion.p
@@ -60,7 +60,7 @@ export default function Hero({ heroImage }) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                 >
-                    Makeup that celebrates your natural beauty
+                    Premier South Asian bridal beauty — serving Pittsburgh & beyond
                 </motion.p>
             </motion.div>
         </section>

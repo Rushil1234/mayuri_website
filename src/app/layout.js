@@ -32,15 +32,18 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "MK Studio Bridal | Mayuri Kakkad",
-  description: "Expert makeup, hair styling & mehendi artistry with 27 years of experience. Serving Western Pennsylvania and the Northeast. Bridal services by Mayuri Kakkad.",
-  keywords: ["makeup artist", "hair stylist", "mehendi", "mehndi", "bridal makeup", "bridal henna", "Pittsburgh makeup artist", "Western Pennsylvania", "Mayuri Kakkad", "MK Studio Bridal"],
+  title: {
+    default: "South Asian Bridal Makeup & Mehndi Pittsburgh | MK Studio",
+    template: "%s | MK Studio Bridal",
+  },
+  description: "Pittsburgh's premier South Asian bridal makeup artist & mehndi specialist. 27+ years transforming brides. Indian, Pakistani, Gujarati, South Indian wedding looks.",
+  keywords: ["south asian bridal makeup pittsburgh", "indian makeup artist pittsburgh", "bridal mehndi pittsburgh", "south indian bridal makeup", "gujarati bridal makeup", "henna artist pittsburgh pa", "pakistani bridal makeup", "Mayuri Kakkad", "MK Studio Bridal"],
   siteName: "MK Studio Bridal",
   authors: [{ name: "Mayuri Kakkad" }],
-  metadataBase: new URL('https://www.mayurikakkad.com'), // Replace with actual domain when live
+  metadataBase: new URL('https://www.mayurikakkad.com'),
   openGraph: {
-    title: "MK Studio Bridal | Mayuri Kakkad",
-    description: "Expert makeup, hair styling & mehendi artistry with 27 years of experience.",
+    title: "South Asian Bridal Makeup & Mehndi Pittsburgh | MK Studio",
+    description: "Pittsburgh's premier South Asian bridal makeup & mehndi artist. 27+ years of transforming brides.",
     type: "website",
     locale: "en_US",
     url: "https://www.mayurikakkad.com",
@@ -49,7 +52,7 @@ export const metadata = {
         url: "https://www.mayurikakkad.com/images/hero-bridal.jpg",
         width: 1200,
         height: 630,
-        alt: "MK Studio Bridal - Luxury Indian Bridal Makeup",
+        alt: "MK Studio Bridal - South Asian Bridal Makeup & Mehndi in Pittsburgh",
       },
     ],
   },
@@ -58,8 +61,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MK Studio Bridal | Mayuri Kakkad",
-    description: "Expert makeup, hair styling & mehendi artistry with 27 years of experience.",
+    title: "South Asian Bridal Makeup & Mehndi Pittsburgh | MK Studio",
+    description: "Pittsburgh's premier South Asian bridal makeup & mehndi artist. 27+ years of transforming brides.",
   },
   robots: {
     index: true,

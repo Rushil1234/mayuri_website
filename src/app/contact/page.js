@@ -1,8 +1,8 @@
 import ContactTemplate from "@/components/templates/ContactTemplate";
 
 export const metadata = {
-    title: "Book Bridal Makeup Artist Pittsburgh | Inquiry | MK Studio",
-    description: "Contact Mayuri Kakkad for bridal makeup, henna, and hair styling availability. Reserve your date for weddings in Pittsburgh and the Northeast US.",
+    title: "Book Your South Asian Bridal Consultation",
+    description: "Book Mayuri Kakkad for South Asian bridal makeup, mehndi & hair in Pittsburgh. Travel-friendly for PA, NJ, NY, OH & DC weddings. Inquire now.",
 };
 
 export default function ContactPage() {
