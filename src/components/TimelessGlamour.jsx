@@ -58,8 +58,8 @@ export default function TimelessGlamour() {
                         style={{ y: y2 }}
                     >
                         <h2 className="text-center lg:text-right">
-                            <span className="block font-serif text-4xl text-charcoal/80 mb-2 lg:mr-4 md:text-5xl">Effortless</span>
-                            <span className="block font-hero-brand text-4xl text-antique-gold md:text-4xl -mt-4 md:-mt-1 lg:ml-58">Beauty</span>
+                            <span className="block font-serif text-5xl text-charcoal/80 mb-2 lg:mr-4 md:text-6xl">Effortless</span>
+                            <span className="block font-hero-brand text-5xl text-antique-gold md:text-5xl -mt-4 md:-mt-1 lg:ml-58">Beauty</span>
                         </h2>
                     </motion.div>
                 </div>
