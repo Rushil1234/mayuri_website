@@ -83,7 +83,7 @@ export default function HowItWorks() {
 
                 <div className="relative">
                     {/* The Golden Thread - Central line */}
-                    <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-antique-gold/20 hidden md:block"></div>
+                    <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-antique-gold/20"></div>
 
                     <div className="space-y-32 md:space-y-48">
                         {steps.map((step) => (

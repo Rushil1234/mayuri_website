@@ -54,15 +54,12 @@ export default function TimelessGlamour() {
 
                     {/* Overlapping Title - Adjusted to not clash */}
                     <motion.div
-                        className="absolute -right-12 top-1/3 z-20 max-w-lg lg:-right-24"
+                        className="relative mt-6 z-20 max-w-lg text-center lg:absolute lg:-right-24 lg:top-1/3 lg:mt-0 lg:text-right"
                         style={{ y: y2 }}
                     >
-                        <div className="mb-6 flex justify-end lg:hidden">
-                            {/* Mobile only button position to avoid overlap issues */}
-                        </div>
-                        <h2 className="text-right">
-                            <span className="block font-serif text-4xl text-charcoal/80 mb-2 mr-4 md:text-5xl">Effortless</span>
-                            <span className="block font-hero-brand text-4xl text-antique-gold md:text-4xl -mt-4 md:-mt-1 ml-58">Beauty</span>
+                        <h2 className="text-center lg:text-right">
+                            <span className="block font-serif text-4xl text-charcoal/80 mb-2 lg:mr-4 md:text-5xl">Effortless</span>
+                            <span className="block font-hero-brand text-4xl text-antique-gold md:text-4xl -mt-4 md:-mt-1 lg:ml-58">Beauty</span>
                         </h2>
                     </motion.div>
                 </div>
