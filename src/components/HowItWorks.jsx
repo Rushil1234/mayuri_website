@@ -58,7 +58,7 @@ const StepContent = ({ step }) => {
 
 export default function HowItWorks() {
     return (
-        <section className="relative overflow-hidden bg-[#F4F1EA] py-24 md:py-32">
+        <section className="relative overflow-hidden bg-[#F4F1EA] pt-24 pb-12 md:pt-32 md:pb-16">
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'url("/images/noise.png")', backgroundRepeat: "repeat" }}>

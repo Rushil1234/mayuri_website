@@ -14,7 +14,7 @@ export default function AboutPage() {
         "url": "https://www.mayurikakkad.com/about",
         "image": "https://www.mayurikakkad.com/images/Mayuri.png",
         "sameAs": [
-            "https://instagram.com/mayuris_studio",
+            "https://instagram.com/mkbridalstudio",
             "https://facebook.com/mayurisstudio"
         ],
         "worksFor": {

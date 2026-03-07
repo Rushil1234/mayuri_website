@@ -132,7 +132,7 @@ export default function Contact() {
                             </p>
                             <div className="flex gap-4">
                                 <a
-                                    href="https://instagram.com/mayuris_studio"
+                                    href="https://instagram.com/mkbridalstudio"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex h-10 w-10 items-center justify-center border border-charcoal/20 text-charcoal transition-all hover:border-[var(--vibe-accent)] hover:text-[var(--vibe-accent)]"

@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 export default function useSmoothScroll() {
     const lenisRef = useRef(null);
+    const pathname = usePathname();
 
     useEffect(() => {
         // Detect touch device - disable smooth scroll for native haptic feel
@@ -47,6 +49,15 @@ export default function useSmoothScroll() {
             lenisRef.current?.destroy();
         };
     }, []);
+
+    // Scroll to top on route change
+    useEffect(() => {
+        if (lenisRef.current) {
+            lenisRef.current.scrollTo(0, { immediate: true });
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [pathname]);
 
     return lenisRef;
 }

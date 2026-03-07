@@ -54,7 +54,7 @@ export default function Home() {
     },
     "priceRange": "$$$",
     "sameAs": [
-      "https://instagram.com/mayuris_studio",
+      "https://www.instagram.com/mkbridalstudio",
       "https://www.facebook.com/MayuriBridalstudio/"
     ]
   };
