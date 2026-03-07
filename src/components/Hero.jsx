@@ -53,15 +53,6 @@ export default function Hero({ heroImage }) {
                 {/* SEO-optimized H1 - visually subtle but semantically primary */}
                 <h1 className="sr-only">South Asian Bridal Makeup & Mehndi Artist | Pittsburgh, PA</h1>
 
-                {/* Minimal Tagline - Sans Serif Uppercase */}
-                <motion.p
-                    className="mt-2 font-serif text-sm font-semibold uppercase tracking-[0.2em] text-cream drop-shadow-lg sm:text-base md:mt-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                    Premier South Asian bridal beauty — serving Pittsburgh & beyond
-                </motion.p>
             </motion.div>
         </section>
     );

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw asset source folders
+newphotomarch7th/
+old_mayuri_photos/
+oldest_mayuri photos/
+mayuri photos/

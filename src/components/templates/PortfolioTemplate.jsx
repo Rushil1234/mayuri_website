@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import useSmoothScroll from "@/hooks/useSmoothScroll";
 
@@ -10,14 +10,30 @@ import Image from "next/image";
 
 const HennaCursor = dynamic(() => import("@/components/HennaCursor"), { ssr: false });
 
-// Full list of images from the portfolio directory
-const portfolioImages = [
+const VIDEO_EXTENSIONS = [".mov", ".mp4", ".webm", ".ogg"];
+
+function isVideo(src) {
+    return VIDEO_EXTENSIONS.some((ext) => src.toLowerCase().endsWith(ext));
+}
+
+// Newest media first (March 7th batch) – videos interleaved among photos
+const portfolioMedia = [
+    // --- March 7 2026 – interleaved for visual spread ---
+    "/images/portfolio/IMG_3741.jpeg",
+    "/images/portfolio/E4BC71F2-943C-4F1E-8418-91D3E724A337.MOV",
+    "/images/portfolio/IMG_3759.jpeg",
+    "/images/portfolio/IMG_6596.mov",
+    // --- Previous batches (videos interspersed) ---
     "/images/portfolio/132032470_2815478238712159_4455502819506302682_n.jpg",
+    "/images/portfolio/IMG_6599.mov",
     "/images/portfolio/132147816_2815478228712160_3848240278735005721_n.jpg",
+    "/images/portfolio/IMG_6723.MOV",
     "/images/portfolio/293024198_715633963052259_1287257007267315921_n.jpg",
+    "/images/portfolio/IMG_6726.mov",
     "/images/portfolio/338414848_613564410194586_5462747058888824762_n-1.webp",
+    "/images/portfolio/IMG_6727.mov",
     "/images/portfolio/36506725_2054475754812415_4135024328804663296_n.jpg",
-    "/images/portfolio/462596474_3841520746107898_2816287746797430915_n.png",
+    "/images/portfolio/IMG_6728.mov",
     "/images/portfolio/462617473_3840533462873293_579953448012367355_n.png",
     "/images/portfolio/474022124_3924080427851929_181639658412880086_n.jpg",
     "/images/portfolio/476903295_1428203855128596_2525672390300642625_n.jpg",
@@ -58,7 +74,6 @@ const portfolioImages = [
     "/images/portfolio/testimonial-anjali.jpg",
     "/images/portfolio/testimonial-priya.jpg",
     "/images/portfolio/testimonial-riya.png",
-    // New images from new_mayuri_photos
     "/images/portfolio/2f8c4941-4151-4fe2-a10c-7463ebfe98ce.JPG",
     "/images/portfolio/44dd7f32-e34d-41e3-bf81-5cbecddfca63.JPG",
     "/images/portfolio/72dcb41e-0ad0-4e54-8c5c-7e14d898665b.JPG",
@@ -105,29 +120,134 @@ const portfolioImages = [
     "/images/portfolio/WhatsApp Image 2026-01-08 at 23.38.20.jpeg",
     "/images/portfolio/WhatsApp Image 2026-01-08 at 23.38.23.jpeg",
     "/images/portfolio/WhatsApp Image 2026-01-08 at 23.38.33.jpeg",
-    "/images/portfolio/WhatsApp Image 2026-01-08 at 23.38.36.jpeg"
+    "/images/portfolio/WhatsApp Image 2026-01-08 at 23.38.36.jpeg",
 ];
 
+/* Distribute items round-robin across N columns so order reads left→right */
+function distributeToColumns(items, numCols) {
+    const cols = Array.from({ length: numCols }, () => []);
+    items.forEach((item, i) => cols[i % numCols].push(item));
+    return cols;
+}
+
+/* Responsive column count hook */
+function useColumnCount() {
+    const [cols, setCols] = useState(2);
+    useEffect(() => {
+        const update = () => {
+            const w = window.innerWidth;
+            if (w >= 1280) setCols(4);
+            else if (w >= 768) setCols(3);
+            else setCols(2);
+        };
+        update();
+        window.addEventListener("resize", update);
+        return () => window.removeEventListener("resize", update);
+    }, []);
+    return cols;
+}
+
+/* ---- Gallery card (plain DOM, no per-item motion) ---- */
+function GalleryCard({ src, onClick }) {
+    const video = isVideo(src);
+    return (
+        <div
+            className="relative group cursor-zoom-in portfolio-card mb-3 md:mb-5"
+            onClick={() => onClick(src)}
+        >
+            <div className="relative overflow-hidden rounded-lg bg-charcoal/5">
+                {video ? (
+                    <video
+                        src={src}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        className="w-full h-auto block transition-transform duration-700 ease-in-out group-hover:scale-105"
+                    />
+                ) : (
+                    <Image
+                        src={src}
+                        alt="Mayuri Portfolio"
+                        width={600}
+                        height={800}
+                        className="w-full h-auto block transition-transform duration-700 ease-in-out group-hover:scale-105"
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                )}
+
+                {/* Tap/Hover Overlay */}
+                <div className="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-white/90 flex items-center justify-center text-charcoal shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+                        <span className="text-xl">+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/* ---- Masonry gallery with row-first ordering ---- */
+function MasonryGallery({ items, onSelect }) {
+    const numCols = useColumnCount();
+    const columns = distributeToColumns(items, numCols);
+
+    return (
+        <section className="px-3 md:px-4 pb-32">
+            <div className="mx-auto max-w-[1400px]">
+                <div className="flex gap-3 md:gap-5 items-start">
+                    {columns.map((col, colIdx) => (
+                        <div key={colIdx} className="flex-1 min-w-0">
+                            {col.map((src) => (
+                                <GalleryCard key={src} src={src} onClick={onSelect} />
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
 export default function PortfolioTemplate() {
-    // Initialize smooth scrolling
     useSmoothScroll();
 
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedMedia, setSelectedMedia] = useState(null);
 
     return (
         <>
             <HennaCursor />
 
+            {/* CSS fade-in for gallery cards – replaces per-item framer-motion whileInView */}
+            <style jsx global>{`
+                .portfolio-card {
+                    opacity: 0;
+                    transform: translateY(24px);
+                    animation: pCardIn 0.5s ease forwards;
+                }
+                @keyframes pCardIn {
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                /* stagger via nth-child for the first visible batch */
+                .portfolio-card:nth-child(1)  { animation-delay: 0s; }
+                .portfolio-card:nth-child(2)  { animation-delay: 0.04s; }
+                .portfolio-card:nth-child(3)  { animation-delay: 0.08s; }
+                .portfolio-card:nth-child(4)  { animation-delay: 0.12s; }
+                .portfolio-card:nth-child(5)  { animation-delay: 0.16s; }
+                .portfolio-card:nth-child(6)  { animation-delay: 0.2s; }
+                .portfolio-card:nth-child(7)  { animation-delay: 0.24s; }
+                .portfolio-card:nth-child(8)  { animation-delay: 0.28s; }
+                .portfolio-card:nth-child(n+9) { animation-delay: 0.3s; }
+            `}</style>
 
             <main className="min-h-screen bg-[#F2F0E9]">
                 {/* Hero Header */}
                 <section className="relative px-6 pt-40 pb-20 text-center overflow-hidden">
-                    {/* Background Noise with low opacity */}
                     <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
                         style={{ backgroundImage: 'url("/images/noise.png")', backgroundRepeat: "repeat" }}>
                     </div>
 
-                    {/* Decorative Top-Right Header: Rotating Henna Mandala */}
                     <motion.div
                         className="absolute -top-[100px] -right-[100px] md:-top-[250px] md:-right-[250px] w-[400px] h-[400px] md:w-[900px] md:h-[900px] pointer-events-none opacity-100 z-0"
                         animate={{ rotate: 360 }}
@@ -160,86 +280,65 @@ export default function PortfolioTemplate() {
                     </motion.div>
                 </section>
 
-                {/* Masonry Gallery */}
-                <section className="px-4 pb-32">
-                    <div className="mx-auto max-w-[1400px]">
-                        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-                            {portfolioImages.map((src, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="break-inside-avoid relative group cursor-zoom-in"
-                                    initial={{ opacity: 0, y: 40 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "100px" }}
-                                    transition={{ duration: 0.6, delay: 0.1 }}
-                                    onClick={() => setSelectedImage(src)}
-                                >
-                                    {/* Image Wrapper */}
-                                    <div className="relative overflow-hidden rounded-lg bg-charcoal/5">
-                                        <Image
-                                            src={src}
-                                            alt="Mayuri Portfolio"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
-                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                        />
-
-                                        {/* Hover Overlay */}
-                                        <div className="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                                            <div className="h-12 w-12 rounded-full bg-white/90 flex items-center justify-center text-charcoal shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
-                                                <span className="text-xl">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                {/* Masonry Gallery – manual column distribution for row-first order */}
+                <MasonryGallery items={portfolioMedia} onSelect={setSelectedMedia} />
 
                 {/* Lightbox Modal */}
-                {selectedImage && (
-                    <motion.div
-                        className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0a0a]/95 backdrop-blur-sm p-4 md:p-10"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setSelectedImage(null)}
-                    >
-                        <motion.button
-                            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[110]"
-                            onClick={() => setSelectedImage(null)}
-                            whileHover={{ scale: 1.1 }}
-                        >
-                            <svg className="w-8 h-8 md:w-12 md:h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </motion.button>
-
+                <AnimatePresence>
+                    {selectedMedia && (
                         <motion.div
-                            className="relative max-w-7xl w-full h-full flex items-center justify-center"
-                            initial={{ scale: 0.95, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 0.3 }}
+                            className="fixed inset-0 z-[150] flex items-center justify-center bg-[#0a0a0a]/95 backdrop-blur-sm p-2 md:p-10"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedMedia(null)}
                         >
-                            <Image
-                                src={selectedImage}
-                                alt="Portfolio Fullscreen"
-                                width={1600}
-                                height={2000}
-                                className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm"
-                                quality={100}
-                            />
-                        </motion.div>
+                            <motion.button
+                                className="absolute top-4 right-4 md:top-8 md:right-8 text-white/50 hover:text-white active:text-white transition-colors z-[160]"
+                                onClick={() => setSelectedMedia(null)}
+                                whileHover={{ scale: 1.1 }}
+                            >
+                                <svg className="w-8 h-8 md:w-12 md:h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </motion.button>
 
-                        <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none">
-                            <span className="font-sans text-xs tracking-widest text-white/40 uppercase">
-                                Mayuri Kakkad Portfolio
-                            </span>
-                        </div>
-                    </motion.div>
-                )}
+                            <motion.div
+                                className="relative max-w-7xl w-full h-full flex items-center justify-center"
+                                initial={{ scale: 0.95, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.3 }}
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                {isVideo(selectedMedia) ? (
+                                    <video
+                                        src={selectedMedia}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm"
+                                    />
+                                ) : (
+                                    <Image
+                                        src={selectedMedia}
+                                        alt="Portfolio Fullscreen"
+                                        width={1600}
+                                        height={2000}
+                                        className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm"
+                                        quality={100}
+                                    />
+                                )}
+                            </motion.div>
+
+                            <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none">
+                                <span className="font-sans text-xs tracking-widest text-white/40 uppercase">
+                                    Mayuri Kakkad Portfolio
+                                </span>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </main>
 
             <Footer />

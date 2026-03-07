@@ -49,7 +49,7 @@ export default function HennaCursor() {
         <>
             {/* Main cursor */}
             <motion.div
-                className="pointer-events-none fixed z-50"
+                className="pointer-events-none fixed z-[200]"
                 style={{
                     left: position.x,
                     top: position.y,
