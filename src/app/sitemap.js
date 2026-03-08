@@ -1,7 +1,7 @@
 import { posts } from "./blog/posts";
 
 export default function sitemap() {
-    const baseUrl = 'https://www.mayurikakkad.com';
+    const baseUrl = 'https://www.mkbridalstudio.com';
 
     const staticPages = [
         {

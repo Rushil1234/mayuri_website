@@ -13,9 +13,9 @@ export default function Home() {
         "@type": "BeautySalon",
         "name": "MK Studio Bridal",
         "alternateName": ["Mayuri Kakkad Bridal Studio", "MK Bridal Studio Pittsburgh"],
-        "image": "https://www.mayurikakkad.com/images/hero-bridal.jpg",
+        "image": "https://www.mkbridalstudio.com/images/hero-bridal.jpg",
         "description": "MK Studio Bridal is Pittsburgh's premier South Asian bridal makeup and mehndi studio, led by Mayuri Kakkad with 27+ years of experience. Specializing in Indian, Gujarati, and South Indian bridal makeup, intricate henna art, and bridal hair styling. Rated 5.0 stars from 47 verified reviews. Serves brides across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.",
-        "url": "https://www.mayurikakkad.com",
+        "url": "https://www.mkbridalstudio.com",
         "telephone": "+12019126702",
         "email": "mayurikakkad@gmail.com",
         "address": {
@@ -131,7 +131,7 @@ export default function Home() {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mayurikakkad.com" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mkbridalstudio.com" }
         ]
       }
     ]

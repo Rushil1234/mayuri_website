@@ -36,6 +36,6 @@ export default function robots() {
                 allow: '/',
             },
         ],
-        sitemap: 'https://www.mayurikakkad.com/sitemap.xml',
+        sitemap: 'https://www.mkbridalstudio.com/sitemap.xml',
     }
 }

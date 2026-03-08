@@ -40,16 +40,16 @@ export const metadata = {
   keywords: ["south asian bridal makeup pittsburgh", "indian makeup artist pittsburgh", "bridal mehndi pittsburgh", "south indian bridal makeup", "gujarati bridal makeup", "henna artist pittsburgh pa", "bridal hair styling pittsburgh", "wedding makeup artist pittsburgh", "mehndi artist near me", "best bridal makeup pittsburgh", "indian wedding makeup", "bridal henna near me", "Mayuri Kakkad", "MK Studio Bridal"],
   siteName: "MK Studio Bridal",
   authors: [{ name: "Mayuri Kakkad" }],
-  metadataBase: new URL('https://www.mayurikakkad.com'),
+  metadataBase: new URL('https://www.mkbridalstudio.com'),
   openGraph: {
     title: "Best South Asian Bridal Makeup & Mehndi Artist Pittsburgh | MK Studio",
     description: "Mayuri Kakkad at MK Studio is Pittsburgh's top-rated South Asian bridal makeup artist & mehndi specialist. 27+ years, 5.0 stars from 47 reviews. Indian, Gujarati & South Indian weddings.",
     type: "website",
     locale: "en_US",
-    url: "https://www.mayurikakkad.com",
+    url: "https://www.mkbridalstudio.com",
     images: [
       {
-        url: "https://www.mayurikakkad.com/images/hero-bridal.jpg",
+        url: "https://www.mkbridalstudio.com/images/hero-bridal.jpg",
         width: 1200,
         height: 630,
         alt: "MK Studio Bridal - South Asian Bridal Makeup & Mehndi Artist in Pittsburgh, PA",
@@ -57,7 +57,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.mayurikakkad.com",
+    canonical: "https://www.mkbridalstudio.com",
   },
   twitter: {
     card: "summary_large_image",
@@ -82,15 +82,15 @@ export default function RootLayout({ children }) {
     "@type": "WebSite",
     "name": "MK Studio Bridal",
     "alternateName": ["Mayuri Kakkad Bridal Studio", "MK Bridal Studio Pittsburgh"],
-    "url": "https://www.mayurikakkad.com",
+    "url": "https://www.mkbridalstudio.com",
     "description": "MK Studio Bridal is Pittsburgh's premier South Asian bridal makeup artist & mehndi specialist. Led by Mayuri Kakkad with 27+ years of experience since 1997, serving brides across the Northeast United States.",
     "publisher": {
       "@type": "Organization",
       "name": "MK Studio Bridal",
-      "url": "https://www.mayurikakkad.com",
+      "url": "https://www.mkbridalstudio.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.mayurikakkad.com/images/Mayuri.png"
+        "url": "https://www.mkbridalstudio.com/images/Mayuri.png"
       },
       "foundingDate": "1997"
     },
@@ -102,8 +102,8 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "MK Studio Bridal",
-    "url": "https://www.mayurikakkad.com",
-    "logo": "https://www.mayurikakkad.com/images/Mayuri.png",
+    "url": "https://www.mkbridalstudio.com",
+    "logo": "https://www.mkbridalstudio.com/images/Mayuri.png",
     "sameAs": [
       "https://www.instagram.com/mkbridalstudio",
       "https://www.facebook.com/MayuriBridalstudio/"

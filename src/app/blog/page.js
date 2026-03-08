@@ -10,11 +10,11 @@ export const metadata = {
         title: "Henna & Bridal Beauty Blog | MK Studio",
         description:
             "Expert tips on bridal henna, mehndi aftercare, design traditions, and South Asian wedding beauty.",
-        url: "https://www.mayurikakkad.com/blog",
+        url: "https://www.mkbridalstudio.com/blog",
         type: "website",
     },
     alternates: {
-        canonical: "https://www.mayurikakkad.com/blog",
+        canonical: "https://www.mkbridalstudio.com/blog",
     },
 };
 
@@ -34,16 +34,16 @@ export default function BlogPage() {
                 name: "MK Studio Henna & Bridal Beauty Blog",
                 description:
                     "Expert tips on bridal henna, mehndi aftercare, design traditions, and South Asian wedding beauty.",
-                url: "https://www.mayurikakkad.com/blog",
+                url: "https://www.mkbridalstudio.com/blog",
                 author: {
                     "@type": "Person",
                     name: "Mayuri Kakkad",
-                    url: "https://www.mayurikakkad.com/about",
+                    url: "https://www.mkbridalstudio.com/about",
                 },
                 publisher: {
                     "@type": "Organization",
                     name: "MK Studio Bridal",
-                    url: "https://www.mayurikakkad.com",
+                    url: "https://www.mkbridalstudio.com",
                 },
                 blogPost: posts.map((post) => ({
                     "@type": "BlogPosting",
@@ -51,17 +51,17 @@ export default function BlogPage() {
                     description: post.excerpt,
                     datePublished: post.date,
                     dateModified: post.dateModified || post.date,
-                    image: post.image ? `https://www.mayurikakkad.com${post.image}` : undefined,
-                    url: `https://www.mayurikakkad.com/blog/${post.slug}`,
-                    author: { "@type": "Person", name: "Mayuri Kakkad", url: "https://www.mayurikakkad.com/about" },
+                    image: post.image ? `https://www.mkbridalstudio.com${post.image}` : undefined,
+                    url: `https://www.mkbridalstudio.com/blog/${post.slug}`,
+                    author: { "@type": "Person", name: "Mayuri Kakkad", url: "https://www.mkbridalstudio.com/about" },
                     articleSection: post.category,
                 })),
             },
             {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mayurikakkad.com" },
-                    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mayurikakkad.com/blog" },
+                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mkbridalstudio.com" },
+                    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mkbridalstudio.com/blog" },
                 ],
             },
         ],

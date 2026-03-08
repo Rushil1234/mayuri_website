@@ -4,12 +4,12 @@ export const metadata = {
     title: "Meet Mayuri Kakkad | 27+ Years of Bridal Artistry in Pittsburgh",
     description: "Mayuri Kakkad is a licensed cosmetologist and South Asian bridal makeup & mehndi artist in Pittsburgh with 27+ years of experience. Specializing in Indian, Gujarati & South Indian wedding transformations. Established 1997.",
     alternates: {
-        canonical: "https://www.mayurikakkad.com/about",
+        canonical: "https://www.mkbridalstudio.com/about",
     },
     openGraph: {
         title: "Meet Mayuri Kakkad | Pittsburgh's Most Experienced Bridal Artist",
         description: "27+ years of South Asian bridal makeup & mehndi artistry. Licensed cosmetologist serving brides across the Northeast.",
-        url: "https://www.mayurikakkad.com/about",
+        url: "https://www.mkbridalstudio.com/about",
         type: "profile",
     },
 };
@@ -22,8 +22,8 @@ export default function AboutPage() {
                 "@type": "Person",
                 "name": "Mayuri Kakkad",
                 "jobTitle": "Bridal Makeup & Henna Artist",
-                "url": "https://www.mayurikakkad.com/about",
-                "image": "https://www.mayurikakkad.com/images/Mayuri.png",
+                "url": "https://www.mkbridalstudio.com/about",
+                "image": "https://www.mkbridalstudio.com/images/Mayuri.png",
                 "sameAs": [
                     "https://instagram.com/mkbridalstudio",
                     "https://facebook.com/mayurisstudio"
@@ -31,7 +31,7 @@ export default function AboutPage() {
                 "worksFor": {
                     "@type": "LocalBusiness",
                     "name": "MK Studio Bridal",
-                    "url": "https://www.mayurikakkad.com"
+                    "url": "https://www.mkbridalstudio.com"
                 },
                 "description": "Mayuri Kakkad is Pittsburgh's most experienced South Asian bridal makeup and mehndi artist, with 27+ years of professional artistry since 1997. A licensed cosmetologist based in Western PA, she specializes in Indian, Gujarati, and South Indian bridal transformations. She serves brides across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C., offering bridal makeup, intricate mehndi designs, and hair styling for weddings and special events.",
                 "knowsAbout": [
@@ -68,8 +68,8 @@ export default function AboutPage() {
             {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mayurikakkad.com" },
-                    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.mayurikakkad.com/about" }
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mkbridalstudio.com" },
+                    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.mkbridalstudio.com/about" }
                 ]
             }
         ]

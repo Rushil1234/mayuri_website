@@ -4,12 +4,12 @@ export const metadata = {
     title: "Book South Asian Bridal Makeup & Mehndi in Pittsburgh",
     description: "Inquire about bridal makeup, mehndi, and hair styling packages with Mayuri Kakkad in Pittsburgh. Travel-friendly for PA, NJ, NY, OH & DC weddings. Bridal trials available.",
     alternates: {
-        canonical: "https://www.mayurikakkad.com/contact",
+        canonical: "https://www.mkbridalstudio.com/contact",
     },
     openGraph: {
         title: "Book Your Bridal Consultation | MK Studio Pittsburgh",
         description: "Request a quote for bridal makeup, mehndi & hair in Pittsburgh. Travel available across the Northeast.",
-        url: "https://www.mayurikakkad.com/contact",
+        url: "https://www.mkbridalstudio.com/contact",
         type: "website",
     },
 };
@@ -22,15 +22,15 @@ export default function ContactPage() {
                 "@type": "ContactPage",
                 "name": "Book South Asian Bridal Makeup & Mehndi in Pittsburgh",
                 "description": "Inquire about bridal makeup, mehndi, and hair styling with Mayuri Kakkad at MK Studio. 27+ years experience, 5.0-star rated. Bridal trials available. Travel-friendly across PA, NJ, NY, OH & DC.",
-                "url": "https://www.mayurikakkad.com/contact",
+                "url": "https://www.mkbridalstudio.com/contact",
                 "mainEntity": {
                     "@type": "LocalBusiness",
                     "name": "MK Studio Bridal",
                     "telephone": "+12019126702",
                     "email": "mayurikakkad@gmail.com",
-                    "url": "https://www.mayurikakkad.com",
+                    "url": "https://www.mkbridalstudio.com",
                     "priceRange": "$$",
-                    "image": "https://www.mayurikakkad.com/images/Mayuri.png",
+                    "image": "https://www.mkbridalstudio.com/images/Mayuri.png",
                     "address": {
                         "@type": "PostalAddress",
                         "addressLocality": "Pittsburgh",
@@ -67,8 +67,8 @@ export default function ContactPage() {
             {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mayurikakkad.com" },
-                    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.mayurikakkad.com/contact" }
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mkbridalstudio.com" },
+                    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.mkbridalstudio.com/contact" }
                 ]
             }
         ]

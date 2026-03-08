@@ -15,12 +15,12 @@ export async function generateMetadata({ params }) {
         title: `${post.title} | MK Studio Blog`,
         description: post.excerpt,
         alternates: {
-            canonical: `https://www.mayurikakkad.com/blog/${post.slug}`,
+            canonical: `https://www.mkbridalstudio.com/blog/${post.slug}`,
         },
         openGraph: {
             title: post.title,
             description: post.excerpt,
-            url: `https://www.mayurikakkad.com/blog/${post.slug}`,
+            url: `https://www.mkbridalstudio.com/blog/${post.slug}`,
             type: "article",
             publishedTime: post.date,
         },
@@ -54,13 +54,13 @@ export default async function BlogPostPage({ params }) {
                 description: post.excerpt,
                 datePublished: post.date,
                 dateModified: post.dateModified || post.date,
-                image: post.image ? `https://www.mayurikakkad.com${post.image}` : undefined,
+                image: post.image ? `https://www.mkbridalstudio.com${post.image}` : undefined,
                 author: {
                     "@type": "Person",
                     name: "Mayuri Kakkad",
-                    url: "https://www.mayurikakkad.com/about",
+                    url: "https://www.mkbridalstudio.com/about",
                     jobTitle: "Bridal Makeup & Mehndi Artist",
-                    image: "https://www.mayurikakkad.com/images/Mayuri.png",
+                    image: "https://www.mkbridalstudio.com/images/Mayuri.png",
                     knowsAbout: ["South Asian bridal makeup", "bridal mehndi", "henna art", "bridal hair styling", "Indian wedding beauty"],
                     sameAs: [
                         "https://instagram.com/mkbridalstudio",
@@ -70,14 +70,14 @@ export default async function BlogPostPage({ params }) {
                 publisher: {
                     "@type": "Organization",
                     name: "MK Studio Bridal",
-                    url: "https://www.mayurikakkad.com",
+                    url: "https://www.mkbridalstudio.com",
                     logo: {
                         "@type": "ImageObject",
-                        url: "https://www.mayurikakkad.com/images/Mayuri.png"
+                        url: "https://www.mkbridalstudio.com/images/Mayuri.png"
                     },
                     foundingDate: "1997"
                 },
-                mainEntityOfPage: `https://www.mayurikakkad.com/blog/${post.slug}`,
+                mainEntityOfPage: `https://www.mkbridalstudio.com/blog/${post.slug}`,
                 articleBody: post.content.filter((b) => b.type === "text").map((b) => b.body).join(" "),
                 wordCount: post.content.filter((b) => b.type === "text").map((b) => b.body).join(" ").split(/\s+/).length,
                 articleSection: post.category,
@@ -93,15 +93,15 @@ export default async function BlogPostPage({ params }) {
                 isPartOf: {
                     "@type": "Blog",
                     name: "MK Studio Henna & Bridal Beauty Blog",
-                    url: "https://www.mayurikakkad.com/blog"
+                    url: "https://www.mkbridalstudio.com/blog"
                 }
             },
             {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mayurikakkad.com" },
-                    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mayurikakkad.com/blog" },
-                    { "@type": "ListItem", position: 3, name: post.title, item: `https://www.mayurikakkad.com/blog/${post.slug}` }
+                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mkbridalstudio.com" },
+                    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mkbridalstudio.com/blog" },
+                    { "@type": "ListItem", position: 3, name: post.title, item: `https://www.mkbridalstudio.com/blog/${post.slug}` }
                 ]
             },
             ...(faqSchema ? [faqSchema] : [])
