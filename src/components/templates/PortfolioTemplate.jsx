@@ -169,7 +169,7 @@ function GalleryCard({ src, onClick }) {
                 ) : (
                     <Image
                         src={src}
-                        alt="Mayuri Portfolio"
+                        alt="Bridal makeup and mehndi work by Mayuri Kakkad"
                         width={600}
                         height={800}
                         className="w-full h-auto block transition-transform duration-700 ease-in-out group-hover:scale-105"
@@ -277,6 +277,9 @@ export default function PortfolioTemplate() {
                         <p className="font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-charcoal/60 max-w-md mx-auto leading-loose">
                             A curated archive of bridal elegance, intricate henna, and timeless beauty.
                         </p>
+                        <p className="sr-only">
+                            Browse the bridal makeup and mehndi portfolio of Mayuri Kakkad at MK Studio in Pittsburgh, Pennsylvania. This gallery features real South Asian brides — Indian, Gujarati, and South Indian — showcasing bridal makeup, intricate henna designs, luxury hair styling, engagement and sangeet looks, haldi ceremony makeup, and reception transformations. With 27+ years of experience and a 5.0-star rating from 47 verified reviews, Mayuri specializes in soft glam bridal makeup, full glam bridal makeup, Gujarati mehndi, Rajasthani mehndi, Arabic henna, and bridal hairstyling including updos, dupatta setting, and passa and tikka placement. Available for weddings across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
+                        </p>
                     </motion.div>
                 </section>
 
@@ -322,7 +325,7 @@ export default function PortfolioTemplate() {
                                 ) : (
                                     <Image
                                         src={selectedMedia}
-                                        alt="Portfolio Fullscreen"
+                                        alt="Full view of bridal makeup and mehndi portfolio piece"
                                         width={1600}
                                         height={2000}
                                         className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm"

@@ -14,6 +14,9 @@ export async function generateMetadata({ params }) {
     return {
         title: `${post.title} | MK Studio Blog`,
         description: post.excerpt,
+        alternates: {
+            canonical: `https://www.mayurikakkad.com/blog/${post.slug}`,
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,
@@ -29,20 +32,80 @@ export default async function BlogPostPage({ params }) {
     const post = getPostBySlug(slug);
     if (!post) notFound();
 
+    const faqBlock = post.content.find((b) => b.type === "faq");
+    const faqSchema = faqBlock ? {
+        "@type": "FAQPage",
+        mainEntity: faqBlock.items.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.a
+            }
+        }))
+    } : null;
+
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: post.title,
-        description: post.excerpt,
-        datePublished: post.date,
-        author: { "@type": "Person", name: "Mayuri Kakkad" },
-        publisher: {
-            "@type": "Organization",
-            name: "MK Studio Bridal",
-            url: "https://www.mayurikakkad.com",
-        },
-        mainEntityOfPage: `https://www.mayurikakkad.com/blog/${post.slug}`,
-        articleBody: post.content.filter((b) => b.type === "text").map((b) => b.body).join(" "),
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                headline: post.title,
+                description: post.excerpt,
+                datePublished: post.date,
+                dateModified: post.dateModified || post.date,
+                image: post.image ? `https://www.mayurikakkad.com${post.image}` : undefined,
+                author: {
+                    "@type": "Person",
+                    name: "Mayuri Kakkad",
+                    url: "https://www.mayurikakkad.com/about",
+                    jobTitle: "Bridal Makeup & Mehndi Artist",
+                    image: "https://www.mayurikakkad.com/images/Mayuri.png",
+                    knowsAbout: ["South Asian bridal makeup", "bridal mehndi", "henna art", "bridal hair styling", "Indian wedding beauty"],
+                    sameAs: [
+                        "https://instagram.com/mkbridalstudio",
+                        "https://www.facebook.com/MayuriBridalstudio/"
+                    ]
+                },
+                publisher: {
+                    "@type": "Organization",
+                    name: "MK Studio Bridal",
+                    url: "https://www.mayurikakkad.com",
+                    logo: {
+                        "@type": "ImageObject",
+                        url: "https://www.mayurikakkad.com/images/Mayuri.png"
+                    },
+                    foundingDate: "1997"
+                },
+                mainEntityOfPage: `https://www.mayurikakkad.com/blog/${post.slug}`,
+                articleBody: post.content.filter((b) => b.type === "text").map((b) => b.body).join(" "),
+                wordCount: post.content.filter((b) => b.type === "text").map((b) => b.body).join(" ").split(/\s+/).length,
+                articleSection: post.category,
+                inLanguage: "en-US",
+                about: {
+                    "@type": "Thing",
+                    name: post.category === "Makeup" ? "South Asian bridal makeup" : post.category === "Aftercare" ? "bridal henna aftercare" : post.category === "Education" ? "natural henna ingredients" : "bridal mehndi traditions"
+                },
+                speakable: {
+                    "@type": "SpeakableSpecification",
+                    cssSelector: ["h1", "article p:first-of-type"]
+                },
+                isPartOf: {
+                    "@type": "Blog",
+                    name: "MK Studio Henna & Bridal Beauty Blog",
+                    url: "https://www.mayurikakkad.com/blog"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mayurikakkad.com" },
+                    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mayurikakkad.com/blog" },
+                    { "@type": "ListItem", position: 3, name: post.title, item: `https://www.mayurikakkad.com/blog/${post.slug}` }
+                ]
+            },
+            ...(faqSchema ? [faqSchema] : [])
+        ]
     };
 
     return (
@@ -94,11 +157,28 @@ export default async function BlogPostPage({ params }) {
 
                     <article className="space-y-6">
                         {post.content.map((block, i) => {
+                            if (block.type === "summary") {
+                                return (
+                                    <div key={i} className="bg-[#FBF6F0] border border-[#D4C5B0] rounded-xl px-6 py-5 mb-8">
+                                        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#8B7355] mb-2">Key Takeaway</p>
+                                        <p className="text-[#1a1a1a] font-sans text-base leading-[1.8]">
+                                            {block.body}
+                                        </p>
+                                    </div>
+                                );
+                            }
                             if (block.type === "heading") {
                                 return (
                                     <h2 key={i} style={{ fontSize: '1.375rem', lineHeight: '1.4' }} className="font-serif text-[#1a1a1a] mt-10 mb-2">
                                         {block.body}
                                     </h2>
+                                );
+                            }
+                            if (block.type === "subheading") {
+                                return (
+                                    <h3 key={i} className="font-serif text-lg text-[#1a1a1a] mt-6 mb-1">
+                                        {block.body}
+                                    </h3>
                                 );
                             }
                             if (block.type === "image") {
@@ -114,6 +194,36 @@ export default async function BlogPostPage({ params }) {
                                     </div>
                                 );
                             }
+                            if (block.type === "list") {
+                                return (
+                                    <ul key={i} className="list-disc pl-6 space-y-2 text-[#444] font-sans text-base leading-[1.8]">
+                                        {block.items.map((item, j) => (
+                                            <li key={j}>{item}</li>
+                                        ))}
+                                    </ul>
+                                );
+                            }
+                            if (block.type === "faq") {
+                                return (
+                                    <section key={i} className="mt-12 pt-8 border-t border-[#8B7355]/10">
+                                        <h2 style={{ fontSize: '1.375rem', lineHeight: '1.4' }} className="font-serif text-[#1a1a1a] mb-6">
+                                            Frequently Asked Questions
+                                        </h2>
+                                        <dl className="space-y-6">
+                                            {block.items.map((faq, j) => (
+                                                <div key={j}>
+                                                    <dt className="font-sans text-base font-semibold text-[#1a1a1a] mb-1">
+                                                        {faq.q}
+                                                    </dt>
+                                                    <dd className="text-[#444] font-sans text-base leading-[1.8]">
+                                                        {faq.a}
+                                                    </dd>
+                                                </div>
+                                            ))}
+                                        </dl>
+                                    </section>
+                                );
+                            }
                             if (block.type === "callout") {
                                 return (
                                     <div key={i} className="bg-[#F5EDE4] border-l-3 border-[#8B7355] rounded-r-xl px-6 py-5 my-8">
@@ -121,6 +231,20 @@ export default async function BlogPostPage({ params }) {
                                             {block.body}
                                         </p>
                                     </div>
+                                );
+                            }
+                            if (block.type === "references") {
+                                return (
+                                    <section key={i} className="mt-12 pt-8 border-t border-[#8B7355]/10">
+                                        <h2 style={{ fontSize: '1.125rem', lineHeight: '1.4' }} className="font-serif text-[#1a1a1a] mb-4">
+                                            References
+                                        </h2>
+                                        <ol className="list-decimal pl-6 space-y-2 text-[#8B7355]/80 font-sans text-sm leading-[1.7]">
+                                            {block.items.map((ref, j) => (
+                                                <li key={j}>{ref}</li>
+                                            ))}
+                                        </ol>
+                                    </section>
                                 );
                             }
                             return (

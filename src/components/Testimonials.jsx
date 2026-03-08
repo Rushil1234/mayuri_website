@@ -140,13 +140,20 @@ function StarRating() {
     );
 }
 
-function Initials({ name }) {
+const avatarColors = [
+    "bg-[#C9A87C]", "bg-[#8B6F5A]", "bg-[#A68B6B]", "bg-[#7A6350]",
+    "bg-[#B89B7A]", "bg-[#9C7E63]", "bg-[#6B5340]", "bg-[#D4B896]",
+    "bg-[#8C7560]", "bg-[#A0826A]", "bg-[#C4A882]", "bg-[#7E6652]",
+];
+
+function Initials({ name, index }) {
     const parts = name.split(" ");
     const initials = parts.length >= 2
         ? parts[0][0] + parts[parts.length - 1][0]
         : parts[0][0];
+    const color = avatarColors[index % avatarColors.length];
     return (
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-antique-gold/15 font-sans text-xs font-bold uppercase tracking-wide text-antique-gold">
+        <div className={`flex h-10 w-10 items-center justify-center rounded-full ${color} font-sans text-xs font-bold uppercase tracking-wide text-white shadow-sm`}>
             {initials}
         </div>
     );
@@ -172,7 +179,7 @@ const TestimonialCard = ({ t }) => (
                     />
                 </div>
             ) : (
-                <Initials name={t.name} />
+                <Initials name={t.name} index={t.id} />
             )}
             <div>
                 <h4 className="font-sans text-xs font-bold uppercase tracking-wide text-charcoal">

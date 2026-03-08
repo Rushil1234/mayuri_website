@@ -46,7 +46,7 @@ export default function TimelessGlamour() {
                     >
                         <Image
                             src="/images/timeless-main.jpg"
-                            alt="Timeless Beauty"
+                            alt="South Asian bride with elegantly styled bridal makeup by Mayuri Kakkad"
                             fill
                             className="object-cover transition-transform duration-700 hover:scale-105"
                         />
@@ -95,7 +95,7 @@ export default function TimelessGlamour() {
                     >
                         <Image
                             src="/images/henna-1.jpg"
-                            alt="Intricate Details"
+                            alt="Intricate bridal mehndi design on hands by MK Studio"
                             fill
                             className="object-cover"
                         />

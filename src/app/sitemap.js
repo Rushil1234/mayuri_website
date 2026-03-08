@@ -1,36 +1,47 @@
-export default function sitemap() {
-    const baseUrl = 'https://www.mayurikakkad.com'; // Replace with actual domain
+import { posts } from "./blog/posts";
 
-    return [
+export default function sitemap() {
+    const baseUrl = 'https://www.mayurikakkad.com';
+
+    const staticPages = [
         {
             url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 1,
+            lastModified: new Date('2025-03-07'),
+            priority: 1.0,
         },
         {
             url: `${baseUrl}/about`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
+            lastModified: new Date('2025-03-07'),
             priority: 0.8,
         },
         {
             url: `${baseUrl}/portfolio`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
+            lastModified: new Date('2025-03-07'),
+            priority: 0.9,
         },
         {
             url: `${baseUrl}/contact`,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.5,
+            lastModified: new Date('2025-03-07'),
+            priority: 0.8,
         },
         {
             url: `${baseUrl}/blog`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
+            lastModified: new Date(
+                posts.reduce((latest, p) => {
+                    const d = p.dateModified || p.date;
+                    return d > latest ? d : latest;
+                }, posts[0].date)
+            ),
+            priority: 0.7,
         },
     ];
+
+    const blogPages = posts.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.dateModified || post.date),
+        priority: 0.6,
+        images: post.image ? [`${baseUrl}${post.image}`] : [],
+    }));
+
+    return [...staticPages, ...blogPages];
 }

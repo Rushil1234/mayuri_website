@@ -8,6 +8,7 @@ const navLinks = [
     { label: "Portfolio", href: "/portfolio" },
     { label: "Services", href: "/#services" },
     { label: "Contact", href: "/contact" },
+    { label: "Blog", href: "/blog" },
 ];
 
 export default function Footer() {
@@ -44,9 +45,9 @@ export default function Footer() {
                     <Link href="/contact" scroll={true} className="block cursor-pointer transition-transform hover:scale-105 active:scale-95"
                     >
                         {/* The "font uptop" - Amsterdam */}
-                        <h1 className="font-hero-brand text-[8rem] leading-[0.8] text-antique-gold md:text-[12rem] lg:text-[15rem]">
+                        <span className="block font-hero-brand text-[8rem] leading-[0.8] text-antique-gold md:text-[12rem] lg:text-[15rem]">
                             MK Bride
-                        </h1>
+                        </span>
                     </Link>
                 </motion.div>
 
@@ -95,9 +96,7 @@ export default function Footer() {
                 {/* Copyright - Below the line */}
                 <div className="border-t border-white/10 pt-8">
                     <p className="font-sans text-[10px] tracking-widest text-white/30 uppercase">
-                        © {currentYear} Mayuri Kakkad • Crafted with ♡ •{' '}
-                        <Link href="/blog" className="hover:text-gray/100 transition-colors not-italic normal-case text-[23px]" style={{ fontFamily: 'serif' }}>𝓑</Link>
-                    </p>
+                        © {currentYear} Mayuri Kakkad • Crafted with ♡ </p>
                 </div>
             </div>
         </footer>

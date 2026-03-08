@@ -8,19 +8,19 @@ const services = [
     {
         id: 1,
         name: "Make-Up",
-        description: "I am a professional makeup artist with years of experience in the industry. I specialize in creating stunning makeup looks that enhance your natural features and make you feel confident and beautiful. Whether you're getting ready for a special occasion or just want to treat yourself to a glam makeover, I can help you achieve the perfect look. From classic bridal makeup to bold and edgy editorial looks, I have a wide range of skills and techniques to suit any style.",
+        description: "Mayuri Kakkad is a professional bridal makeup artist in Pittsburgh with 27+ years of experience specializing in South Asian bridal makeup. She creates flawless, long-lasting looks for Indian, Gujarati, and South Indian brides — from soft glam and natural bridal makeup to full glam and traditional red bridal looks. Services include ceremony makeup, reception glam, sangeet makeup, haldi makeup, engagement makeup, and bridal party makeup. She uses airbrush techniques and products designed for melanin-rich skin tones that photograph beautifully and last all day.",
         popular: false,
     },
     {
         id: 2,
         name: "Hair Styling",
-        description: "Multi certified hairstylist with a passion for delivering hair artistry and service excellence exceeding client expectations. Blend creativity, vision, and skill with strengths in achieving custom cut, color, and design solutions meeting client needs and lifestyles. Gladfully working with brides for their special occasions. I believing in building of lasting relationships and loyal clientele.",
+        description: "Multi-certified bridal hairstylist in Pittsburgh offering elegant South Asian bridal hairstyles. Specialties include classic bridal buns with passa and tikka setting, dupatta draping and styling, bridal updos for lehenga, reception hairstyles, and modern South Asian bridal hair. From traditional Indian bridal hair to contemporary flowing styles, every look is tailored to complement your outfit and jewelry for ceremony, sangeet, and reception events.",
         popular: true,
     },
     {
         id: 3,
         name: "Mehendi / Henna",
-        description: "I am also a skilled Mehendi artist with a passion for creating intricate and beautiful designs. From traditional bridal Mehendi to contemporary patterns and designs, I can create a wide range of styles to suit any taste. Using only the finest quality henna, I ensure that each design is rich in color and long-lasting. My Packages depend on the style and length of the Mehendi on arms and legs. I take great pride in my work and strive to make each Mehendi experience a special and memorable one for my clients.",
+        description: "Mayuri is one of Pittsburgh's most experienced bridal mehndi artists, creating intricate bridal henna designs using 100% natural henna paste. She specializes in Gujarati mehndi (bold florals with mirror-like symmetry), Rajasthani mehndi (intricate full coverage), Arabic henna designs, and modern fusion patterns. Full bridal mehndi packages include coverage from fingertips to elbows. She also offers mehndi for wedding guests, engagement henna, and henna for sangeet and mehndi night celebrations. Her natural paste produces the darkest, richest stains.",
         popular: false,
     },
 ];
@@ -103,7 +103,7 @@ export default function Services() {
                 </div>
 
                 {/* Centered CTA Button */}
-                <div className="mt-20 flex justify-center">
+                <div className="mt-12 flex justify-center">
                     <MagneticButton
                         href="/contact"
                         variant="secondary"

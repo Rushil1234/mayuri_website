@@ -79,9 +79,12 @@ export default function AboutTemplate() {
                                 Mayuri <br /> <span className="italic text-antique-gold">Kakkad</span>
                             </h2>
                             <p className="font-sans text-charcoal/70 text-lg leading-relaxed max-w-md mx-auto md:mx-0">
-                                A celebrated cosmetologist and mehendi artist bringing
-                                <span className="font-serif italic text-xl px-1">27 years</span>
-                                of artistry to life. Based in Western PA, crafting timeless beauty for brides across the Northeast.
+                                A licensed cosmetologist and mehendi artist bringing
+                                <span className="font-serif italic text-xl px-1">27+ years</span>
+                                of artistry to life. Established in 1997, based in Pittsburgh, PA — crafting timeless beauty for South Asian brides across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
+                            </p>
+                            <p className="sr-only">
+                                Mayuri Kakkad is the founder and lead artist at MK Studio Bridal in Pittsburgh, Pennsylvania. She is a licensed cosmetologist with 27+ years of experience in South Asian bridal makeup, mehndi (henna) artistry, and bridal hair styling. Established in 1997, MK Studio holds a 5.0-star rating from 47 verified reviews. Mayuri specializes in Indian bridal makeup, Gujarati bridal makeup, South Indian bridal makeup, soft glam and natural looks, full glam transformations, airbrush techniques for melanin-rich skin tones, Gujarati mehndi patterns, Rajasthani mehndi designs, Arabic henna, and bridal hairstyling including updos, dupatta setting, and bridal jewelry placement. She is available for weddings in Pittsburgh, all of Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
                             </p>
 
                             {/* Henna Pattern Flow */}
@@ -314,7 +317,7 @@ export default function AboutTemplate() {
                                 <h3 className="font-serif text-3xl text-charcoal mb-4">Roots & Rhythm</h3>
                                 <p className="font-sans text-charcoal/70 leading-relaxed">
                                     Born and raised in the vibrant city of Hyderabad, India, art runs through my veins.
-                                    Beyond the brush and cone, I am a classical dancer—finding rhythm in movement just as I find flow in henna patterns.
+                                    I began my journey in beauty artistry in 1997, training as a licensed cosmetologist while also pursuing classical dance — finding rhythm in movement just as I find flow in henna patterns.
                                 </p>
                             </div>
                             {/* Connector Dot */}
@@ -366,8 +369,7 @@ export default function AboutTemplate() {
                                 <span className="text-[6rem] font-serif leading-none text-antique-gold/20 absolute -top-12 md:-right-4 right-0 -z-10">03</span>
                                 <h3 className="font-serif text-3xl text-charcoal mb-4">The Craft</h3>
                                 <p className="font-sans text-charcoal/70 leading-relaxed">
-                                    Adorning a bride is a sacred trust. I strive to create designs that aren't just beautiful,
-                                    but are whispered blessings—bringing out your inner radiance and marking the beginning of a beautiful journey.
+                                    Adorning a bride is a sacred trust. Over 27+ years, I have perfected bridal makeup for melanin-rich skin tones, intricate Gujarati and Rajasthani mehndi designs, and elegant bridal hairstyling — each one a whispered blessing, bringing out your inner radiance and marking the beginning of a beautiful journey.
                                 </p>
                             </div>
                             {/* Connector Dot */}

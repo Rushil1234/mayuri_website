@@ -109,7 +109,7 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Final CTA */}
-                <motion.div className="mt-40 text-center">
+                <motion.div className="mt-16 text-center">
                     <Link
                         href="/contact"
                         className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-charcoal px-12 py-5 font-sans text-xs font-bold uppercase tracking-[0.25em] text-white transition-all hover:bg-antique-gold"

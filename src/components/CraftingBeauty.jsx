@@ -52,13 +52,13 @@ export default function CraftingBeauty() {
                             <div className="absolute left-0 top-2 h-full w-px bg-antique-gold/30"></div>
 
                             <p>
-                                I have been a makeup and Mehendi artist for <span className="font-bold text-charcoal">27 years</span>.
+                                I have been a makeup and Mehendi artist for <span className="font-bold text-charcoal">27 years</span>, serving brides across Pittsburgh and the Northeast United States since 1997.
                             </p>
                             <p>
-                                I take pride in adorning brides and clients with stunning designs that bring out their inner beauty and express their unique personalities.
+                                As a licensed cosmetologist, I specialize in South Asian bridal makeup, intricate mehndi designs, and bridal hair styling for Indian, Gujarati, and South Indian weddings.
                             </p>
                             <p>
-                                I have always been committed to providing artistic and professional services to make my clients' experience with makeup and Mehendi unforgettable.
+                                With a 5-star rating from 47 verified reviews, I take pride in creating looks that are both flawless and deeply personal — honoring each bride's heritage and individual beauty.
                             </p>
                         </div>
 

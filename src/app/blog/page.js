@@ -13,6 +13,9 @@ export const metadata = {
         url: "https://www.mayurikakkad.com/blog",
         type: "website",
     },
+    alternates: {
+        canonical: "https://www.mayurikakkad.com/blog",
+    },
 };
 
 const categoryColors = {
@@ -25,28 +28,43 @@ const categoryColors = {
 export default function BlogPage() {
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "Blog",
-        name: "MK Studio Henna & Bridal Beauty Blog",
-        description:
-            "Expert tips on bridal henna, mehndi aftercare, design traditions, and South Asian wedding beauty.",
-        url: "https://www.mayurikakkad.com/blog",
-        author: {
-            "@type": "Person",
-            name: "Mayuri Kakkad",
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "MK Studio Bridal",
-            url: "https://www.mayurikakkad.com",
-        },
-        blogPost: posts.map((post) => ({
-            "@type": "BlogPosting",
-            headline: post.title,
-            description: post.excerpt,
-            datePublished: post.date,
-            author: { "@type": "Person", name: "Mayuri Kakkad" },
-            articleBody: post.content.filter((b) => b.type === "text").map((b) => b.body).join(" "),
-        })),
+        "@graph": [
+            {
+                "@type": "Blog",
+                name: "MK Studio Henna & Bridal Beauty Blog",
+                description:
+                    "Expert tips on bridal henna, mehndi aftercare, design traditions, and South Asian wedding beauty.",
+                url: "https://www.mayurikakkad.com/blog",
+                author: {
+                    "@type": "Person",
+                    name: "Mayuri Kakkad",
+                    url: "https://www.mayurikakkad.com/about",
+                },
+                publisher: {
+                    "@type": "Organization",
+                    name: "MK Studio Bridal",
+                    url: "https://www.mayurikakkad.com",
+                },
+                blogPost: posts.map((post) => ({
+                    "@type": "BlogPosting",
+                    headline: post.title,
+                    description: post.excerpt,
+                    datePublished: post.date,
+                    dateModified: post.dateModified || post.date,
+                    image: post.image ? `https://www.mayurikakkad.com${post.image}` : undefined,
+                    url: `https://www.mayurikakkad.com/blog/${post.slug}`,
+                    author: { "@type": "Person", name: "Mayuri Kakkad", url: "https://www.mayurikakkad.com/about" },
+                    articleSection: post.category,
+                })),
+            },
+            {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mayurikakkad.com" },
+                    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mayurikakkad.com/blog" },
+                ],
+            },
+        ],
     };
 
     return (

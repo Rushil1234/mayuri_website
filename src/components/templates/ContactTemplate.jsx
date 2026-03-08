@@ -104,6 +104,9 @@ export default function ContactTemplate() {
                         >
                             Let's create something <span className="border-b border-antique-gold">timeless</span> together.
                         </motion.p>
+                        <p className="sr-only">
+                            Book a bridal makeup, mehndi, or hair styling consultation with Mayuri Kakkad at MK Studio in Pittsburgh, PA. Services include bridal makeup trials, wedding-day makeup, bridal mehndi and henna for hands and feet, bridal hair styling, engagement and sangeet makeup, haldi ceremony looks, and reception transformations. Mayuri is a licensed cosmetologist with 27+ years of experience specializing in South Asian bridal beauty. She travels for weddings across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C. Contact by phone at (201) 912-6702 or email mayurikakkad@gmail.com. Bridal trials are available to ensure your perfect wedding-day look.
+                        </p>
                     </div>
 
                     <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
