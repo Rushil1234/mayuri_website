@@ -3,6 +3,7 @@ import ClientCursor from "@/components/ClientCursor";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
+import PreloadPortfolio from "@/components/PreloadPortfolio";
 import "./globals.css";
 
 // Modern, breezy, effortless signature script
@@ -140,6 +141,7 @@ export default function RootLayout({ children }) {
         <ClientCursor />
         <Navbar />
         {children}
+        <PreloadPortfolio />
         <Analytics />
         <SpeedInsights />
       </body>

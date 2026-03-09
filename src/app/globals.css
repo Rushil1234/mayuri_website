@@ -38,7 +38,7 @@
 
   /* Spacing Scale (generous whitespace) */
   --spacing-section: 120px;
-  --spacing-section-mobile: 80px;
+  --spacing-section-mobile: 48px;
   --spacing-element: 48px;
   --spacing-element-small: 24px;
 }
