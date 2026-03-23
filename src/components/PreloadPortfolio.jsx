@@ -40,9 +40,6 @@ export default function PreloadPortfolio() {
 
                             fetch(src, { mode: 'no-cors', priority: 'low' }).catch(() => { });
                         }
-                    } else {
-                        const img = new window.Image();
-                        img.src = src;
                     }
 
                     setTimeout(preloadNext, 100); // 100ms delay to be even gentler on the main thread

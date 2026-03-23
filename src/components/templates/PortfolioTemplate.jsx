@@ -37,7 +37,7 @@ function useColumnCount() {
 }
 
 /* ---- Gallery card (plain DOM, no per-item motion) ---- */
-function GalleryCard({ src, onClick }) {
+function GalleryCard({ src, onClick, priority = false }) {
     const video = isVideo(src);
     return (
         <div
@@ -63,6 +63,7 @@ function GalleryCard({ src, onClick }) {
                         height={800}
                         className="w-full h-auto block transition-transform duration-700 ease-in-out group-hover:scale-105"
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        priority={priority}
                     />
                 )}
 
@@ -88,8 +89,8 @@ function MasonryGallery({ items, onSelect }) {
                 <div className="flex gap-3 md:gap-5 items-start">
                     {columns.map((col, colIdx) => (
                         <div key={colIdx} className="flex-1 min-w-0">
-                            {col.map((src) => (
-                                <GalleryCard key={src} src={src} onClick={onSelect} />
+                            {col.map((src, rowIdx) => (
+                                <GalleryCard key={src} src={src} onClick={onSelect} priority={rowIdx === 0} />
                             ))}
                         </div>
                     ))}
@@ -218,15 +219,26 @@ export default function PortfolioTemplate() {
                                         width={1600}
                                         height={2000}
                                         className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm"
-                                        quality={100}
                                     />
                                 )}
                             </motion.div>
 
-                            <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none">
+                            <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none flex flex-col items-center gap-2">
                                 <span className="font-sans text-xs tracking-widest text-white/40 uppercase">
                                     Mayuri Kakkad Portfolio
                                 </span>
+                                {!isVideo(selectedMedia) && (
+                                    <a
+                                        href={selectedMedia}
+                                        download
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="pointer-events-auto text-xs font-sans text-white/60 hover:text-white underline underline-offset-4 transition-colors"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        View / Download High-Res Original
+                                    </a>
+                                )}
                             </div>
                         </motion.div>
                     )}
