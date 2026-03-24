@@ -42,17 +42,17 @@ export default function Navbar() {
                     <div className="relative h-12 w-12 overflow-hidden rounded-full">
                         <Image
                             src="/images/logo.png"
-                            alt="MK Studio Bridal"
+                            alt="MK Bridal Studio"
                             fill
                             className="object-cover"
                         />
                     </div>
                     <div className="hidden sm:block">
                         <span className="block font-serif text-xl text-charcoal">
-                            MK Studio
+                            MK Bridal
                         </span>
                         <span className="block font-sans text-xs uppercase tracking-widest text-charcoal/60">
-                            Bridal
+                            Studio
                         </span>
                     </div>
                 </Link>

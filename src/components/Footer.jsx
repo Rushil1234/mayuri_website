@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
+    { label: "Bridal Makeup", href: "/bridal-makeup-pittsburgh" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Services", href: "/#services" },
     { label: "Contact", href: "/contact" },
@@ -46,7 +47,7 @@ export default function Footer() {
                     >
                         {/* The "font uptop" - Amsterdam */}
                         <span className="block font-hero-brand text-[8rem] leading-[0.8] text-antique-gold md:text-[12rem] lg:text-[15rem]">
-                            MK Bride
+                            MK Bridal
                         </span>
                     </Link>
                 </motion.div>
@@ -56,7 +57,7 @@ export default function Footer() {
                     <div className="relative h-24 w-64 md:h-32 md:w-100">
                         <Image
                             src="/images/logo.png"
-                            alt="MK Studio Logo"
+                            alt="MK Bridal Studio Logo"
                             fill
                             className="object-contain"
                         />

@@ -44,7 +44,7 @@ export async function POST(request) {
                 });
 
                 const mailOptions = {
-                    from: `"MK Studio Bot" <${process.env.GMAIL_USER}>`,
+                    from: `"MK Bridal Studio Bot" <${process.env.GMAIL_USER}>`,
                     to: 'mayurikakkad@gmail.com',
                     subject: `New Client Inquiry: ${name}`,
                     html: `

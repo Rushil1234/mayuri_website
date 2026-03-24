@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import MagneticButton from "./MagneticButton";
 
@@ -10,6 +11,8 @@ const services = [
         name: "Make-Up",
         description: "Mayuri Kakkad is a professional bridal makeup artist in Pittsburgh with 27+ years of experience specializing in South Asian bridal makeup. She creates flawless, long-lasting looks for Indian, Gujarati, and South Indian brides — from soft glam and natural bridal makeup to full glam and traditional red bridal looks. Services include ceremony makeup, reception glam, sangeet makeup, haldi makeup, engagement makeup, and bridal party makeup. She uses airbrush techniques and products designed for melanin-rich skin tones that photograph beautifully and last all day.",
         popular: false,
+        href: "/bridal-makeup-pittsburgh",
+        cta: "Explore Pittsburgh Bridal Makeup",
     },
     {
         id: 2,
@@ -97,6 +100,15 @@ export default function Services() {
                                 <p className="mb-8 font-serif text-base leading-relaxed text-charcoal/80">
                                     {service.description}
                                 </p>
+                                {service.href && (
+                                    <Link
+                                        href={service.href}
+                                        className="inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-[0.22em] text-antique-gold transition-colors hover:text-charcoal"
+                                    >
+                                        {service.cta}
+                                        <span aria-hidden="true">→</span>
+                                    </Link>
+                                )}
                             </div>
                         </motion.div>
                     ))}

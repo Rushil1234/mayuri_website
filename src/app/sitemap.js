@@ -25,6 +25,11 @@ export default function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/bridal-makeup-pittsburgh`,
+            lastModified: new Date('2026-03-24'),
+            priority: 0.9,
+        },
+        {
             url: `${baseUrl}/blog`,
             lastModified: new Date(
                 posts.reduce((latest, p) => {

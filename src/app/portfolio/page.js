@@ -7,10 +7,11 @@ export const metadata = {
         canonical: "https://www.mkbridalstudio.com/portfolio",
     },
     openGraph: {
-        title: "MK Studio Bridal Portfolio | Real South Asian Brides",
+        title: "MK Bridal Studio Portfolio | Real South Asian Brides",
         description: "Explore bridal makeup, mehndi designs, and hair styling by Mayuri Kakkad in Pittsburgh.",
         url: "https://www.mkbridalstudio.com/portfolio",
         type: "website",
+        siteName: "MK Bridal Studio",
     },
 };
 
@@ -21,7 +22,7 @@ export default function PortfolioPage() {
             {
                 "@type": "CollectionPage",
                 "name": "Bridal Makeup & Mehndi Portfolio — Real South Asian Brides in Pittsburgh",
-                "description": "Browse 90+ real bridal transformations by Mayuri Kakkad at MK Studio. Indian, Gujarati & South Indian brides showcasing bridal makeup, intricate henna designs, hair styling, and reception looks in Pittsburgh, PA.",
+                "description": "Browse 90+ real bridal transformations by Mayuri Kakkad at MK Bridal Studio. Indian, Gujarati & South Indian brides showcasing bridal makeup, intricate henna designs, hair styling, and reception looks in Pittsburgh, PA.",
                 "url": "https://www.mkbridalstudio.com/portfolio",
                 "about": [
                     { "@type": "Thing", "name": "South Asian bridal makeup" },
@@ -44,7 +45,7 @@ export default function PortfolioPage() {
                 },
                 "provider": {
                     "@type": "BeautySalon",
-                    "name": "MK Studio Bridal",
+                    "name": "MK Bridal Studio",
                     "url": "https://www.mkbridalstudio.com",
                     "address": {
                         "@type": "PostalAddress",

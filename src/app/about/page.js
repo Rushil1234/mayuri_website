@@ -11,6 +11,7 @@ export const metadata = {
         description: "27+ years of South Asian bridal makeup & mehndi artistry. Licensed cosmetologist serving brides across the Northeast.",
         url: "https://www.mkbridalstudio.com/about",
         type: "profile",
+        siteName: "MK Bridal Studio",
     },
 };
 
@@ -30,7 +31,7 @@ export default function AboutPage() {
                 ],
                 "worksFor": {
                     "@type": "LocalBusiness",
-                    "name": "MK Studio Bridal",
+                    "name": "MK Bridal Studio",
                     "url": "https://www.mkbridalstudio.com"
                 },
                 "description": "Mayuri Kakkad is Pittsburgh's most experienced South Asian bridal makeup and mehndi artist, with 27+ years of professional artistry since 1997. A licensed cosmetologist based in Western PA, she specializes in Indian, Gujarati, and South Indian bridal transformations. She serves brides across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C., offering bridal makeup, intricate mehndi designs, and hair styling for weddings and special events.",

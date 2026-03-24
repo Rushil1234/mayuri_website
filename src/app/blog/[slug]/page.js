@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
     const post = getPostBySlug(slug);
     if (!post) return {};
     return {
-        title: `${post.title} | MK Studio Blog`,
+        title: `${post.title} | MK Bridal Studio Blog`,
         description: post.excerpt,
         alternates: {
             canonical: `https://www.mkbridalstudio.com/blog/${post.slug}`,
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }) {
             url: `https://www.mkbridalstudio.com/blog/${post.slug}`,
             type: "article",
             publishedTime: post.date,
+            siteName: "MK Bridal Studio",
         },
     };
 }
@@ -31,6 +32,14 @@ export default async function BlogPostPage({ params }) {
     const { slug } = await params;
     const post = getPostBySlug(slug);
     if (!post) notFound();
+    const relatedPosts = posts
+        .filter((candidate) => candidate.slug !== post.slug)
+        .sort((a, b) => {
+            if (a.category === post.category && b.category !== post.category) return -1;
+            if (a.category !== post.category && b.category === post.category) return 1;
+            return a.title.localeCompare(b.title);
+        })
+        .slice(0, 3);
 
     const faqBlock = post.content.find((b) => b.type === "faq");
     const faqSchema = faqBlock ? {
@@ -69,7 +78,7 @@ export default async function BlogPostPage({ params }) {
                 },
                 publisher: {
                     "@type": "Organization",
-                    name: "MK Studio Bridal",
+                    name: "MK Bridal Studio",
                     url: "https://www.mkbridalstudio.com",
                     logo: {
                         "@type": "ImageObject",
@@ -92,7 +101,7 @@ export default async function BlogPostPage({ params }) {
                 },
                 isPartOf: {
                     "@type": "Blog",
-                    name: "MK Studio Henna & Bridal Beauty Blog",
+                    name: "MK Bridal Studio Henna & Bridal Beauty Blog",
                     url: "https://www.mkbridalstudio.com/blog"
                 }
             },
@@ -154,6 +163,39 @@ export default async function BlogPostPage({ params }) {
                     <p className="text-[#8B7355] font-sans text-lg leading-relaxed mb-10 border-l-2 border-[#8B7355]/20 pl-5">
                         {post.excerpt}
                     </p>
+
+                    <section className="mb-10 rounded-2xl border border-[#D9CFC4] bg-[#FBF6F0] px-6 py-6">
+                        <p className="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355] mb-3">
+                            Planning A Pittsburgh Wedding?
+                        </p>
+                        <h2 style={{ fontSize: "1.4rem", lineHeight: "1.35" }} className="font-serif text-[#1a1a1a] mb-3">
+                            Book bridal mehndi, makeup, and hair styling with Mayuri Kakkad.
+                        </h2>
+                        <p className="text-[#5E5245] font-sans text-[15px] leading-[1.8] mb-5">
+                            If you are researching bridal henna or South Asian wedding beauty for your event,
+                            MK Bridal Studio serves Pittsburgh brides with custom mehndi, makeup, and wedding-day styling.
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            <Link
+                                href="/bridal-makeup-pittsburgh"
+                                className="inline-flex items-center justify-center rounded-full bg-[#8B7355] px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#6B5340]"
+                            >
+                                Pittsburgh Bridal Makeup
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                            >
+                                Book Your Consultation
+                            </Link>
+                            <Link
+                                href="/portfolio"
+                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                            >
+                                View Real Brides
+                            </Link>
+                        </div>
+                    </section>
 
                     <article className="space-y-6">
                         {post.content.map((block, i) => {
@@ -257,6 +299,78 @@ export default async function BlogPostPage({ params }) {
                             );
                         })}
                     </article>
+
+                    <section className="mt-14 rounded-2xl border border-[#D9CFC4] bg-white px-6 py-6">
+                        <p className="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355] mb-3">
+                            Next Step
+                        </p>
+                        <h2 style={{ fontSize: "1.35rem", lineHeight: "1.35" }} className="font-serif text-[#1a1a1a] mb-3">
+                            Ready to plan your bridal look?
+                        </h2>
+                        <p className="text-[#5E5245] font-sans text-[15px] leading-[1.8] mb-5">
+                            Explore real bridal makeup and mehndi work, then reach out to book your date,
+                            ask about bridal trials, or discuss your wedding timeline.
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            <Link
+                                href="/bridal-makeup-pittsburgh"
+                                className="inline-flex items-center justify-center rounded-full bg-[#8B7355] px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#6B5340]"
+                            >
+                                Bridal Makeup Pittsburgh
+                            </Link>
+                            <Link
+                                href="/portfolio"
+                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                            >
+                                Explore The Portfolio
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                            >
+                                Contact MK Bridal Studio
+                            </Link>
+                        </div>
+                    </section>
+
+                    <section className="mt-14 pt-8 border-t border-[#8B7355]/10">
+                        <div className="flex items-end justify-between gap-4 mb-6">
+                            <div>
+                                <p className="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355] mb-2">
+                                    Keep Reading
+                                </p>
+                                <h2 style={{ fontSize: "1.35rem", lineHeight: "1.35" }} className="font-serif text-[#1a1a1a]">
+                                    Related bridal beauty guides
+                                </h2>
+                            </div>
+                            <Link
+                                href="/blog"
+                                className="text-xs font-sans uppercase tracking-[0.18em] text-[#8B7355] hover:text-[#6B5340] transition-colors"
+                            >
+                                View All Articles
+                            </Link>
+                        </div>
+
+                        <div className="grid gap-4 md:grid-cols-3">
+                            {relatedPosts.map((relatedPost) => (
+                                <Link
+                                    key={relatedPost.slug}
+                                    href={`/blog/${relatedPost.slug}`}
+                                    className="group block rounded-2xl border border-[#8B7355]/10 bg-[#FBF6F0] p-5 transition-all duration-300 hover:border-[#8B7355]/30 hover:-translate-y-0.5"
+                                >
+                                    <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#8B7355]/70 mb-2">
+                                        {relatedPost.category}
+                                    </p>
+                                    <h3 style={{ fontSize: "1rem", lineHeight: "1.5" }} className="font-serif text-[#1a1a1a] group-hover:text-[#6B5340] transition-colors mb-3">
+                                        {relatedPost.title}
+                                    </h3>
+                                    <p className="text-[#6D6256] font-sans text-[13px] leading-[1.7]">
+                                        {relatedPost.excerpt}
+                                    </p>
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
 
                     <div className="mt-16 pt-8 border-t border-[#8B7355]/10">
                         <p className="text-[#8B7355]/40 font-sans text-xs uppercase tracking-widest mb-2">

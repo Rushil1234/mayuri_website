@@ -1,9 +1,130 @@
 export const posts = [
     {
-        slug: "how-long-does-bridal-henna-last",
-        title: "How Long Does Bridal Henna Last? The Science of Stain Longevity & Aftercare",
+        slug: "bridal-makeup-trial-timeline-pittsburgh",
+        title: "When Should Pittsburgh Brides Book a Bridal Makeup Trial? A Research-Backed Timeline",
         excerpt:
-            "Bridal henna typically lasts 1–3 weeks depending on body placement, skin chemistry, and aftercare. This guide explains the biology behind henna staining and evidence-based methods to maximize longevity.",
+            "A smart bridal makeup trial timeline depends on patch testing, skin treatments, and how long procedures like peels or microneedling take to settle before the wedding day.",
+        date: "2026-03-24",
+        dateModified: "2026-03-24",
+        category: "Makeup",
+        image: "/images/portfolio/A12I0780.jpeg",
+        content: [
+            { type: "summary", body: "For most brides, the safest window for a bridal makeup trial is 6 to 8 weeks before the wedding. That timing leaves room for patch testing, shade changes, and skin prep while still keeping the final look close to the event. This scheduling recommendation is an inference drawn from dermatology timelines for patch testing, chemical peels, and microneedling [1][2][3]." },
+            { type: "text", body: "A bridal makeup trial is not just about picking lip color or deciding between soft glam and full glam. It is also the point where product compatibility, skin prep, and timing come together. For Pittsburgh brides managing facials, acne-scar treatments, or a packed South Asian wedding week, the trial should happen after the broad shape of the skin plan is known but before the calendar becomes rigid." },
+            { type: "heading", body: "Why is 6 to 8 weeks before the wedding a practical trial window?" },
+            { type: "text", body: "Two common problems happen when a trial is booked too early or too late. If it happens months too early, the bride may still change skin care, color preferences, or even jewelry and outfit details. If it happens too late, there is little room to respond to irritation, adjust coverage preferences, or refine undertone matching. A 6 to 8 week window gives enough space for a second test, product swaps, or patch testing when there is a history of sensitivity [1]." },
+            { type: "list", items: [
+                "8 to 12 weeks out: useful if you are still deciding on skin treatments, acne-scar care, or event-by-event makeup direction",
+                "6 to 8 weeks out: best window for most full bridal trials, especially if you want time for shade or product adjustments",
+                "2 to 4 weeks out: good for a final confirmation conversation, but often too tight for a first-ever trial",
+                "Final week: avoid new peels, devices, or completely new complexion products unless medically necessary"
+            ] },
+            { type: "image", src: "/images/portfolio/A12I0766.jpeg", alt: "South Asian bride with polished bridal makeup suitable for a full makeup trial" },
+            { type: "heading", body: "How do chemical peels and microneedling affect the trial timeline?" },
+            { type: "text", body: "The American Academy of Dermatology notes that some chemical peel patients need a pre-peel skin care plan for 2 to 4 weeks before treatment [2]. AAD also notes that microneedling for acne scars often requires 3 to 5 sessions spaced every 2 to 4 weeks, with full results taking several months to appear [3]. In practice, that means complexion-changing procedures should be planned well before the makeup trial if you want the trial to reflect your wedding-day skin as closely as possible." },
+            { type: "callout", body: "Planning note: If you are treating acne scars or uneven texture, book the procedure plan first, then place the bridal trial after your skin has settled. A last-minute trial cannot accurately predict a complexion that is still healing or changing [2][3]." },
+            { type: "heading", body: "When should brides with sensitive skin or makeup reactions patch test?" },
+            { type: "text", body: "AAD describes patch testing as a delayed allergy test in which allergens remain on the skin for 48 hours, followed by follow-up review after several days [1]. If you have a history of itchy eyelids, rashes, or burning after foundations, adhesives, or skin prep, a trial should be scheduled early enough that patch testing and any treatment plan can happen before the wedding week." },
+            { type: "faq", items: [
+                { q: "How far in advance should I book my first bridal makeup trial?", a: "For most brides, 6 to 8 weeks before the wedding is a practical starting point. That usually gives enough time for product changes, a second look if needed, and patch testing if you have reactive skin." },
+                { q: "Can I do a peel right before my bridal makeup trial?", a: "It is better not to. AAD notes that some peel patients need a 2 to 4 week pre-peel plan, and the skin can look different while healing. Schedule peels early enough that your trial reflects your stable skin." },
+                { q: "If I am considering microneedling for acne scars, when should I start?", a: "AAD notes that acne-scar patients may need 3 to 5 microneedling sessions spaced every 2 to 4 weeks, and full results may take several months. That makes it a pre-trial planning item, not a last-minute wedding week decision." },
+                { q: "Do all brides need patch testing?", a: "No. But if you have a history of cosmetic rashes, itchy eyelids, or burning after makeup or adhesives, patch testing is worth discussing with a dermatologist before finalizing wedding products." }
+            ] },
+            { type: "references", items: [
+                "American Academy of Dermatology. Patch testing can find what's causing your rash. AAD.org.",
+                "American Academy of Dermatology. Chemical peels: FAQs. AAD.org.",
+                "American Academy of Dermatology. Microneedling can fade scars, uneven skin tone, and more. AAD.org."
+            ] },
+        ],
+    },
+    {
+        slug: "bridal-makeup-acne-prone-sensitive-skin-pittsburgh",
+        title: "Bridal Makeup for Acne-Prone or Sensitive Skin: Dermatologist-Backed Tips for Pittsburgh Brides",
+        excerpt:
+            "Acne-prone and reactive skin can still wear bridal makeup well. The key is non-comedogenic product selection, early acne control, and patch testing when reactions are part of your history.",
+        date: "2026-03-24",
+        dateModified: "2026-03-24",
+        category: "Makeup",
+        image: "/images/portfolio/A12I0766.jpeg",
+        content: [
+            { type: "summary", body: "Brides with acne-prone or sensitive skin do not need to avoid makeup altogether. AAD guidance says acne patients can wear makeup if they choose non-comedogenic products and follow a skin routine that fits their skin type [1]. For melanin-rich skin, early acne treatment matters even more because post-inflammatory dark marks and scars can linger long after the breakout itself has calmed [2]." },
+            { type: "text", body: "One of the most common bridal fears is that coverage makeup will trigger breakouts right before the ceremony. That can happen, but it is usually a product-selection and timing problem rather than a universal rule that makeup is bad for acne. In fact, research has shown that corrective makeup can improve quality of life in acne patients without worsening acne eruptions when appropriate products are used during treatment [3]." },
+            { type: "heading", body: "Can acne-prone brides safely wear bridal makeup?" },
+            { type: "text", body: "AAD says yes. The main guidance is to choose makeup labeled oil-free, non-comedogenic, or won't clog pores, remove it fully at night, and apply it gently rather than scrubbing or layering aggressively [1]. This is especially important for long-wear bridal base products, which often involve primer, color corrector, foundation, concealer, powder, and setting spray in a single look." },
+            { type: "list", items: [
+                "Choose complexion products labeled non-comedogenic or won't clog pores",
+                "Wash the face with a gentle cleanser morning and night, and after sweating",
+                "Remove all makeup before bed, including eye makeup",
+                "Clean makeup brushes weekly and do not share them",
+                "If you use acne medication, keep treating the acne instead of only covering it"
+            ] },
+            { type: "image", src: "/images/portfolio/IMG_7506.jpeg", alt: "Bridal makeup with smooth complexion and eye detail suitable for acne-prone or sensitive skin planning" },
+            { type: "heading", body: "Why does early acne control matter more in skin of color?" },
+            { type: "text", body: "AAD notes that treating acne early can help prevent dark spots and scars, and that people with skin of color have a higher risk of hyperpigmentation and keloid-type scarring when acne becomes moderate to severe before treatment begins [2]. For South Asian brides, that means the real makeup prep often starts with acne control months before the event, not just with foundation choice during wedding week." },
+            { type: "heading", body: "When should a bride think about patch testing?" },
+            { type: "text", body: "If your skin stings, burns, itches, or develops rashes from complexion products, lash glue, or fragranced skin prep, patch testing is worth discussing. AAD explains that patch testing is a delayed-allergy evaluation: patches stay in place for 48 hours and are followed by review several days later [4]. Cosmetic dermatitis studies also show that face creams, hair dyes, and cosmetic ingredients such as fragrance mixes or preservatives are common triggers in people being tested for suspected cosmetic allergy [5]." },
+            { type: "callout", body: "Practical bridal rule: If your history includes itchy eyelids, rash around the mouth, burning after primer, or random flare-ups after getting glam, schedule product testing early rather than hoping wedding-day makeup will be different." },
+            { type: "faq", items: [
+                { q: "Can bridal makeup make acne worse?", a: "It can if the products are comedogenic, irritating, or not removed properly. But AAD says people with acne can still wear makeup safely when they choose acne-friendly products and follow a consistent routine." },
+                { q: "What should brides with melanin-rich skin prioritize first?", a: "Treat acne early. AAD notes that skin of color has a higher risk of dark spots and scarring when acne progresses before treatment, so prevention matters more than heavy last-minute coverage." },
+                { q: "Should I stop wearing makeup if I get a rash?", a: "If you get a true rash, burning, or repeated irritation, stop the suspected products and talk to a dermatologist. Patch testing can help identify whether a cosmetic ingredient is causing allergic contact dermatitis." },
+                { q: "Is corrective makeup always bad for acne?", a: "No. One study found that makeup designed for acne patients improved quality of life without aggravating acne eruptions during treatment, which supports thoughtful product use rather than blanket avoidance." }
+            ] },
+            { type: "references", items: [
+                "American Academy of Dermatology. I have acne! Is it okay to wear makeup? AAD.org.",
+                "American Academy of Dermatology. 10 tips for clearing acne in darker skin tones. AAD.org.",
+                "Hayashi N, et al. Make-up improves the quality of life of acne patients without aggravating acne eruptions during treatments. Eur J Dermatol. 2005.",
+                "American Academy of Dermatology. Patch testing can find what's causing your rash. AAD.org.",
+                "Kumar P, Paulose R. Patch testing in suspected allergic contact dermatitis to cosmetics. Dermatol Res Pract. 2014."
+            ] },
+        ],
+    },
+    {
+        slug: "wedding-eye-makeup-safety-pittsburgh-brides",
+        title: "Wedding Eye Makeup Safety for Pittsburgh Brides: Mascara, Lash Glue, and Expiration Rules",
+        excerpt:
+            "Old mascara, contaminated applicators, and reactive lash adhesives can derail wedding-week glam. FDA guidance gives clear rules for safer eye makeup prep.",
+        date: "2026-03-24",
+        dateModified: "2026-03-24",
+        category: "Makeup",
+        image: "/images/portfolio/IMG_7506.jpeg",
+        content: [
+            { type: "summary", body: "Eye-area cosmetics need stricter hygiene than the rest of the makeup kit. FDA warns that misuse can allow bacteria or fungi to grow in products and lead to infection, and that some experts recommend replacing mascara about 3 months after purchase because of repeated microbial exposure during use [1][2]." },
+            { type: "text", body: "Wedding makeup usually puts extra attention on the eye area: liner, mascara, lashes, adhesives, shimmer, and often multiple touch-ups across events. That makes old products and improvised fixes especially risky. If a bride is building a fresh glam kit for the ceremony, reception, and sangeet, eye products are the part of the bag that most deserve an early audit." },
+            { type: "heading", body: "Why are eye cosmetics more sensitive than the rest of the makeup bag?" },
+            { type: "text", body: "FDA notes that eye cosmetics may become contaminated when they are misused, and that contamination can cause infection. The agency also warns against applying eye makeup in a moving car because an applicator can scratch the eye and create a serious infection risk [1]. These are wedding-week concerns because people often rush through makeup while traveling between venues, hotels, and family events." },
+            { type: "list", items: [
+                "Replace old or dried mascara rather than trying to revive it",
+                "Do not add water or saliva to mascara or liners",
+                "Do not share eye makeup, even with relatives or bridesmaids",
+                "Wash hands before applying eye cosmetics and keep tools clean",
+                "Throw away all eye-area products you used during an eye infection"
+            ] },
+            { type: "heading", body: "What should brides know about false lashes and lash glue?" },
+            { type: "text", body: "FDA treats false eyelashes, eyelash extensions, and their adhesives as cosmetic products. Because the eyelids are delicate, the agency notes that allergic reactions, irritation, or injury in the area can be particularly troublesome [1]. For brides with sensitive skin or watery eyes, lash glue belongs in the same category as primer or foundation when it comes to ingredient awareness and pre-event testing." },
+            { type: "image", src: "/images/portfolio/IMG_0578.jpeg", alt: "Close-up bridal eye makeup with defined liner and lashes for wedding eye safety planning" },
+            { type: "heading", body: "How early should you audit eye makeup before wedding week?" },
+            { type: "text", body: "FDA says eye-area cosmetics have shorter shelf lives than other products and notes that some industry experts recommend replacing mascara about 3 months after purchase [2]. In real bridal planning terms, it is smarter to replace mascara, liquid liner, and opened lash glue well before the first major event rather than the night before the ceremony." },
+            { type: "callout", body: "Bridal kit rule: If an eye product is dry, smells different, causes stinging, or you cannot remember when you opened it, replace it before wedding week." },
+            { type: "faq", items: [
+                { q: "How often should mascara be replaced before a wedding?", a: "FDA notes that some industry experts recommend replacing mascara about 3 months after purchase because the product is repeatedly exposed to microbes during use." },
+                { q: "Can I share mascara or liner with a bridesmaid or family member?", a: "No. FDA specifically advises against sharing eye cosmetics because bacteria and other microbes can be transferred from person to person." },
+                { q: "What should I do if my lash glue or liner irritates my eyes?", a: "Stop using it immediately. If irritation continues, contact a healthcare professional. Sensitive brides should test eye products early instead of waiting for the wedding day." },
+                { q: "Why should I not add water to dried mascara?", a: "FDA warns that adding water or saliva introduces bacteria and reduces the product's protection against contamination." }
+            ] },
+            { type: "references", items: [
+                "U.S. Food & Drug Administration. Eye Cosmetic Safety. FDA.gov.",
+                "U.S. Food & Drug Administration. Cosmetics Safety Q&A: Shelf Life. FDA.gov.",
+                "U.S. Food & Drug Administration. Shelf Life and Expiration Dating of Cosmetics. FDA.gov."
+            ] },
+        ],
+    },
+    {
+        slug: "how-long-does-bridal-henna-last",
+        title: "How Long Does Bridal Henna Last? Aftercare Tips for a Darker, Longer Stain",
+        excerpt:
+            "Bridal henna usually lasts 1–3 weeks. Learn what affects stain depth, how aftercare changes the result, and what brides can do for darker, longer-lasting mehndi.",
         date: "2025-01-15",
         dateModified: "2025-03-07",
         category: "Aftercare",
@@ -58,9 +179,9 @@ export const posts = [
     },
     {
         slug: "indian-bridal-henna-designs-meanings",
-        title: "The Cultural Symbolism of Indian Bridal Henna: A Guide to Traditional Motifs",
+        title: "Indian Bridal Henna Meanings: Traditional Motifs Brides Should Know",
         excerpt:
-            "Every motif in Indian bridal mehndi carries centuries of symbolic meaning — from paisleys representing fertility to peacocks symbolizing love. An educational guide to the iconography of mehndi.",
+            "From paisleys to peacocks and lotus flowers, discover what common Indian bridal mehndi motifs symbolize and how to choose meaningful details for your design.",
         date: "2025-01-28",
         dateModified: "2025-03-07",
         category: "Traditions",
@@ -106,16 +227,16 @@ export const posts = [
     },
     {
         slug: "south-asian-bridal-makeup-tips",
-        title: "South Asian Bridal Makeup: Evidence-Based Tips for Long-Lasting Results",
+        title: "South Asian Bridal Makeup Tips for Pittsburgh Weddings: How to Make Glam Last All Day",
         excerpt:
-            "From skincare preparation weeks before the wedding to the chemistry behind setting sprays — a practical, evidence-based guide to South Asian bridal makeup that lasts all day.",
+            "Learn how Pittsburgh brides can make South Asian bridal makeup last through long ceremonies, changing venues, tears, and photography with practical prep, product, and timing tips.",
         date: "2025-02-10",
         dateModified: "2025-03-07",
         category: "Makeup",
         image: "/images/portfolio/A12I0766.jpeg",
         content: [
             { type: "summary", body: "Five evidence-based bridal makeup practices: (1) begin a consistent skincare routine 4–6 weeks prior, (2) match foundation in natural light to the neck and chest, (3) use layered waterproof eye products, (4) apply setting spray formulated with film-forming polymers, and (5) blot with papers instead of adding powder for touch-ups [1]." },
-            { type: "text", body: "Bridal makeup for South Asian weddings must withstand long ceremonies, emotional moments, warm venues, and extensive photography. The following practices are grounded in dermatological research and decades of professional experience in the bridal beauty industry." },
+            { type: "text", body: "Bridal makeup for South Asian weddings must withstand long ceremonies, emotional moments, venue changes, and extensive photography. For Pittsburgh brides moving between hotel prep, ceremony coverage, and reception lighting, the following practices help the makeup stay polished while still looking natural in person and on camera." },
             { type: "image", src: "/images/portfolio/A12I0780.jpeg", alt: "South Asian bride with long-lasting professional bridal makeup" },
             { type: "heading", body: "How Does Pre-Wedding Skincare Affect Makeup Longevity?" },
             { type: "text", body: "Dermatologists recommend establishing a consistent skincare routine at least 4–6 weeks before any major event [1]. Well-hydrated skin creates a smoother surface for makeup application and improves product adhesion. The stratum corneum — the skin's outermost barrier — functions best when properly moisturized." },
@@ -162,9 +283,9 @@ export const posts = [
     },
     {
         slug: "what-is-henna-natural-ingredients",
-        title: "What Is Henna? The Botany, Chemistry, and Safety of Lawsonia Inermis",
+        title: "What Is Henna? Ingredients, Safety, and How Natural Mehndi Works",
         excerpt:
-            "Henna is a natural plant-based dye from Lawsonia inermis. This guide covers the botanical science, the chemistry of lawsone, how to identify safe henna, and why 'black henna' is a health risk.",
+            "A clear guide to natural henna ingredients, stain chemistry, safety, and how to spot risky 'black henna' products before your event.",
         date: "2025-02-25",
         dateModified: "2025-03-07",
         category: "Education",
@@ -214,9 +335,9 @@ export const posts = [
     },
     {
         slug: "gujarati-vs-rajasthani-mehndi-styles",
-        title: "Gujarati vs Rajasthani Mehndi: A Cultural Comparison of Two Indian Bridal Traditions",
+        title: "Gujarati vs Rajasthani Mehndi: Key Bridal Style Differences",
         excerpt:
-            "An in-depth look at the distinct design characteristics, cultural origins, and symbolic differences between Gujarati and Rajasthani bridal mehndi — two of India's most recognized henna traditions.",
+            "Compare Gujarati and Rajasthani bridal mehndi styles, from layout and density to cultural symbolism, so you can choose the look that fits your wedding vision.",
         date: "2025-03-10",
         dateModified: "2025-03-07",
         category: "Traditions",

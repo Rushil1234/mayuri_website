@@ -26,7 +26,7 @@ export default function AboutTemplate() {
             <main className="min-h-screen bg-[#F2F0E9] overflow-hidden">
                 {/* Global Grain Texture */}
                 <div className="fixed inset-0 opacity-[0.03] pointer-events-none z-0"
-                    style={{ backgroundImage: 'url("/images/noise.png")', backgroundRepeat: "repeat" }}>
+                    style={{ backgroundImage: 'url("/images/noise.svg")', backgroundRepeat: "repeat" }}>
                 </div>
 
                 {/* --- HERO SECTION --- */}
@@ -84,7 +84,7 @@ export default function AboutTemplate() {
                                 of artistry to life. Established in 1997, based in Pittsburgh, PA — crafting timeless beauty for South Asian brides across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
                             </p>
                             <p className="sr-only">
-                                Mayuri Kakkad is the founder and lead artist at MK Studio Bridal in Pittsburgh, Pennsylvania. She is a licensed cosmetologist with 27+ years of experience in South Asian bridal makeup, mehndi (henna) artistry, and bridal hair styling. Established in 1997, MK Studio holds a 5.0-star rating from 47 verified reviews. Mayuri specializes in Indian bridal makeup, Gujarati bridal makeup, South Indian bridal makeup, soft glam and natural looks, full glam transformations, airbrush techniques for melanin-rich skin tones, Gujarati mehndi patterns, Rajasthani mehndi designs, Arabic henna, and bridal hairstyling including updos, dupatta setting, and bridal jewelry placement. She is available for weddings in Pittsburgh, all of Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
+                                Mayuri Kakkad is the founder and lead artist at MK Bridal Studio in Pittsburgh, Pennsylvania. She is a licensed cosmetologist with 27+ years of experience in South Asian bridal makeup, mehndi (henna) artistry, and bridal hair styling. Established in 1997, MK Bridal Studio holds a 5.0-star rating from 47 verified reviews. Mayuri specializes in Indian bridal makeup, Gujarati bridal makeup, South Indian bridal makeup, soft glam and natural looks, full glam transformations, airbrush techniques for melanin-rich skin tones, Gujarati mehndi patterns, Rajasthani mehndi designs, Arabic henna, and bridal hairstyling including updos, dupatta setting, and bridal jewelry placement. She is available for weddings in Pittsburgh, all of Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
                             </p>
 
                             {/* Henna Pattern Flow */}
@@ -385,7 +385,7 @@ export default function AboutTemplate() {
                     <div className="max-w-3xl mx-auto relative z-10">
                         <svg className="w-12 h-12 text-antique-gold/20 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 15.372 14.8516 16.9609 14.8516C18.2305 14.8516 19.3633 15.6523 19.4648 16.6445C20.3086 16.0352 20.8164 15.0234 20.8164 13.9102C20.8164 12.1875 19.7852 10.9688 18.0625 10.9688C15.8984 10.9688 14.017 12.8008 14.017 15.1172H11.5176C11.5176 11.2344 14.7266 8.03516 18.25 8.03516C21.9023 8.03516 23.9961 10.8867 23.9961 13.5273C23.9961 16.8555 21.6523 21 17.5195 21H14.017ZM8.01562 21L8.01562 18C8.01562 16.0547 9.37109 14.8516 10.9609 14.8516C12.2305 14.8516 13.3633 15.6523 13.4648 16.6445C14.3086 16.0352 14.8164 15.0234 14.8164 13.9102C14.8164 12.1875 13.7852 10.9688 12.0625 10.9688C9.89844 10.9688 8.01562 12.8008 8.01563 15.1172H5.51562C5.51562 11.2344 8.72656 8.03516 12.25 8.03516C15.9023 8.03516 17.9961 10.8867 17.9961 13.5273C17.9961 16.8555 15.6523 21 11.5195 21H8.01562Z" /></svg>
                         <p className="font-serif text-3xl md:text-4xl text-charcoal italic leading-relaxed">
-                            "Every design is a whispered blessing, a silent prayer inked on skin."
+                            &ldquo;Every design is a whispered blessing, a silent prayer inked on skin.&rdquo;
                         </p>
                         <div className="mt-8 flex items-center justify-center gap-4">
                             <span className="h-px w-12 bg-antique-gold"></span>
@@ -403,7 +403,7 @@ export default function AboutTemplate() {
                     viewport={{ once: true }}
                 >
                     <h2 className="font-hero-brand text-6xl md:text-8xl text-antique-gold mb-8">
-                        Let's Create Magic
+                        Let&apos;s Create Magic
                     </h2>
                     <Link
                         href="/contact"

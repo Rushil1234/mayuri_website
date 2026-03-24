@@ -61,7 +61,7 @@ export default function HowItWorks() {
         <section className="relative overflow-hidden bg-[#F4F1EA] pt-24 pb-12 md:pt-32 md:pb-16">
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'url("/images/noise.png")', backgroundRepeat: "repeat" }}>
+                style={{ backgroundImage: 'url("/images/noise.svg")', backgroundRepeat: "repeat" }}>
             </div>
 
             <div className="container relative z-10 mx-auto max-w-6xl px-6">

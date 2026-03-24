@@ -3,15 +3,16 @@ import Image from "next/image";
 import { posts, formatDate } from "./posts";
 
 export const metadata = {
-    title: "Henna & Bridal Beauty Blog | MK Studio",
+    title: "Pittsburgh Bridal Makeup & Mehndi Blog | MK Bridal Studio",
     description:
-        "Expert tips on bridal henna, mehndi aftercare, design traditions, and South Asian wedding beauty. Educational guides by Mayuri Kakkad, 27+ years of artistry.",
+        "Research-backed Pittsburgh bridal makeup, mehndi, bridal trial, and South Asian wedding beauty tips from Mayuri Kakkad at MK Bridal Studio.",
     openGraph: {
-        title: "Henna & Bridal Beauty Blog | MK Studio",
+        title: "Pittsburgh Bridal Makeup & Mehndi Blog | MK Bridal Studio",
         description:
-            "Expert tips on bridal henna, mehndi aftercare, design traditions, and South Asian wedding beauty.",
+            "Research-backed Pittsburgh bridal makeup, mehndi, bridal trial, and South Asian wedding beauty tips from Mayuri Kakkad at MK Bridal Studio.",
         url: "https://www.mkbridalstudio.com/blog",
         type: "website",
+        siteName: "MK Bridal Studio",
     },
     alternates: {
         canonical: "https://www.mkbridalstudio.com/blog",
@@ -31,9 +32,9 @@ export default function BlogPage() {
         "@graph": [
             {
                 "@type": "Blog",
-                name: "MK Studio Henna & Bridal Beauty Blog",
+                name: "MK Bridal Studio Henna & Bridal Beauty Blog",
                 description:
-                    "Expert tips on bridal henna, mehndi aftercare, design traditions, and South Asian wedding beauty.",
+                    "Research-backed Pittsburgh bridal makeup, bridal trial, mehndi, and South Asian wedding beauty guidance.",
                 url: "https://www.mkbridalstudio.com/blog",
                 author: {
                     "@type": "Person",
@@ -42,7 +43,7 @@ export default function BlogPage() {
                 },
                 publisher: {
                     "@type": "Organization",
-                    name: "MK Studio Bridal",
+                    name: "MK Bridal Studio",
                     url: "https://www.mkbridalstudio.com",
                 },
                 blogPost: posts.map((post) => ({
@@ -77,12 +78,48 @@ export default function BlogPage() {
             <main className="min-h-screen bg-[#FDF8F4] pt-32 pb-24 px-6">
                 <div className="max-w-5xl mx-auto">
                     <h1 className="font-serif text-4xl md:text-5xl text-[#1a1a1a] mb-4">
-                        Henna & Bridal Beauty
+                        Pittsburgh Bridal Makeup & Mehndi Guides
                     </h1>
                     <p className="text-[#8B7355] font-sans text-lg mb-16 max-w-2xl">
-                        Expert guides on mehndi traditions, bridal beauty, aftercare
-                        tips, and the artistry behind South Asian weddings.
+                        Research-backed articles on bridal makeup, bridal trials, mehndi aftercare,
+                        and South Asian wedding beauty for Pittsburgh brides planning a polished, long-lasting wedding look.
                     </p>
+
+                    <section className="mb-14 rounded-2xl border border-[#D9CFC4] bg-white px-6 py-6 md:px-8">
+                        <p className="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355] mb-3">
+                            Planning Your Wedding?
+                        </p>
+                        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+                            <div className="max-w-2xl">
+                                <h2 style={{ fontSize: "1.5rem", lineHeight: "1.35" }} className="font-serif text-[#1a1a1a] mb-2">
+                                    Looking for a Pittsburgh bridal makeup and mehndi artist?
+                                </h2>
+                                <p className="text-[#5E5245] font-sans text-[15px] leading-[1.8]">
+                                    Read the guides, explore real bridal work, and book with Mayuri Kakkad for bridal makeup, mehndi, and hair styling in Pittsburgh.
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap gap-3">
+                                <Link
+                                    href="/bridal-makeup-pittsburgh"
+                                    className="inline-flex items-center justify-center rounded-full bg-[#8B7355] px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#6B5340]"
+                                >
+                                    Pittsburgh Makeup Page
+                                </Link>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                                >
+                                    Book Consultation
+                                </Link>
+                                <Link
+                                    href="/portfolio"
+                                    className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                                >
+                                    View Portfolio
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {posts.map((post) => {
@@ -134,9 +171,29 @@ export default function BlogPage() {
                     </div>
 
                     <div className="mt-16 text-center">
-                        <p className="text-[#8B7355]/60 font-sans text-sm">
+                        <p className="text-[#8B7355]/60 font-sans text-sm mb-5">
                             More articles coming soon.
                         </p>
+                        <div className="flex flex-wrap items-center justify-center gap-3">
+                            <Link
+                                href="/bridal-makeup-pittsburgh"
+                                className="inline-flex items-center justify-center rounded-full bg-[#8B7355] px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#6B5340]"
+                            >
+                                Bridal Makeup In Pittsburgh
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                            >
+                                Ask About Your Date
+                            </Link>
+                            <Link
+                                href="/portfolio"
+                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
+                            >
+                                See Real Brides
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </main>

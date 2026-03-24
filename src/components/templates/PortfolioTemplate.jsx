@@ -135,7 +135,7 @@ export default function PortfolioTemplate() {
                 {/* Hero Header */}
                 <section className="relative px-6 pt-40 pb-20 text-center overflow-hidden">
                     <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
-                        style={{ backgroundImage: 'url("/images/noise.png")', backgroundRepeat: "repeat" }}>
+                        style={{ backgroundImage: 'url("/images/noise.svg")', backgroundRepeat: "repeat" }}>
                     </div>
 
                     <motion.div
@@ -168,7 +168,7 @@ export default function PortfolioTemplate() {
                             A curated archive of bridal elegance, intricate henna, and timeless beauty.
                         </p>
                         <p className="sr-only">
-                            Browse the bridal makeup and mehndi portfolio of Mayuri Kakkad at MK Studio in Pittsburgh, Pennsylvania. This gallery features real South Asian brides — Indian, Gujarati, and South Indian — showcasing bridal makeup, intricate henna designs, luxury hair styling, engagement and sangeet looks, haldi ceremony makeup, and reception transformations. With 27+ years of experience and a 5.0-star rating from 47 verified reviews, Mayuri specializes in soft glam bridal makeup, full glam bridal makeup, Gujarati mehndi, Rajasthani mehndi, Arabic henna, and bridal hairstyling including updos, dupatta setting, and passa and tikka placement. Available for weddings across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
+                            Browse the bridal makeup and mehndi portfolio of Mayuri Kakkad at MK Bridal Studio in Pittsburgh, Pennsylvania. This gallery features real South Asian brides — Indian, Gujarati, and South Indian — showcasing bridal makeup, intricate henna designs, luxury hair styling, engagement and sangeet looks, haldi ceremony makeup, and reception transformations. With 27+ years of experience and a 5.0-star rating from 47 verified reviews, Mayuri specializes in soft glam bridal makeup, full glam bridal makeup, Gujarati mehndi, Rajasthani mehndi, Arabic henna, and bridal hairstyling including updos, dupatta setting, and passa and tikka placement. Available for weddings across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C.
                         </p>
                     </motion.div>
                 </section>
@@ -218,27 +218,16 @@ export default function PortfolioTemplate() {
                                         alt="Full view of bridal makeup and mehndi portfolio piece"
                                         width={1600}
                                         height={2000}
+                                        unoptimized
                                         className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm"
                                     />
                                 )}
                             </motion.div>
 
-                            <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none flex flex-col items-center gap-2">
+                            <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none">
                                 <span className="font-sans text-xs tracking-widest text-white/40 uppercase">
                                     Mayuri Kakkad Portfolio
                                 </span>
-                                {!isVideo(selectedMedia) && (
-                                    <a
-                                        href={selectedMedia}
-                                        download
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="pointer-events-auto text-xs font-sans text-white/60 hover:text-white underline underline-offset-4 transition-colors"
-                                        onClick={(e) => e.stopPropagation()}
-                                    >
-                                        View / Download High-Res Original
-                                    </a>
-                                )}
                             </div>
                         </motion.div>
                     )}

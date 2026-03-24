@@ -7,10 +7,11 @@ export const metadata = {
         canonical: "https://www.mkbridalstudio.com/contact",
     },
     openGraph: {
-        title: "Book Your Bridal Consultation | MK Studio Pittsburgh",
+        title: "Book Your Bridal Consultation | MK Bridal Studio Pittsburgh",
         description: "Request a quote for bridal makeup, mehndi & hair in Pittsburgh. Travel available across the Northeast.",
         url: "https://www.mkbridalstudio.com/contact",
         type: "website",
+        siteName: "MK Bridal Studio",
     },
 };
 
@@ -21,11 +22,11 @@ export default function ContactPage() {
             {
                 "@type": "ContactPage",
                 "name": "Book South Asian Bridal Makeup & Mehndi in Pittsburgh",
-                "description": "Inquire about bridal makeup, mehndi, and hair styling with Mayuri Kakkad at MK Studio. 27+ years experience, 5.0-star rated. Bridal trials available. Travel-friendly across PA, NJ, NY, OH & DC.",
+                "description": "Inquire about bridal makeup, mehndi, and hair styling with Mayuri Kakkad at MK Bridal Studio. 27+ years experience, 5.0-star rated. Bridal trials available. Travel-friendly across PA, NJ, NY, OH & DC.",
                 "url": "https://www.mkbridalstudio.com/contact",
                 "mainEntity": {
                     "@type": "LocalBusiness",
-                    "name": "MK Studio Bridal",
+                    "name": "MK Bridal Studio",
                     "telephone": "+12019126702",
                     "email": "mayurikakkad@gmail.com",
                     "url": "https://www.mkbridalstudio.com",

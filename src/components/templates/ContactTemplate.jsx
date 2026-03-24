@@ -73,7 +73,7 @@ export default function ContactTemplate() {
             <main className="min-h-screen bg-[#F2F0E9] relative overflow-hidden">
                 {/* Global Grain Texture */}
                 <div className="fixed inset-0 opacity-[0.04] pointer-events-none z-0 mix-blend-multiply"
-                    style={{ backgroundImage: 'url("/images/noise.png")', backgroundRepeat: "repeat" }}>
+                    style={{ backgroundImage: 'url("/images/noise.svg")', backgroundRepeat: "repeat" }}>
                 </div>
 
                 {/* Decorative Henna SVG Reuse (Top Right) */}
@@ -102,10 +102,10 @@ export default function ContactTemplate() {
                             transition={{ delay: 0.5, duration: 1 }}
                             className="font-serif text-charcoal italic text-xl md:text-2xl mt-4 relative z-20"
                         >
-                            Let's create something <span className="border-b border-antique-gold">timeless</span> together.
+                            Let&apos;s create something <span className="border-b border-antique-gold">timeless</span> together.
                         </motion.p>
                         <p className="sr-only">
-                            Book a bridal makeup, mehndi, or hair styling consultation with Mayuri Kakkad at MK Studio in Pittsburgh, PA. Services include bridal makeup trials, wedding-day makeup, bridal mehndi and henna for hands and feet, bridal hair styling, engagement and sangeet makeup, haldi ceremony looks, and reception transformations. Mayuri is a licensed cosmetologist with 27+ years of experience specializing in South Asian bridal beauty. She travels for weddings across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C. Contact by phone at (201) 912-6702 or email mayurikakkad@gmail.com. Bridal trials are available to ensure your perfect wedding-day look.
+                            Book a bridal makeup, mehndi, or hair styling consultation with Mayuri Kakkad at MK Bridal Studio in Pittsburgh, PA. Services include bridal makeup trials, wedding-day makeup, bridal mehndi and henna for hands and feet, bridal hair styling, engagement and sangeet makeup, haldi ceremony looks, and reception transformations. Mayuri is a licensed cosmetologist with 27+ years of experience specializing in South Asian bridal beauty. She travels for weddings across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C. Contact by phone at (201) 912-6702 or email mayurikakkad@gmail.com. Bridal trials are available to ensure your perfect wedding-day look.
                         </p>
                     </div>
 
@@ -158,6 +158,12 @@ export default function ContactTemplate() {
                                         <a href="https://facebook.com" target="_blank" className="font-serif text-lg text-charcoal hover:text-antique-gold underline decoration-antique-gold/30 underline-offset-4">Facebook</a>
                                     </div>
                                 </div>
+                                <div>
+                                    <h3 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-antique-gold mb-2">Popular</h3>
+                                    <Link href="/bridal-makeup-pittsburgh" className="font-serif text-lg text-charcoal hover:text-antique-gold underline decoration-antique-gold/30 underline-offset-4">
+                                        Bridal Makeup in Pittsburgh
+                                    </Link>
+                                </div>
                             </div>
                         </motion.div>
 
@@ -182,7 +188,7 @@ export default function ContactTemplate() {
                                         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                     </motion.div>
                                     <h3 className="font-hero-brand text-4xl md:text-5xl text-charcoal mb-4">Thank You</h3>
-                                    <p className="font-serif text-lg text-charcoal/70 max-w-md">Your inquiry has been received. I'll be in touch shortly to start planning your vision.</p>
+                                    <p className="font-serif text-lg text-charcoal/70 max-w-md">Your inquiry has been received. I&apos;ll be in touch shortly to start planning your vision.</p>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-10">
