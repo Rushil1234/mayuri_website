@@ -17,6 +17,36 @@ const nextConfig = {
             },
         ];
     },
+    async redirects() {
+        return [
+            {
+                source: '/:path*',
+                has: [{ type: 'host', value: 'mkbridalstudio.com' }],
+                destination: 'https://www.mkbridalstudio.com/:path*',
+                permanent: true,
+            },
+            {
+                source: '/about-me-2',
+                destination: '/about',
+                permanent: true,
+            },
+            {
+                source: '/about-me-2/:path*',
+                destination: '/about',
+                permanent: true,
+            },
+            {
+                source: '/contact-us',
+                destination: '/contact',
+                permanent: true,
+            },
+            {
+                source: '/contact-us/:path*',
+                destination: '/contact',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;
