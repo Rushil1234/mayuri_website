@@ -155,7 +155,7 @@ export default function ContactTemplate() {
                                     <h3 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-antique-gold mb-2">Socials</h3>
                                     <div className="flex gap-6">
                                         <a href="https://instagram.com/mkbridalstudio" target="_blank" className="font-serif text-lg text-charcoal hover:text-antique-gold underline decoration-antique-gold/30 underline-offset-4">Instagram</a>
-                                        <a href="https://facebook.com" target="_blank" className="font-serif text-lg text-charcoal hover:text-antique-gold underline decoration-antique-gold/30 underline-offset-4">Facebook</a>
+                                        <a href="https://www.facebook.com/MayuriBridalstudio/" target="_blank" rel="noopener noreferrer" className="font-serif text-lg text-charcoal hover:text-antique-gold underline decoration-antique-gold/30 underline-offset-4">Facebook</a>
                                     </div>
                                 </div>
                                 <div>

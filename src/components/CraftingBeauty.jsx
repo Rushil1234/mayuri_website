@@ -84,7 +84,7 @@ export default function CraftingBeauty() {
                             <div className="relative aspect-[3/5] w-full overflow-hidden rounded-t-[14rem] cursor-pointer">
                                 <Image
                                     src="/images/Mayuri.png"
-                                    alt="Mayuri Kakkad Portrait"
+                                    alt="Mayuri Kakkad, South Asian bridal makeup artist in Pittsburgh, PA"
                                     fill
                                     className="object-cover transition-transform duration-500 hover:scale-105"
                                 />

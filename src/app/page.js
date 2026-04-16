@@ -66,8 +66,8 @@ export default function Home() {
           "ratingValue": "5.0",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "47",
-          "reviewCount": "47"
+          "ratingCount": "31",
+          "reviewCount": "31"
         },
         "review": [
           {

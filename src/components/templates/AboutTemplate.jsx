@@ -55,7 +55,7 @@ export default function AboutTemplate() {
                             <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-t-[10rem] overflow-hidden border border-white/50 shadow-2xl">
                                 <Image
                                     src="/images/Mayuri.png" // Updated to standard image temporarily, can be swapped
-                                    alt="Mayuri Kakkad"
+                                    alt="Mayuri Kakkad, South Asian bridal makeup artist in Pittsburgh, PA"
                                     fill
                                     className="object-cover object-top"
                                     priority

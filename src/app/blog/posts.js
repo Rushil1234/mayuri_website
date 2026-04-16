@@ -1,5 +1,74 @@
 export const posts = [
     {
+        slug: "how-to-choose-south-asian-bridal-makeup-artist-pittsburgh",
+        title: "How to Choose a South Asian Bridal Makeup Artist in Pittsburgh: 10 Questions to Ask Before You Book",
+        excerpt:
+            "The right South Asian bridal makeup artist in Pittsburgh is not just the prettiest Instagram — it is the artist with the right skin-tone expertise, sanitation standards, trial policy, and wedding-day logistics. Here are the 10 questions that separate a safe booking from a regret.",
+        date: "2026-04-16",
+        dateModified: "2026-04-16",
+        category: "Makeup",
+        image: "/images/portfolio/IMG_9366.jpeg",
+        content: [
+            { type: "summary", body: "Choosing a South Asian bridal makeup artist in Pittsburgh is a high-stakes decision that deserves more than a scroll through portfolios. Before you book, verify experience with melanin-rich skin, ask about sanitation and patch testing, confirm trial policy, and review contract terms. FDA and AAD guidance on cosmetic safety, patch testing, and eye-area hygiene should inform every question you ask [1][2][3]." },
+            { type: "text", body: "A South Asian wedding is often a multi-day event — sangeet, haldi, mehndi night, ceremony, and reception — with high-pigment outfits, intense lighting, tears, heat, and hours in front of photographers. Your makeup artist is not a vendor you can easily swap out a week before. Making the right choice early protects both the wedding-day experience and, in some cases, your skin health. This guide walks through the ten questions that every Pittsburgh bride should ask before signing a contract, grounded in consumer-safety guidance and bridal industry norms." },
+            { type: "heading", body: "1. Do You Have Specific Experience with South Asian and Melanin-Rich Skin Tones?" },
+            { type: "text", body: "This is the single most important question. South Asian skin spans a wide range of undertones — warm, olive, neutral, cool — and most off-the-shelf foundation lines are formulated for lighter or more limited tone ranges. Cosmetic dermatology research notes that melanin-rich skin reflects light differently than lighter skin, making shade matching under artificial lighting unreliable [4]. A Pittsburgh artist who routinely works with Indian, Gujarati, South Indian, Pakistani, and Bangladeshi brides will usually own a deeper and more undertone-accurate foundation range than a generalist who occasionally books a South Asian wedding." },
+            { type: "list", items: [
+                "Ask to see 5+ full bridal looks on brides with skin tones similar to yours",
+                "Ask which foundation brands and shade ranges they carry for medium to deep skin",
+                "Ask how they match foundation — natural daylight to neck and chest is the professional standard [4]",
+                "Ask about their approach for ceremony vs. reception looks (traditional red-and-gold vs. modern soft glam)"
+            ] },
+            { type: "heading", body: "2. How Do You Sanitize Products and Tools Between Clients?" },
+            { type: "text", body: "Eye-area cosmetics are a recognized contamination risk. FDA explicitly warns that misused eye cosmetics can support bacterial or fungal growth and cause infection, and advises against sharing eye products even among family members [1]. A professional bridal artist should be able to explain, without hesitation, how they sanitize brushes, disinfect metal tools, decant lipsticks with a spatula, and replace single-use items like mascara wands and lash applicators. If the answer is vague, that is a red flag." },
+            { type: "callout", body: "Consumer-safety rule: Never accept a bridal kit where mascara is applied from the tube to your lash, where lipstick is swiped directly from a bullet, or where brushes look visibly used and unwashed. FDA guidance on eye-area hygiene applies to every bride, not just sensitive skin [1][2]." },
+            { type: "heading", body: "3. Do You Offer Patch Testing, and When Should I Do It?" },
+            { type: "text", body: "The American Academy of Dermatology describes patch testing as a delayed-allergy evaluation: the suspected allergen remains on the skin for 48 hours, with follow-up review several days later [3]. If you have a history of reactions to foundation, lash glue, fragrance, or skin prep, a makeup artist should be willing to apply small product samples to your inner forearm at your trial — or refer you to a dermatologist for formal patch testing. An artist who dismisses the question is an artist who has not thought about bridal-week safety." },
+            { type: "heading", body: "4. What Does Your Trial Look Like — and When Should It Happen?" },
+            { type: "text", body: "A bridal trial is more than a photo shoot. It is the point where product compatibility, shade matching, longevity, and aesthetic direction all come together. For most brides, 6 to 8 weeks before the wedding is a practical window — far enough out to change products or revisit a look, close enough that your skin, hair color, and body will resemble your wedding-day state. Ask whether the trial fee is separate or applied to the wedding-day package, how long it lasts, whether you can bring inspiration references, and whether you can take photos in natural and indoor light." },
+            { type: "image", src: "/images/portfolio/A12I0780.jpeg", alt: "South Asian bride showcasing polished bridal makeup trial result in Pittsburgh studio" },
+            { type: "heading", body: "5. Do You Specialize in Both Makeup and Mehndi, or Only One?" },
+            { type: "text", body: "South Asian weddings often compress beauty services into a narrow window. Booking one artist who can handle ceremony makeup on Saturday and bridal mehndi on the night before can reduce logistical complexity, but only if that artist has genuine expertise in both disciplines. Ask to see separate portfolios: full bridal mehndi from fingertips to elbows (not just a few hand designs), and full bridal makeup looks from prep to final photo. Artists who are strong in one and weak in the other often produce a compromise on wedding day." },
+            { type: "heading", body: "6. What Is Included in a Full Bridal Package vs. an A La Carte Booking?" },
+            { type: "text", body: "South Asian bridal packages typically include multiple events — sangeet, haldi, mehndi night, ceremony, reception — plus optional hair styling, second-day looks, mother-of-the-bride and bridesmaid services. Ask exactly what is included at each price point: how many events, whether hair is separate, how many touch-ups during the ceremony, whether a second artist assists, and whether lashes or hair pieces are included or extra. A written line-item breakdown prevents day-of surprises." },
+            { type: "list", items: [
+                "Bridal trial (and whether it is credited toward the wedding package)",
+                "Bridal makeup for each event you want covered",
+                "Hair styling — clarify if separate artist is needed",
+                "Lashes and any hair add-ons (extensions, pieces, passa/tikka setting)",
+                "On-site touch-ups or a travel kit left with the bride",
+                "Travel fees for venue location, including hotel or home prep",
+                "Bridesmaid, mother-of-the-bride, and family group rates"
+            ] },
+            { type: "heading", body: "7. How Do You Handle Travel, Venue Access, and Start Times?" },
+            { type: "text", body: "South Asian weddings frequently run across multiple Pittsburgh-area venues — hotel suites for prep, gurdwaras or mandirs for ceremonies, ballrooms for receptions — and often continue into the night. Ask how early the artist will arrive, whether they travel with an assistant for large bridal parties, how they handle delays caused by long ceremonies, and what backup plan exists if traffic, weather, or health issues threaten their arrival. A professional answer sounds specific; an amateur answer sounds flexible in a vague way." },
+            { type: "heading", body: "8. What Does Your Contract and Cancellation Policy Cover?" },
+            { type: "text", body: "Treat the contract as a checklist: deposit amount and refundability, final payment timing, headcount changes, late arrivals, overtime rates, travel fees, force-majeure clauses (weather, illness), and what happens if the artist is sick on the wedding day. The Better Business Bureau's consumer-tips guidance on contracting wedding vendors recommends getting every fee in writing before any deposit is paid [5]. A serious bridal artist will have a contract ready at inquiry; if not, that is a signal." },
+            { type: "heading", body: "9. Can You Share Full Weddings, Not Just Hero Shots?" },
+            { type: "text", body: "Instagram favors a single flattering portrait. A full wedding is several hours of makeup survival under changing light, venue temperature, tears, food, and photography. Ask for at least one full-wedding gallery per artist — bridal prep, ceremony close-ups, and reception photos of the same bride — to see how the makeup held up from 8 AM to 11 PM. This is the fastest way to distinguish a strong bridal specialist from an artist who excels only in a short, well-lit portrait session." },
+            { type: "image", src: "/images/portfolio/A12I0766.jpeg", alt: "South Asian bridal makeup shown in natural daylight for accurate shade evaluation" },
+            { type: "heading", body: "10. Who Actually Does My Makeup on the Day?" },
+            { type: "text", body: "Some studios book under a lead artist's name but assign the wedding to an associate. That is not inherently wrong — many excellent studios operate this way — but you deserve to know in advance. Ask to meet the artist who will personally do your makeup at the trial, and ask for that person's own portfolio. If the answer shifts between inquiry, trial, and wedding day, you are taking a risk that no bride should take on a non-refundable event." },
+            { type: "callout", body: "Final practical rule: Your bridal artist should be excited to answer every one of these questions. Hesitation, vague answers, or pressure to deposit immediately are all warning signs. A Pittsburgh bridal booking is a months-long relationship — not a purchase." },
+            { type: "heading", body: "What Should Pittsburgh Brides Do Next?" },
+            { type: "text", body: "Once you have shortlisted two or three South Asian bridal artists in Pittsburgh, schedule consultations before committing to a trial. A 20-minute call is enough to compare communication style, confirm availability for your dates, and review contract basics. Only then should you invest in paid trials. Starting this process 9 to 12 months before the wedding is ideal — peak South Asian wedding weekends in Pittsburgh book out early, especially for multi-event packages that require extended artist availability." },
+            { type: "faq", items: [
+                { q: "How far in advance should I book a South Asian bridal makeup artist in Pittsburgh?", a: "Most experienced South Asian bridal artists in the Pittsburgh area are booked 9 to 12 months in advance for peak wedding weekends. For multi-event bookings — sangeet, haldi, mehndi night, ceremony, reception — begin inquiries as soon as your wedding date is confirmed." },
+                { q: "Should I book the artist with the best Instagram or the most reviews?", a: "Neither alone. Instagram shows hero shots under controlled lighting, and reviews can be skewed by recency bias. Evaluate portfolios of full weddings on brides with skin tones similar to yours, verify sanitation and patch-test policies, and read detailed multi-paragraph reviews rather than star counts." },
+                { q: "Do I need a separate mehndi artist if my bridal makeup artist offers both?", a: "Only if their mehndi portfolio is weak. Some artists genuinely specialize in both; others do one well and the other as a side service. Ask to see full bridal mehndi coverage (fingertips to elbows, front and back of hands) before deciding to bundle, and compare against dedicated mehndi artists." },
+                { q: "What should the bridal trial cost and when should I do it?", a: "Trial pricing varies across the Pittsburgh market. More important than price is the policy: is the fee separate, or does it apply toward the wedding-day package? Aim for a trial 6 to 8 weeks before the wedding — close enough to wedding-day skin, far enough to adjust if needed." },
+                { q: "Is it safe to share a bridal makeup kit with bridesmaids or family?", a: "For eye-area products, no. FDA warns that bacteria and fungi can transfer via mascara, liner, and shadow, which can cause infections. A professional bridal artist uses single-use applicators and disinfects or disposes of eye-area items between clients [1]." }
+            ] },
+            { type: "references", items: [
+                "U.S. Food & Drug Administration. Eye Cosmetic Safety. FDA.gov.",
+                "U.S. Food & Drug Administration. Cosmetics Safety Q&A: Shelf Life. FDA.gov.",
+                "American Academy of Dermatology. Patch testing can find what's causing your rash. AAD.org.",
+                "Draelos, Z.D. (2015). Cosmetics and Dermatologic Problems and Solutions (3rd ed.). CRC Press. (Shade matching and melanin-rich skin.)",
+                "Better Business Bureau. Tips for hiring a wedding vendor. BBB.org."
+            ] },
+        ],
+    },
+    {
         slug: "bridal-makeup-trial-timeline-pittsburgh",
         title: "When Should Pittsburgh Brides Book a Bridal Makeup Trial? A Research-Backed Timeline",
         excerpt:

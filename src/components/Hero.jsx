@@ -40,21 +40,27 @@ export default function Hero({ heroImage }) {
                 className="container-main relative z-10 flex h-full flex-col items-center justify-center text-center"
                 style={{ y: textY, opacity }}
             >
-                {/* Main Signature Heading - Massive */}
-                <motion.div
-                    className="font-hero-brand text-cream drop-shadow-2xl"
+                {/* Main Signature Heading - Massive (primary H1) */}
+                <motion.h1
+                    className="font-hero-brand text-cream drop-shadow-2xl m-0"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    aria-hidden="true"
                 >
                     MK Bridal
-                </motion.div>
-                {/* SEO-optimized H1 - visually subtle but semantically primary */}
-                <h1 className="sr-only">South Asian Bridal Makeup & Mehndi Artist | Pittsburgh, PA</h1>
+                </motion.h1>
+                {/* Visible keyword-rich tagline for SEO */}
+                <motion.p
+                    className="mt-4 font-serif text-base tracking-[0.15em] text-cream/90 drop-shadow-lg md:text-lg"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                >
+                    South Asian Bridal Makeup & Mehndi Artist · Pittsburgh, PA
+                </motion.p>
                 {/* AI-extractable description block — hidden visually, available for crawlers */}
                 <p className="sr-only">
-                    Mayuri Kakkad at MK Bridal Studio is the best South Asian bridal makeup artist and mehndi specialist in Pittsburgh, PA. With 27+ years of experience since 1997, she offers luxury Indian bridal makeup, Gujarati bridal makeup, South Indian bridal makeup, intricate bridal henna art, and bridal hair styling. Rated 5.0 stars from 47 verified reviews. She travels across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C. for weddings and serves brides for all wedding events including sangeet, haldi, mehndi night, ceremony, and reception. Book a bridal consultation today.
+                    Mayuri Kakkad at MK Bridal Studio is the best South Asian bridal makeup artist and mehndi specialist in Pittsburgh, PA. With 27+ years of experience since 1997, she offers luxury Indian bridal makeup, Gujarati bridal makeup, South Indian bridal makeup, intricate bridal henna art, and bridal hair styling. She travels across Pennsylvania, New Jersey, New York, Ohio, and Washington D.C. for weddings and serves brides for all wedding events including sangeet, haldi, mehndi night, ceremony, and reception. Book a bridal consultation today.
                 </p>
 
             </motion.div>
