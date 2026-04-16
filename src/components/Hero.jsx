@@ -42,7 +42,7 @@ export default function Hero({ heroImage }) {
             >
                 {/* Main Signature Heading - Massive (primary H1) */}
                 <motion.h1
-                    className="font-hero-brand text-cream drop-shadow-2xl m-0"
+                    className="font-hero-brand text-cream drop-shadow-2xl m-0 pb-8 md:pb-12"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
@@ -51,12 +51,12 @@ export default function Hero({ heroImage }) {
                 </motion.h1>
                 {/* Visible keyword-rich tagline for SEO */}
                 <motion.p
-                    className="mt-4 font-serif text-base tracking-[0.15em] text-cream/90 drop-shadow-lg md:text-lg"
+                    className="mt-6 font-sans text-xs uppercase tracking-[0.3em] text-cream/80 drop-shadow-lg md:mt-8 md:text-sm"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                    transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
                 >
-                    South Asian Bridal Makeup & Mehndi Artist · Pittsburgh, PA
+                    South Asian Bridal Makeup &amp; Mehndi Artist · Pittsburgh, PA
                 </motion.p>
                 {/* AI-extractable description block — hidden visually, available for crawlers */}
                 <p className="sr-only">
