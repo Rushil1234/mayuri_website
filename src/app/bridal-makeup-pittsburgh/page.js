@@ -1,308 +1,272 @@
+import Image from "next/image";
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import styles from "./bridal-makeup.module.css";
+
+const pageUrl = "https://www.mkbridalstudio.com/bridal-makeup-pittsburgh";
+const title = "Bridal Makeup in Pittsburgh | MK Bridal Studio";
+const description =
+    "South Asian bridal makeup in Pittsburgh by Mayuri Kakkad. Explore bridal looks, makeup trials and wedding-day services. Inquire about your date and a custom quote.";
 
 export const metadata = {
-    title: "Best Bridal Makeup in Pittsburgh | South Asian Bridal Makeup by MK Bridal Studio",
-    description:
-        "Looking for the best bridal makeup in Pittsburgh? MK Bridal Studio offers South Asian bridal makeup, bridal trials, engagement makeup, reception glam, and long-wear wedding day beauty by Mayuri Kakkad.",
-    alternates: {
-        canonical: "https://www.mkbridalstudio.com/bridal-makeup-pittsburgh",
-    },
+    title: { absolute: title },
+    description,
+    alternates: { canonical: pageUrl },
     openGraph: {
-        title: "Best Bridal Makeup in Pittsburgh | South Asian Bridal Makeup by MK Bridal Studio",
-        description:
-            "Top-rated bridal makeup in Pittsburgh for Indian, Gujarati, and South Asian weddings. Bridal trials, wedding-day glam, and long-lasting makeup by Mayuri Kakkad.",
-        url: "https://www.mkbridalstudio.com/bridal-makeup-pittsburgh",
+        title,
+        description,
+        url: pageUrl,
         type: "website",
         siteName: "MK Bridal Studio",
+        locale: "en_US",
+        images: [{
+            url: "https://www.mkbridalstudio.com/images/henna-1.jpg",
+            width: 1440,
+            height: 1799,
+            alt: "Soft bridal makeup and traditional jewelry from the MK Bridal Studio portfolio",
+        }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: ["https://www.mkbridalstudio.com/images/henna-1.jpg"],
     },
 };
 
 const faqs = [
     {
-        q: "Who is this bridal makeup service best for?",
-        a: "This page is designed for Pittsburgh brides looking for bridal makeup with experience in South Asian wedding styling, melanin-rich skin tones, bridal trials, and long-wear event makeup.",
+        q: "Do you offer bridal makeup trials?",
+        a: "Yes. A trial is a chance to explore your foundation match, eye makeup, lip color and overall finish with Mayuri before your wedding. Bring makeup inspiration and photos of your outfit and jewelry, and share any skin sensitivities when you inquire.",
     },
     {
-        q: "Do you offer bridal makeup trials in Pittsburgh?",
-        a: "Yes. Bridal trials are available so you can finalize foundation matching, eye intensity, lip color, finish, and timing before the wedding day.",
+        q: "How much does bridal makeup cost?",
+        a: "Ask for a quote based on your wedding date, location, number of events and the people needing services. Include whether you would like a trial, hair styling or mehndi so Mayuri can discuss the right options for your celebration.",
     },
     {
-        q: "Do you only do ceremony makeup?",
-        a: "No. Makeup services can cover bridal trials, ceremony glam, reception changes, engagement looks, sangeet makeup, haldi-ready looks, and bridal party makeup.",
+        q: "Can you create a natural look or a more dramatic bridal look?",
+        a: "Both. Your look can range from soft, natural makeup to a more defined eye and fuller bridal glam. Share the looks you love and how you usually wear makeup so your wedding look feels comfortable and personal.",
     },
     {
-        q: "Why is this page focused on Pittsburgh bridal makeup?",
-        a: "The goal is to help local brides find a dedicated makeup page instead of only general studio pages. It clearly explains the makeup service, the artist's experience, and how to book in Pittsburgh.",
+        q: "Do you offer hair, mehndi and bridal party makeup too?",
+        a: "Yes. MK Bridal Studio also offers bridal hair styling, mehndi, and makeup for bridesmaids and family. Mention everyone who needs services and each event's getting-ready time so availability and scheduling can be discussed together.",
+    },
+    {
+        q: "Do you travel to wedding venues?",
+        a: "Mayuri is based in Pittsburgh and is open to traveling around the Northeast. Share your venue and getting-ready location when you inquire to confirm travel availability and any additional costs for your date.",
+    },
+    {
+        q: "How do I check availability for my wedding?",
+        a: "Send your wedding date, venue or city, the services you are interested in, and the time you need to be ready. You can use the contact form, email Mayuri, or call (201) 912-6702 to discuss availability and next steps.",
     },
 ];
 
-export default function BridalMakeupPittsburghPage() {
-    const faqSchema = {
-        "@type": "FAQPage",
-        mainEntity: faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.q,
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.a,
-            },
-        })),
-    };
+const services = [
+    {
+        number: "01",
+        title: "Find your look",
+        label: "Bridal makeup trials",
+        copy: "Explore the colors, coverage and details that feel right for you. Bring your outfit inspiration and the makeup looks you love.",
+    },
+    {
+        number: "02",
+        title: "Your wedding day",
+        label: "Ceremony & reception makeup",
+        copy: "From a soft bridal glow to a defined, expressive eye, plan makeup that complements your features, jewelry and wedding traditions.",
+    },
+    {
+        number: "03",
+        title: "Every celebration",
+        label: "Pre-wedding & bridal party beauty",
+        copy: "Bring your engagement, sangeet, reception and family beauty plans together. Ask about hair styling and mehndi for a complete bridal look.",
+    },
+];
 
+function Arrow() {
+    return <span aria-hidden="true">↗</span>;
+}
+
+export default function BridalMakeupPittsburghPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
             {
                 "@type": "Service",
+                "@id": `${pageUrl}#service`,
                 name: "Bridal Makeup in Pittsburgh",
-                serviceType: "South Asian Bridal Makeup",
-                url: "https://www.mkbridalstudio.com/bridal-makeup-pittsburgh",
-                description:
-                    "Bridal makeup in Pittsburgh by Mayuri Kakkad at MK Bridal Studio. Specializing in South Asian bridal makeup, bridal trials, long-wear wedding day glam, and event makeup for Indian, Gujarati, and South Indian weddings.",
-                areaServed: [
-                    { "@type": "City", name: "Pittsburgh" },
-                    { "@type": "State", name: "Pennsylvania" },
-                ],
+                serviceType: "South Asian bridal makeup and bridal makeup trials",
+                description,
+                url: pageUrl,
+                image: "https://www.mkbridalstudio.com/images/henna-1.jpg",
+                areaServed: { "@type": "City", name: "Pittsburgh" },
                 provider: {
-                    "@type": "BeautySalon",
+                    "@type": "Organization",
                     name: "MK Bridal Studio",
                     url: "https://www.mkbridalstudio.com",
                     telephone: "+12019126702",
                     email: "mayurikakkad@gmail.com",
-                    address: {
-                        "@type": "PostalAddress",
-                        addressLocality: "Pittsburgh",
-                        addressRegion: "PA",
-                        postalCode: "15228",
-                        addressCountry: "US",
-                    },
-                    aggregateRating: {
-                        "@type": "AggregateRating",
-                        ratingValue: "5.0",
-                        reviewCount: "47",
-                        bestRating: "5",
-                        worstRating: "1",
-                    },
-                },
-                offers: {
-                    "@type": "Offer",
-                    availability: "https://schema.org/InStock",
-                    url: "https://www.mkbridalstudio.com/contact",
                 },
             },
             {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mkbridalstudio.com" },
-                    { "@type": "ListItem", position: 2, name: "Bridal Makeup Pittsburgh", item: "https://www.mkbridalstudio.com/bridal-makeup-pittsburgh" },
+                    { "@type": "ListItem", position: 2, name: "Bridal Makeup", item: pageUrl },
                 ],
             },
-            faqSchema,
+            {
+                "@type": "FAQPage",
+                mainEntity: faqs.map(({ q, a }) => ({
+                    "@type": "Question",
+                    name: q,
+                    acceptedAnswer: { "@type": "Answer", text: a },
+                })),
+            },
         ],
     };
 
-    const benefits = [
-        "27+ years of bridal artistry since 1997",
-        "Specialized experience with Indian, Gujarati, and South Indian bridal looks",
-        "Bridal makeup designed for melanin-rich skin tones and long wedding timelines",
-        "Bridal trials available before the wedding day",
-        "Soft glam, natural glam, and full glam bridal makeup options",
-        "Reception changes, sangeet looks, engagement glam, and bridal party makeup available",
-    ];
-
-    const makeupMoments = [
-        "Bridal makeup trial appointments",
-        "Wedding ceremony makeup",
-        "Reception makeup and second-look glam",
-        "Engagement makeup and hair styling",
-        "Sangeet and mehndi night makeup",
-        "Bridesmaid and family makeup",
-    ];
-
-    const reasons = [
-        "Local Pittsburgh relevance: this page is built specifically for brides searching bridal makeup in Pittsburgh, not just general beauty terms.",
-        "Clear proof: the service highlights 27+ years of experience, a licensed cosmetologist background, and 5.0-star review signals already used across the site.",
-        "Higher-intent copy: the page focuses on bridal makeup first, with supporting mentions of trials, reception glam, engagement looks, and wedding-day wear.",
-        "Conversion-ready structure: strong internal links push users directly to the portfolio and booking page instead of leaving them on an informational dead end.",
-    ];
-
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+            <main className={styles.page}>
+                <div className={styles.container}>
+                    <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
+                        <Link href="/">Home</Link><span aria-hidden="true">/</span><span aria-current="page">Bridal Makeup</span>
+                    </nav>
 
-            <main className="min-h-screen bg-[#FDF8F4] px-6 pb-24 pt-32">
-                <div className="mx-auto max-w-5xl">
-                    <div className="mb-8">
-                        <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355]">
-                            Pittsburgh Bridal Makeup
-                        </p>
-                        <h1 className="mb-5 font-serif text-4xl text-[#1a1a1a] md:text-5xl">
-                            Best Bridal Makeup in Pittsburgh for South Asian Weddings
-                        </h1>
-                        <p className="max-w-3xl font-sans text-lg leading-[1.9] text-[#5E5245]">
-                            Mayuri Kakkad at MK Bridal Studio offers Pittsburgh bridal makeup for brides who want polished,
-                            long-wear glam that still looks elegant in person and in photos. The focus is bridal makeup first:
-                            trials, wedding-day artistry, reception changes, and event makeup built around Indian, Gujarati,
-                            and South Asian wedding styling.
-                        </p>
+                    <section className={styles.hero} aria-labelledby="bridal-title">
+                        <div className={styles.heroCopy}>
+                            <p className={styles.eyebrow}>South Asian bridal beauty · Since 1997</p>
+                            <h1 id="bridal-title">Bridal makeup<br />in Pittsburgh.</h1>
+                            <p className={styles.signature}>Beautifully you.</p>
+                            <p className={styles.intro}>
+                                From soft, luminous skin to a defined bridal eye, your look is planned around
+                                you, your outfit, and your wedding celebrations. Discover bridal makeup by Mayuri Kakkad.
+                            </p>
+                            <div className={styles.actions}>
+                                <Link href="/contact" className={styles.primaryButton}>Check my wedding date <Arrow /></Link>
+                                <a href="#bridal-looks" className={styles.textLink}>Explore bridal looks <span aria-hidden="true">↓</span></a>
+                            </div>
+                            <p className={styles.heroNote}>Makeup trials · Wedding-day beauty · Hair & mehndi</p>
+                        </div>
+                        <figure className={styles.heroPhoto}>
+                            <Image
+                                src="/images/henna-1.jpg"
+                                alt="Bride wearing soft eye makeup, a natural lip and gold jewelry, with her partner beside her"
+                                fill
+                                sizes="(max-width: 760px) 90vw, 46vw"
+                                priority
+                                className={styles.cover}
+                            />
+                            <figcaption>For the moments you&apos;ll always remember.</figcaption>
+                        </figure>
+                    </section>
+
+                    <div className={styles.detailsStrip}>
+                        <span>Personal artistry by Mayuri Kakkad</span>
+                        <span>Indian & South Asian weddings</span>
+                        <span>Pittsburgh, Pennsylvania</span>
                     </div>
 
-                    <section className="mb-12 rounded-3xl border border-[#D9CFC4] bg-white px-7 py-7 shadow-[0_2px_20px_rgba(139,115,85,0.08)]">
-                        <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
+                    <section className={styles.section} aria-labelledby="services-title">
+                        <div className={styles.sectionHeading}>
                             <div>
-                                <h2 className="mb-3 font-serif text-2xl text-[#1a1a1a]">
-                                    Why brides search this page
-                                </h2>
-                                <p className="mb-5 font-sans text-[15px] leading-[1.9] text-[#5E5245]">
-                                    If someone searches for the best bridal makeup in Pittsburgh, they usually want one page
-                                    that confirms experience, bridal focus, local relevance, and proof. This page is built to
-                                    answer that exact intent clearly.
-                                </p>
-                                <ul className="space-y-3 font-sans text-[15px] leading-[1.8] text-[#444]">
-                                    {reasons.map((reason) => (
-                                        <li key={reason} className="flex gap-3">
-                                            <span className="mt-1 text-[#8B7355]">•</span>
-                                            <span>{reason}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <p className={styles.eyebrow}>Your bridal beauty experience</p>
+                                <h2 id="services-title">A look that feels like you.<br /><em>For every part of your day.</em></h2>
                             </div>
-
-                            <div className="rounded-2xl bg-[#FBF6F0] px-6 py-6">
-                                <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355]">
-                                    Fast Facts
-                                </p>
-                                <div className="space-y-4 font-sans text-[15px] leading-[1.8] text-[#5E5245]">
-                                    <p><strong className="text-[#1a1a1a]">Artist:</strong> Mayuri Kakkad</p>
-                                    <p><strong className="text-[#1a1a1a]">Based in:</strong> Pittsburgh, Pennsylvania</p>
-                                    <p><strong className="text-[#1a1a1a]">Experience:</strong> 27+ years since 1997</p>
-                                    <p><strong className="text-[#1a1a1a]">Reviews:</strong> 5.0 stars from 47 reviews</p>
-                                    <p><strong className="text-[#1a1a1a]">Focus:</strong> South Asian bridal makeup, bridal trials, reception glam, long-wear wedding makeup</p>
-                                </div>
-                            </div>
+                            <p>One celebration or a full wedding weekend. Tell Mayuri what you have planned, and explore the beauty services that fit.</p>
                         </div>
-                    </section>
-
-                    <section className="mb-12 grid gap-8 md:grid-cols-2">
-                        <div className="rounded-3xl border border-[#D9CFC4] bg-white px-7 py-7">
-                            <h2 className="mb-4 font-serif text-2xl text-[#1a1a1a]">
-                                What bridal makeup services are included
-                            </h2>
-                            <ul className="space-y-3 font-sans text-[15px] leading-[1.8] text-[#444]">
-                                {makeupMoments.map((item) => (
-                                    <li key={item} className="flex gap-3">
-                                        <span className="mt-1 text-[#8B7355]">•</span>
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="rounded-3xl border border-[#D9CFC4] bg-white px-7 py-7">
-                        <h2 className="mb-4 font-serif text-2xl text-[#1a1a1a]">
-                                Why Pittsburgh brides choose MK Bridal Studio
-                            </h2>
-                            <ul className="space-y-3 font-sans text-[15px] leading-[1.8] text-[#444]">
-                                {benefits.map((benefit) => (
-                                    <li key={benefit} className="flex gap-3">
-                                        <span className="mt-1 text-[#8B7355]">•</span>
-                                        <span>{benefit}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section className="mb-12 rounded-3xl border border-[#D9CFC4] bg-[#FBF6F0] px-7 py-7">
-                        <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355]">
-                            Bridal Makeup Fit
-                        </p>
-                        <h2 className="mb-4 font-serif text-2xl text-[#1a1a1a]">
-                            A strong fit for brides who want makeup to lead the experience
-                        </h2>
-                        <p className="max-w-3xl font-sans text-[15px] leading-[1.9] text-[#5E5245]">
-                            This page is intentionally makeup-led. It is for brides whose first search is not just mehndi or
-                            hair, but specifically bridal makeup in Pittsburgh. The service is especially relevant for brides
-                            who want professional foundation matching, bridal trials, camera-ready eye makeup, reception look
-                            changes, and wedding-day makeup that holds through long South Asian events.
-                        </p>
-                    </section>
-
-                    <section className="mb-12 rounded-3xl border border-[#D9CFC4] bg-white px-7 py-7">
-                        <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355]">
-                            Review Signals
-                        </p>
-                        <h2 className="mb-6 font-serif text-2xl text-[#1a1a1a]">
-                            Proof that supports the “best bridal makeup in Pittsburgh” query
-                        </h2>
-                        <div className="grid gap-5 md:grid-cols-3">
-                            <blockquote className="rounded-2xl bg-[#FBF6F0] p-5 font-sans text-[14px] leading-[1.8] text-[#5E5245]">
-                                “Her makeup work was flawless, natural yet elegant, enhancing my features without going overboard.”
-                            </blockquote>
-                            <blockquote className="rounded-2xl bg-[#FBF6F0] p-5 font-sans text-[14px] leading-[1.8] text-[#5E5245]">
-                                “I moved to Pittsburgh in 2020 and since then I only visit her for my mehandi, haircut or any make up work.”
-                            </blockquote>
-                            <blockquote className="rounded-2xl bg-[#FBF6F0] p-5 font-sans text-[14px] leading-[1.8] text-[#5E5245]">
-                                “She listens to my expectations and needs and provides the same result. I am always happy and satisfied.”
-                            </blockquote>
-                        </div>
-                    </section>
-
-                    <section className="mb-12 rounded-3xl border border-[#D9CFC4] bg-white px-7 py-7">
-                        <h2 className="mb-6 font-serif text-2xl text-[#1a1a1a]">
-                            Frequently asked questions about bridal makeup in Pittsburgh
-                        </h2>
-                        <div className="space-y-6">
-                            {faqs.map((faq) => (
-                                <div key={faq.q}>
-                                    <h3 className="mb-2 font-sans text-base font-semibold text-[#1a1a1a]">
-                                        {faq.q}
-                                    </h3>
-                                    <p className="font-sans text-[15px] leading-[1.9] text-[#5E5245]">
-                                        {faq.a}
-                                    </p>
-                                </div>
+                        <div className={styles.services}>
+                            {services.map((service) => (
+                                <article key={service.number} className={styles.service}>
+                                    <span className={styles.serviceNumber} aria-hidden="true">{service.number}</span>
+                                    <h3>{service.title}</h3>
+                                    <p className={styles.serviceLabel}>{service.label}</p>
+                                    <p>{service.copy}</p>
+                                </article>
                             ))}
                         </div>
                     </section>
 
-                    <section className="rounded-3xl border border-[#D9CFC4] bg-white px-7 py-7">
-                        <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#8B7355]">
-                            Next Step
-                        </p>
-                        <h2 className="mb-3 font-serif text-2xl text-[#1a1a1a]">
-                            Want to rank for bridal makeup in Pittsburgh and convert that traffic?
-                        </h2>
-                        <p className="mb-6 max-w-3xl font-sans text-[15px] leading-[1.9] text-[#5E5245]">
-                            This page gives Google a dedicated bridal makeup target. The next conversion step is simple:
-                            show real work and send brides directly to booking.
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                            <Link
-                                href="/portfolio"
-                                className="inline-flex items-center justify-center rounded-full bg-[#8B7355] px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#6B5340]"
-                            >
-                                View Makeup Portfolio
-                            </Link>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
-                            >
-                                Book A Bridal Trial
-                            </Link>
-                            <Link
-                                href="/blog"
-                                className="inline-flex items-center justify-center rounded-full border border-[#8B7355]/20 px-5 py-2.5 text-xs font-sans font-bold uppercase tracking-[0.18em] text-[#8B7355] transition-colors hover:border-[#8B7355] hover:text-[#6B5340]"
-                            >
-                                Read Makeup Guides
-                            </Link>
+                    <section id="bridal-looks" className={styles.section} aria-labelledby="looks-title">
+                        <div className={styles.sectionHeading}>
+                            <div>
+                                <p className={styles.eyebrow}>From the MK Bridal portfolio</p>
+                                <h2 id="looks-title">The beauty is in <em>the details.</em></h2>
+                            </div>
+                            <Link href="/portfolio" className={styles.textLink}>See the full portfolio <Arrow /></Link>
+                        </div>
+                        <div className={styles.gallery}>
+                            <figure>
+                                <div className={styles.galleryPortrait}>
+                                    <Image src="/images/portfolio/IMG_9366.jpeg" alt="South Asian bride in a blue silk sari with defined eye makeup, a deep lip color and traditional gold jewelry" fill sizes="(max-width: 760px) 90vw, 35vw" className={styles.cover} />
+                                </div>
+                                <figcaption>Traditional bridal beauty</figcaption>
+                            </figure>
+                            <figure>
+                                <div className={styles.galleryLandscape}>
+                                    <Image src="/images/portfolio/A12I0780.jpeg" alt="Bride in red with her bridal party in green, gathered for wedding photographs" fill sizes="(max-width: 760px) 90vw, 55vw" className={styles.cover} />
+                                </div>
+                                <figcaption>Made for the whole celebration</figcaption>
+                                <blockquote className={styles.galleryQuote}>
+                                    <p>“Her makeup work was flawless — natural yet elegant, enhancing my features without going overboard.”</p>
+                                    <cite>Pravallika N · Bridal client</cite>
+                                </blockquote>
+                            </figure>
                         </div>
                     </section>
                 </div>
+
+                <section className={styles.artistSection} aria-labelledby="artist-title">
+                    <div className={`${styles.container} ${styles.artist}`}>
+                        <div className={styles.artistPhoto}>
+                            <Image src="/images/Mayuri.png" alt="Mayuri Kakkad, the artist behind MK Bridal Studio" fill sizes="(max-width: 760px) 75vw, 28vw" className={styles.cover} />
+                        </div>
+                        <div className={styles.artistCopy}>
+                            <p className={styles.eyebrow}>Meet your artist</p>
+                            <h2 id="artist-title">Experienced hands.<br /><em>A personal touch.</em></h2>
+                            <p>Mayuri Kakkad is a licensed makeup artist and cosmetologist based in Pittsburgh. Creating bridal beauty since 1997, she brings experience with Indian, Gujarati and South Indian wedding traditions to every look.</p>
+                            <p>Share what you love, what feels comfortable, and the details that matter to you. Your makeup, hair and mehndi should feel like part of your story.</p>
+                            <Link href="/about" className={styles.textLink}>More about Mayuri <Arrow /></Link>
+                        </div>
+                    </div>
+                </section>
+
+                <div className={styles.container}>
+                    <section className={`${styles.section} ${styles.faqSection}`} aria-labelledby="faq-title">
+                        <div>
+                            <p className={styles.eyebrow}>Before you say “I do”</p>
+                            <h2 id="faq-title">A few things<br /><em>you might be wondering.</em></h2>
+                            <p className={styles.faqIntro}>Have something else in mind? <Link href="/contact">Ask Mayuri.</Link></p>
+                        </div>
+                        <div className={styles.faqs}>
+                            {faqs.map(({ q, a }) => (
+                                <details key={q} name="bridal-faq">
+                                    <summary>{q}<span aria-hidden="true" className={styles.faqIcon} /></summary>
+                                    <p>{a}</p>
+                                </details>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className={styles.inquiry} aria-labelledby="inquiry-title">
+                        <p className={styles.eyebrow}>Let&apos;s start with your date</p>
+                        <h2 id="inquiry-title">Your bridal look<br />starts <em>with a conversation.</em></h2>
+                        <p>Share your wedding date, venue, services and getting-ready time.<br className={styles.desktopBreak} /> Mayuri can discuss availability, your ideas and a personalized quote.</p>
+                        <div className={styles.actions}>
+                            <Link href="/contact" className={styles.primaryButton}>Inquire about my wedding <Arrow /></Link>
+                            <a href="tel:+12019126702" className={styles.textLink}>Call (201) 912-6702 <Arrow /></a>
+                        </div>
+                        <a className={styles.email} href="mailto:mayurikakkad@gmail.com?subject=Bridal%20makeup%20inquiry">Prefer email? mayurikakkad@gmail.com</a>
+                    </section>
+                    <p className={styles.planningGuide}>Still gathering ideas? <Link href="/blog/how-to-choose-south-asian-bridal-makeup-artist-pittsburgh">Read our guide to choosing your bridal makeup artist <Arrow /></Link></p>
+                </div>
+                <aside className={styles.mobileInquiry} aria-label="Wedding inquiries">
+                    <a href="tel:+12019126702">Call Mayuri</a>
+                    <Link href="/contact" className={styles.primaryButton}>Check my date <Arrow /></Link>
+                </aside>
             </main>
+            <Footer />
         </>
     );
 }
