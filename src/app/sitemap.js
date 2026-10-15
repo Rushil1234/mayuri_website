@@ -26,7 +26,7 @@ export default function sitemap() {
         },
         {
             url: `${baseUrl}/bridal-makeup-pittsburgh`,
-            lastModified: new Date('2026-03-24'),
+            lastModified: new Date('2026-10-15'),
             priority: 0.9,
         },
         {
